@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "tildasans-reg";
+  src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-med";
+  src: url("../fonts/TildaSans-Bold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.home_section-tittle {
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-size: 54px;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.home_section-subtittle {
+  color: rgb(122, 122, 122);
+  transition-delay: 0s;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 41px 0 0 0;
+}
+.home_section-img {
+  width: 900px;
+
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_section-img img {
+  width: 100%;
+}
+
+.home_section-target {
+  background-color: #f2f7fa;
+  padding: 100px 0 100px 0;
+}
+
+.home_section-target-info {
+  text-align: center;
+}
+.home_section-target-info h2 {
+  padding: 20px 0 20px 0;
+  position: relative;
+}
+.home_section-target-info p {
+  padding: 20px 0 20px 0;
+  position: relative;
+  font-weight: 300;
+  color: #000000;
+}
+.target_line {
+  display: flex;
+  justify-content: center;
+}
+.target_line span {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  width: 100px;
+  height: 3px;
+  margin: 20px 0;
+}
+
+.sertificate_container-logo {
+  width: 65px;
+  height: 65px;
+  margin-top: 40px;
+}
+
+.home_section-sertificate {
+  background-color: #f2f7fa;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.sertificate_container p {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 100;
+}
+.home_section-project-title h2 {
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-size: 45px;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 100px;
+  color: #009975;
+}
+
+.home_section-project-title p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item_card-1 img {
+  width: 350px;
+  height: 250px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home_section-project p {
+  margin-top: 10px;
+}
+
+.home_section-project {
+  background-color: #e2dfdff7;
+}
+
+/* .item_card-2 {
+  width: 350px;
+  background: url("https://thumb.tildacdn.com/tild6531-6339-4363-b130-316538633965/-/cover/720x990/center/center/-/format/webp/IMG_4148.jpeg");
+} */
+
+.item_card-1 {
+  margin-top: 50px;
+}
