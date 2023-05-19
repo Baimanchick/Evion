@@ -18,6 +18,7 @@ function HomePage() {
           alt=""
         />
       </div>
+      <div className="greenBlock"></div>
       <div class="home_section-target">
         <div class="home_section-target-info">
           <h2>Наша главная цель</h2>
@@ -34,31 +35,44 @@ function HomePage() {
       <div class="home_section-sertificate">
         <div class="sertificate_container">
           <div className="sertificate">
-            <img
-              class="sertificate_container-logo"
-              src="https://static.tildacdn.com/tild3035-3862-4135-b633-353266316437/6Artboard_34.svg"
-              alt=""
-            />
+            <div>
+              <img
+                class="sertificate_container-logo"
+                src="https://static.tildacdn.com/tild3035-3862-4135-b633-353266316437/6Artboard_34.svg"
+                alt=""
+              />
+            </div>
+            <div className="sertificate__column">
+              <h3>Сертифицированный товар</h3>
+              <p> Производство: Китай и Россия</p>
+            </div>
           </div>
-          <h3>Сертифицированный товар</h3>
-          <p> Производство: Китай и Россия</p>
-          <img
-            class="sertificate_container-logo"
-            src="https://static.tildacdn.com/tild6638-3938-4132-b831-613462346536/6Artboard_34_copy.svg"
-            alt=""
-          />
-
-          <h3>Быстрая установка</h3>
-          <p> Оперативная установка станции</p>
-
-          <img
-            class="sertificate_container-logo"
-            src="https://static.tildacdn.com/lib/tildaicon/31643538-3131-4563-b735-636634373338/Tilda_Icons_47dlvr_speed.svg"
-            alt=""
-          />
-
-          <h3> Экологический проект </h3>
-          <p> Мы за ЭКО транспорт</p>
+          <div className="sertificate">
+            <div>
+              <img
+                class="sertificate_container-logo"
+                src="https://static.tildacdn.com/tild6638-3938-4132-b831-613462346536/6Artboard_34_copy.svg"
+                alt=""
+              />
+            </div>
+            <div className="sertificate__column">
+              <h3>Быстрая установка</h3>
+              <p> Оперативная установка станции</p>
+            </div>
+          </div>
+          <div className="sertificate">
+            <div>
+              <img
+                class="sertificate_container-logo"
+                src="https://static.tildacdn.com/lib/tildaicon/31643538-3131-4563-b735-636634373338/Tilda_Icons_47dlvr_speed.svg"
+                alt=""
+              />
+            </div>
+            <div className="sertificate__column">
+              <h3> Экологический проект </h3>
+              <p> Мы за ЭКО транспорт</p>
+            </div>
+          </div>
         </div>
 
         <div class="sertificate_container-image">

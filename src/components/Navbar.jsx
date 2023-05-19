@@ -27,7 +27,7 @@ function Navbar() {
         </a>
       </div>
       <div class="header_right">
-        <a href="tel:+996500333351">+996500333351</a>
+        <a href="tel:+996500333351">+996 500 333351</a>
         <button href="#section-2" class="header_right-button">
           Рассчитать стоимость
         </button>
