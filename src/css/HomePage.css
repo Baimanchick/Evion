@@ -10,6 +10,17 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "tildasans-semibold";
+  src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* .container__main{
+  max-width: 1400px;
+  margin: 0 auto;
+} */
 
 .home_section-tittle {
   padding-top: 8px;
@@ -18,31 +29,47 @@
   line-height: 1.1;
   text-align: center;
   margin-top: 100px;
+  font-family: "tildasans-semibold";
 }
 
 .home_section-subtittle {
   color: rgb(122, 122, 122);
   transition-delay: 0s;
   text-align: center;
-  font-weight: 300;
+  /* font-family: "tildasans-reg"; */
   line-height: 1.5;
   padding: 41px 0 0 0;
+  font-size: 24px;
+  font-family: "tildasans-thin";
 }
+
+
 .home_section-img {
   width: 900px;
-
   margin: 50px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .home_section-img img {
-  width: 100%;
+    width: 827px;
+    height: 423px;
+    object-fit: cover;
 }
 
 .home_section-target {
   background-color: #f2f7fa;
-  padding: 100px 0 100px 0;
+  padding: 0px 0 100px 0;
+}
+
+.greenBlock{
+  position: absolute;
+  top: 500px;
+  z-index: -1;
+  background-color: #f2f7fa;
+  width: 100%;
+  height: 390px;
 }
 
 .home_section-target-info {
@@ -51,12 +78,15 @@
 .home_section-target-info h2 {
   padding: 20px 0 20px 0;
   position: relative;
+  font-size: 32px;
+  font-family: "tildasans-semibold";
 }
 .home_section-target-info p {
   padding: 20px 0 20px 0;
   position: relative;
-  font-weight: 300;
+  font-family: "tildasans-reg";
   color: #000000;
+  font-size: 24px;
 }
 .target_line {
   display: flex;
@@ -73,20 +103,38 @@
 .sertificate_container-logo {
   width: 65px;
   height: 65px;
-  margin-top: 40px;
+}
+
+.sertificate{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.sertificate__column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home_section-sertificate {
   background-color: #f2f7fa;
-
+  padding-bottom: 120px;
   display: flex;
   justify-content: space-around;
 }
 
+.sertificate_container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
 .sertificate_container p {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #7a7a7a;
-  font-weight: 100;
+  font-size: 16px;
+  font-family: "tildasans-reg";
 }
 .home_section-project-title h2 {
   padding-top: 8px;
