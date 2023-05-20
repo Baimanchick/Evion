@@ -16,6 +16,12 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "tildasans-thin";
+  src: url("../fonts/TildaSans-Light.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 /* .container__main{
   max-width: 1400px;
@@ -77,13 +83,11 @@
 }
 .home_section-target-info h2 {
   padding: 20px 0 20px 0;
-  position: relative;
   font-size: 32px;
   font-family: "tildasans-semibold";
 }
 .home_section-target-info p {
   padding: 20px 0 20px 0;
-  position: relative;
   font-family: "tildasans-reg";
   color: #000000;
   font-size: 24px;
@@ -136,46 +140,206 @@
   font-size: 16px;
   font-family: "tildasans-reg";
 }
-.home_section-project-title h2 {
-  padding-top: 8px;
-  padding-bottom: 3px;
-  font-size: 45px;
-  line-height: 1.1;
+
+.home_section-project-title{
+  width: 100%;
   text-align: center;
-  margin-top: 100px;
-  color: #009975;
+  margin-bottom: 90px;
+}
+.home_section-project-title h2{
+  font-size: 42px;
+  line-height: 1.23;
+  font-family: "tildasans-reg";
+  margin-bottom: 20px;  
 }
 
-.home_section-project-title p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
+.home_section-project-title p{
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "tildasans-thin";
 }
 
-.item_card-1 img {
-  width: 350px;
-  height: 250px;
+.containerC{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-around;
-}
-
-.home_section-project p {
-  margin-top: 10px;
-}
 
 .home_section-project {
   background-color: #e2dfdff7;
+  padding-top: 130px;
+  padding-bottom: 150px;
+  margin-top: 100px;
+  width: 100%;
 }
 
-/* .item_card-2 {
-  width: 350px;
-  background: url("https://thumb.tildacdn.com/tild6531-6339-4363-b130-316538633965/-/cover/720x990/center/center/-/format/webp/IMG_4148.jpeg");
-} */
 
-.item_card-1 {
-  margin-top: 50px;
+.home_section-how-we-works{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding-bottom: 15px;
+}
+
+.title__how-we-works{
+  font-size: 42px;
+  line-height: 1.23;
+  font-family: "tildasans-semibold";
+  width: 100%;
+  text-align: center;
+  margin-top: 105px;
+  margin-bottom: 100px;
+}
+
+.how-we-works__items{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+
+.stepsBlock{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+.stepsAboveBlock{
+  display: flex;
+  position: relative;
+}
+
+.steps__number{
+  width: 34px;
+  height: 34px;
+  background-color: #222;
+  border-radius: 100%;
+  z-index: 1;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.steps__line{
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 298px;
+  height: 2px;
+  background-color: #e6e6e6;
+}
+
+.stepsContents{
+  width: 260px;
+  height: 140px;
+  margin-top: 20px;
+}
+
+.stepsContentsTitle{
+  font-size: 20px;
+  line-height: 1.35;
+  font-family: "tildasans-semibold";
+  color: black;
+}
+
+.stepsContentsText{
+  margin-top: 16px;
+  font-family: "tildasans-thin";
+  color: #7a7a7a;
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__item{
+  background: white;
+  height: 495px;
+}
+
+.cards__img{
+  width: 360px;
+  height: 252px;
+  object-fit: cover;
+}
+
+.cards__typography{
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.cards__title{
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-family: "tildasans-semibold";
+}
+
+.cards__text{
+  font-size: 14px;
+  line-height: 1.55;
+  color: black;
+  font-family: "tildasans-thin";
+  text-align: left;
+}
+
+.cards__img__special{
+  width: 360px;
+  height: 495px;
+  object-fit: cover;
+}
+
+.blackBlock{
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.40));
+  padding-top: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+}
+
+.cards__item__special{
+  position: relative;
+}
+
+.cards__typography__special{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  background-color: transparent !important;
+}
+
+.cards__title__special{
+  color: white;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-family: "tildasans-semibold";
+}
+
+.cards__text__special{
+  color: white;
+  font-size: 14px;
+  line-height: 1.55;
+  font-family: "tildasans-thin";
 }
