@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/HomePage.css";
+import Slider1 from "./Slider1";
 
 function HomePage() {
   return (
@@ -172,6 +173,112 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+
+
+      <div className="home_section-mobile_app">
+        <div className="mobileApp__title">
+          Гибкое и легкое управление <br /> через приложение
+        </div>
+        <div className="mobileApp__text">
+          Мобильное приложение "Touch"
+        </div>
+        <div className="containerC">
+        <div className="mobileApp__items">
+          <div className="mobileApp__item">
+            <div className="info__items">
+              <div className="info__item">
+                <div className="info__item__title_img" style={{ justifyContent: "flex-end" }}>
+                  <div className="info__item__title">Будьте в курсе</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/61376132-3735-4136-b436-373834633035/18ked_bell.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text" style={{ textAlign: "right" }}>
+                  Получайте моментальные оповещения о новой локации ЭЗС
+                </div>        
+              </div>
+              <div className="info__item">
+                <div className="info__item__title_img" style={{ justifyContent: "flex-end" }}>
+                  <div className="info__item__title">Используйте аналитику</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/64666539-3361-4663-b462-623833343337/Tilda_Icons_39_IT_analytics.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text" style={{ textAlign: "right" }}>
+                  Контролируйте процесс зарядки и оценивайте энергопотребление.
+                </div>        
+              </div>
+              <div className="info__item">
+                <div className="info__item__title_img" style={{ justifyContent: "flex-end" }}>
+                  <div className="info__item__title">Истории зарядок</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/35306639-3563-4432-b536-396436666161/18ked_camera.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text" style={{ textAlign: "right" }}>
+                  Отслеживания истории зарядки.
+                </div>        
+              </div>
+            </div>
+          </div>
+          <div className="mobileApp__item">
+            <div className="mobileApp__img">
+              <img src="https://thumb.tildacdn.com/tild3230-3837-4561-b931-303436346461/-/format/webp/Flat_white___.png" className="mobileApp__img__details" />
+            </div>
+          </div>
+          <div className="mobileApp__item">
+            <div className="info__items">
+              <div className="info__item">
+                <div className="info__item__title_img">
+                  <div className="info__item__title">Поиск станций на карте</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/65316432-3063-4537-b539-623663383731/Tilda_Icons_41_hotel_family.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text">
+                  Все локации отображены на карте в приложении.
+                </div>        
+              </div>
+              <div className="info__item">
+                <div className="info__item__title_img">
+                  <div className="info__item__title">Управляйте станциями</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/34313138-3432-4531-b432-623839666466/Tilda_Icons_30_system_settings.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text">
+                  Настраивайте работу станций по расписанию или по событию.
+                </div>        
+              </div>
+              <div className="info__item">
+                <div className="info__item__title_img">
+                  <div className="info__item__title">Бронирование ЭЗС</div>
+                  <img src="https://static.tildacdn.com/lib/tildaicon/61373835-3230-4732-a566-663366353936/5ev_magic.svg" className="svg__info"/>
+                </div>
+                <div className="info__item__text">
+                  Бронируйте время зарядки электромобиля.
+                </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+
+      <div className="home_section-carousel">
+          <div className="intro__rate">
+            <h3>Отзывы наших клиентов</h3>
+          </div>
+        <div className="containerB" style={{ position: "relative" }}>
+          <Slider1/>
+        </div>
+      </div>
+
+
+      <div className="home_section-bigIMG">
+        <div className="home_sectiom-bigIMG__items">
+          <div className="bigIMG__title">Развивайте инфраструктуру <br /> для электромобилей вместе с <br /> "EVION"</div>
+          <div className="bigIMG__text">Стоимость зарядной станции с установкой от 100 000сом</div>
+          <div className="bigIMG__button">Рассчитать стоимость</div>
+        </div>
+        <div className="greenBlock2">
+        </div>
+      </div>
+
+
     </div>
   );
 }
