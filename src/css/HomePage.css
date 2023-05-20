@@ -43,7 +43,6 @@
   font-family: "tildasans-thin";
 }
 
-
 .home_section-img {
   width: 900px;
   margin: 50px auto;
@@ -53,9 +52,9 @@
 }
 
 .home_section-img img {
-    width: 827px;
-    height: 423px;
-    object-fit: cover;
+  width: 827px;
+  height: 423px;
+  object-fit: cover;
 }
 
 .home_section-target {
@@ -63,7 +62,7 @@
   padding: 0px 0 100px 0;
 }
 
-.greenBlock{
+.greenBlock {
   position: absolute;
   top: 500px;
   z-index: -1;
@@ -105,13 +104,13 @@
   height: 65px;
 }
 
-.sertificate{
+.sertificate {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.sertificate__column{
+.sertificate__column {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,7 +123,7 @@
   justify-content: space-around;
 }
 
-.sertificate_container{
+.sertificate_container {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
@@ -178,4 +177,6 @@
 
 .item_card-1 {
   margin-top: 50px;
+}
+@media all and (max-width: 898px) {
 }

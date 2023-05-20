@@ -83,7 +83,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="home_section-project">
+      {/* <div className="home_section-project">
         <div className="home_section-project-title">
           <h2>Наши проекты</h2>
           <p>В данный момент мы реализуем следующие проекты</p>
@@ -103,14 +103,14 @@ function HomePage() {
               территории ТЦ "АЮ Гранд"
             </p>
           </div>
-          {/* <div className="item_card-2">
+          /* <div className="item_card-2">
             <h2>
               Установка станции на <br /> парковке БЦ 79
             </h2>
             <p>Установлено 2 станции по 120 квт. </p>
-          </div> */}
+          </div> *
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
