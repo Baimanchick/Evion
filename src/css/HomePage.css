@@ -49,7 +49,6 @@
   font-family: "tildasans-thin";
 }
 
-
 .home_section-img {
   width: 900px;
   margin: 50px auto;
@@ -59,9 +58,9 @@
 }
 
 .home_section-img img {
-    width: 827px;
-    height: 423px;
-    object-fit: cover;
+  width: 827px;
+  height: 423px;
+  object-fit: cover;
 }
 
 .home_section-target {
@@ -69,7 +68,7 @@
   padding: 0px 0 100px 0;
 }
 
-.greenBlock{
+.greenBlock {
   position: absolute;
   top: 500px;
   z-index: -1;
@@ -109,13 +108,13 @@
   height: 65px;
 }
 
-.sertificate{
+.sertificate {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.sertificate__column{
+.sertificate__column {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,7 +127,7 @@
   justify-content: space-around;
 }
 
-.sertificate_container{
+.sertificate_container {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
@@ -141,35 +140,34 @@
   font-family: "tildasans-reg";
 }
 
-.home_section-project-title{
+.home_section-project-title {
   width: 100%;
   text-align: center;
   margin-bottom: 90px;
 }
-.home_section-project-title h2{
+.home_section-project-title h2 {
   font-size: 42px;
   line-height: 1.23;
   font-family: "tildasans-reg";
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
-.home_section-project-title p{
+.home_section-project-title p {
   font-size: 24px;
   line-height: 1.5;
   text-align: center;
   font-family: "tildasans-thin";
 }
 
-.containerC{
+.containerC {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.containerB{
+.containerB {
   max-width: 1400px;
   margin: 0 35px;
 }
-
 
 .home_section-project {
   background-color: #e2dfdff7;
@@ -179,15 +177,14 @@
   width: 100%;
 }
 
-
-.home_section-how-we-works{
+.home_section-how-we-works {
   width: 100%;
   height: auto;
   background-color: white;
   padding-bottom: 15px;
 }
 
-.title__how-we-works{
+.title__how-we-works {
   font-size: 42px;
   line-height: 1.23;
   font-family: "tildasans-semibold";
@@ -197,14 +194,14 @@
   margin-bottom: 100px;
 }
 
-.how-we-works__items{
+.how-we-works__items {
   display: flex;
   justify-content: space-between;
   align-content: center;
   width: 100%;
 }
 
-.stepsBlock{
+.stepsBlock {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -215,12 +212,12 @@
   padding: 0;
 }
 
-.stepsAboveBlock{
+.stepsAboveBlock {
   display: flex;
   position: relative;
 }
 
-.steps__number{
+.steps__number {
   width: 34px;
   height: 34px;
   background-color: #222;
@@ -233,7 +230,7 @@
   color: white;
 }
 
-.steps__line{
+.steps__line {
   position: absolute;
   top: 17px;
   left: 20px;
@@ -242,20 +239,20 @@
   background-color: #e6e6e6;
 }
 
-.stepsContents{
+.stepsContents {
   width: 260px;
   height: 140px;
   margin-top: 20px;
 }
 
-.stepsContentsTitle{
+.stepsContentsTitle {
   font-size: 20px;
   line-height: 1.35;
   font-family: "tildasans-semibold";
   color: black;
 }
 
-.stepsContentsText{
+.stepsContentsText {
   margin-top: 16px;
   font-family: "tildasans-thin";
   color: #7a7a7a;
@@ -263,25 +260,24 @@
   font-size: 15px;
 }
 
-
-.cards{
+.cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.cards__item{
+.cards__item {
   background: white;
   height: 495px;
 }
 
-.cards__img{
+.cards__img {
   width: 360px;
   height: 252px;
   object-fit: cover;
 }
 
-.cards__typography{
+.cards__typography {
   background-color: white;
   padding: 30px;
   width: 100%;
@@ -289,7 +285,7 @@
   height: auto;
 }
 
-.cards__title{
+.cards__title {
   color: #222;
   margin-bottom: 10px;
   font-size: 24px;
@@ -297,7 +293,7 @@
   font-family: "tildasans-semibold";
 }
 
-.cards__text{
+.cards__text {
   font-size: 14px;
   line-height: 1.55;
   color: black;
@@ -305,14 +301,18 @@
   text-align: left;
 }
 
-.cards__img__special{
+.cards__img__special {
   width: 360px;
   height: 495px;
   object-fit: cover;
 }
 
-.blackBlock{
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.40));
+.blackBlock {
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4)
+  );
   padding-top: 0;
   position: absolute;
   top: 0;
@@ -321,11 +321,11 @@
   left: 0;
 }
 
-.cards__item__special{
+.cards__item__special {
   position: relative;
 }
 
-.cards__typography__special{
+.cards__typography__special {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -334,7 +334,7 @@
   background-color: transparent !important;
 }
 
-.cards__title__special{
+.cards__title__special {
   color: white;
   margin-bottom: 10px;
   font-size: 24px;
@@ -342,29 +342,21 @@
   font-family: "tildasans-semibold";
 }
 
-.cards__text__special{
+.cards__text__special {
   color: white;
   font-size: 14px;
   line-height: 1.55;
   font-family: "tildasans-thin";
 }
 
-
-
-
-
-
-
-.home_section-mobile_app{
+.home_section-mobile_app {
   background-color: #f2f7fa;
   width: 100%;
   height: auto;
   padding-bottom: 50px;
 }
 
-
-
-.mobileApp__title{
+.mobileApp__title {
   font-size: 42px;
   line-height: 1.23;
   margin-bottom: 40px;
@@ -374,7 +366,7 @@
   padding-top: 105px;
   width: 100%;
 }
-.mobileApp__text{
+.mobileApp__text {
   font-size: 24px;
   line-height: 1.55;
   font-family: "tildasans-thin";
@@ -382,45 +374,45 @@
   text-align: center;
 }
 
-.mobileApp__items{
+.mobileApp__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.mobileApp__img__details{
+.mobileApp__img__details {
   width: 600px;
   height: 540px;
   object-fit: cover;
 }
 
-.info__items{
+.info__items {
   display: flex;
   flex-direction: column;
   gap: 45px;
 }
 
-.svg__info{
+.svg__info {
   width: 20px;
   height: 20px;
 }
 
-.info__item__title_img{
+.info__item__title_img {
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 270px;
 }
 
-.info__item__title{
+.info__item__title {
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 22px;
   line-height: 1.35;
   color: #000000;
-  font-family: "tildasans-semibold";  
+  font-family: "tildasans-semibold";
 }
-.info__item__text{
+.info__item__text {
   font-size: 15px;
   line-height: 1.55;
   color: #7a7a7a;
@@ -429,8 +421,7 @@
   max-width: 240px;
 }
 
-
-.home_section-carousel{
+.home_section-carousel {
   width: 100%;
   height: auto;
   background-color: white;
@@ -438,23 +429,18 @@
   padding-bottom: 10px;
 }
 
-
-.intro__rate{
+.intro__rate {
   margin-bottom: 100px;
 }
 
-.intro__rate h3{
+.intro__rate h3 {
   font-size: 42px;
   line-height: 1.23;
   font-family: "tildasans-semibold";
   text-align: center;
 }
 
-
-
-
-
-.home_section-bigIMG{
+.home_section-bigIMG {
   background: url("https://thumb.tildacdn.com/tild3239-3366-4635-b765-666138303432/-/format/webp/zaryadnaya-staniya.jpg");
   width: 100%;
   height: 602px;
@@ -463,9 +449,13 @@
   position: relative;
 }
 
-.greenBlock2{
+.greenBlock2 {
   height: 602px;
-  background-image: -webkit-linear-gradient(top, rgba(41, 41, 41, 0.3), rgb(12, 92, 17));
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(41, 41, 41, 0.3),
+    rgb(12, 92, 17)
+  );
   width: 100%;
   position: absolute;
   top: 0;
@@ -473,7 +463,7 @@
   z-index: 1;
 }
 
-.home_sectiom-bigIMG__items{
+.home_sectiom-bigIMG__items {
   position: relative;
   z-index: 2;
   display: flex;
@@ -481,7 +471,7 @@
   align-items: center;
 }
 
-.bigIMG__title{
+.bigIMG__title {
   font-size: 42px;
   color: white;
   line-height: 1.23;
@@ -491,17 +481,17 @@
   padding-top: 160px;
 }
 
-.bigIMG__text{
+.bigIMG__text {
   font-size: 22px;
   line-height: 1.55;
-  opacity: 0.60;
+  opacity: 0.6;
   /* margin-top: 22px; */
   color: white;
   font-family: "tildasans-thin";
   text-align: center;
 }
 
-.bigIMG__button{
+.bigIMG__button {
   margin-top: 22px;
   cursor: pointer;
   color: white;
@@ -510,6 +500,6 @@
   outline: none;
   width: 222px;
   padding-top: 16px;
-  padding-bottom: 16px;  
+  padding-bottom: 16px;
   text-align: center;
 }

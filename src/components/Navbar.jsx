@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
+// import "../BurgerMenu";
 
 function Navbar() {
+  useEffect(() => {
+    const menuBtn = document.querySelector(".menu-btn");
+    let menuOpen = false;
+    menuBtn.addEventListener("click", () => {
+      if (!menuOpen) {
+        menuBtn.classList.add("open");
+        menuOpen = true;
+      } else {
+        menuBtn.classList.remove("open");
+        menuOpen = false;
+      }
+    });
+  });
   return (
     <header>
       <div class="header_left">
@@ -31,6 +45,10 @@ function Navbar() {
         <button href="#section-2" class="header_right-button">
           Рассчитать стоимость
         </button>
+      </div>
+      <h2 className="company-name__title">EVION</h2>
+      <div className="menu-btn">
+        <div className="menu-btn__burger"></div>
       </div>
     </header>
   );
