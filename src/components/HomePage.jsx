@@ -21,7 +21,7 @@ function HomePage() {
       <div className="greenBlock"></div>
       <div class="home_section-target">
         <div class="home_section-target-info">
-          <h2>Наша главная цель</h2>
+          <h1>Наша главная цель</h1>
           <div class="target_line">
             <span></span>
           </div>
