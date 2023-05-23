@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <header>
       <div className="header_left">
-        <ul className="nav-menu">
+        <ul>
           <li className="nav-item">
             <a href="#howitworks">Как мы работаем</a>
           </li>
