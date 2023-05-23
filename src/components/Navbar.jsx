@@ -34,10 +34,10 @@ function Navbar() {
           Рассчитать стоимость
         </button>
       </div>
-      <h2 className="nav-branding">EVION</h2>
+      {/* <h2 className="nav-branding">EVION</h2>
       <div className="menu-btn">
         <div className="menu-btn__burger"></div>
-      </div>
+      </div> */}
     </header>
   );
 }
