@@ -4,26 +4,26 @@ import Slider1 from "./Slider1";
 
 function HomePage() {
   return (
-    <div>
-      <div class="home_section">
-        <h1 class="home_section-tittle">
+    <div className="container_home">
+      <div className="home_section">
+        <h1 className="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
         </h1>
-        <p class="home_section-subtittle">
+        <p className="home_section-subtittle">
           Создание комфортных условий для владельцев электромобилей.
         </p>
       </div>
-      <div class="home_section-img">
+      <div className="home_section-img">
         <img
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
           alt=""
         />
       </div>
       <div className="greenBlock"></div>
-      <div class="home_section-target">
-        <div class="home_section-target-info">
+      <div className="home_section-target">
+        <div className="home_section-target-info">
           <h1>Наша главная цель</h1>
-          <div class="target_line">
+          <div className="target_line">
             <span></span>
           </div>
           <p>
@@ -33,12 +33,12 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div class="home_section-sertificate">
-        <div class="sertificate_container">
+      <div className="home_section-sertificate">
+        <div className="sertificate_container">
           <div className="sertificate">
             <div>
               <img
-                class="sertificate_container-logo"
+                className="sertificate_container-logo"
                 src="https://static.tildacdn.com/tild3035-3862-4135-b633-353266316437/6Artboard_34.svg"
                 alt=""
               />
@@ -64,7 +64,7 @@ function HomePage() {
           <div className="sertificate">
             <div>
               <img
-                class="sertificate_container-logo"
+                className="sertificate_container-logo"
                 src="https://static.tildacdn.com/lib/tildaicon/31643538-3131-4563-b735-636634373338/Tilda_Icons_47dlvr_speed.svg"
                 alt=""
               />
@@ -76,7 +76,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div class="sertificate_container-image">
+        <div className="sertificate_container-image">
           <img
             src="https://thumb.tildacdn.com/tild3537-3138-4435-a332-343530393433/-/resize/560x/-/format/webp/3c28f7470f0ec11cde19.png"
             alt=""
