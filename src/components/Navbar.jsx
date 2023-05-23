@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
 // import "../BurgerMenu";
-import "../css/BurgerMenu.css";
+// import "../css/BurgerMenu.css";
 
 function Navbar() {
   return (
