@@ -4,7 +4,7 @@ import Slider1 from "./Slider1";
 
 function HomePage() {
   return (
-    <div>
+    <div className="container">
       <div class="home_section">
         <h1 class="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"

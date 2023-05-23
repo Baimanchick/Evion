@@ -28,6 +28,10 @@
   margin: 0 auto;
 } */
 
+.container {
+  max-width: 1400px;
+}
+
 .home_section-tittle {
   padding-top: 8px;
   padding-bottom: 3px;
@@ -502,4 +506,44 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  .home_section-tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home_section-subtittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home_section-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 317px;
+  }
+  .home_section-sertificate {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .stepsBlock {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mobileApp__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stepsAboveBlock {
+    display: flex;
+  }
 }
