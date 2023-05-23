@@ -9,3 +9,5 @@
 //     menuOpen = false;
 //   }
 // });
+
+console.log("hello world");
