@@ -273,6 +273,8 @@
 .cards__item {
   background: white;
   height: 495px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .cards__img {
@@ -284,8 +286,8 @@
 .cards__typography {
   background-color: white;
   padding: 30px;
-  width: 100%;
-  max-width: 350px;
+  /* width: 100%; */
+  max-width: 360px;
   height: auto;
 }
 

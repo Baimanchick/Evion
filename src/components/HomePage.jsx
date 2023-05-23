@@ -19,12 +19,12 @@ function HomePage() {
   };
 
   return (
-    <div className="container_home">
-      <div className="home_section">
-        <h1 className="home_section-tittle">
+    <div>
+      <div class="home_section">
+        <h1 class="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
         </h1>
-        <p className="home_section-subtittle">
+        <p class="home_section-subtittle">
           Создание комфортных условий для владельцев электромобилей.
         </p>
       </div>
@@ -60,10 +60,10 @@ function HomePage() {
         />
       </div>
       <div className="greenBlock"></div>
-      <div className="home_section-target">
-        <div className="home_section-target-info">
+      <div class="home_section-target">
+        <div class="home_section-target-info">
           <h1>Наша главная цель</h1>
-          <div className="target_line">
+          <div class="target_line">
             <span></span>
           </div>
           <p>
@@ -73,12 +73,12 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div className="home_section-sertificate">
-        <div className="sertificate_container">
+      <div class="home_section-sertificate">
+        <div class="sertificate_container">
           <div className="sertificate">
             <div>
               <img
-                className="sertificate_container-logo"
+                class="sertificate_container-logo"
                 src="https://static.tildacdn.com/tild3035-3862-4135-b633-353266316437/6Artboard_34.svg"
                 alt=""
               />
@@ -104,7 +104,7 @@ function HomePage() {
           <div className="sertificate">
             <div>
               <img
-                className="sertificate_container-logo"
+                class="sertificate_container-logo"
                 src="https://static.tildacdn.com/lib/tildaicon/31643538-3131-4563-b735-636634373338/Tilda_Icons_47dlvr_speed.svg"
                 alt=""
               />
@@ -116,7 +116,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="sertificate_container-image">
+        <div class="sertificate_container-image">
           <img
             src="https://thumb.tildacdn.com/tild3537-3138-4435-a332-343530393433/-/resize/560x/-/format/webp/3c28f7470f0ec11cde19.png"
             alt=""
@@ -549,10 +549,7 @@ function HomePage() {
               </div>
               <div className="footer__info__social">
                 <ion-icon name="logo-facebook"></ion-icon>
-                <a href="https://instagram.com/evion_kg?igshid=MzRlODBiNWFlZA==">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                {/* <ion-icon name="logo-instagram"></ion-icon> */}
+                <ion-icon name="logo-instagram"></ion-icon>
                 <ion-icon name="logo-youtube"></ion-icon>
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </div>
