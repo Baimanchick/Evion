@@ -22,7 +22,7 @@ function HomePage() {
 
 
   return (
-    <div className="container">
+    <div>
       <div class="home_section">
         <h1 class="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"

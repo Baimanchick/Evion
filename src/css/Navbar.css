@@ -117,11 +117,11 @@ header {
   border: none;
 }
 
-.nav-branding {
+/* .nav-branding {
   display: none;
-}
-@media screen and (max-width: 975px) {
+} */
+/* @media screen and (max-width: 975px) {
   header {
     position: relative;
   }
-}
+} */
