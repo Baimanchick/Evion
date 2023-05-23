@@ -209,7 +209,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
@@ -273,6 +273,8 @@
 .cards__item {
   background: white;
   height: 495px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .cards__img {
@@ -284,8 +286,8 @@
 .cards__typography {
   background-color: white;
   padding: 30px;
-  width: 100%;
-  max-width: 350px;
+  /* width: 100%; */
+  max-width: 360px;
   height: auto;
 }
 
@@ -489,7 +491,7 @@
   font-size: 22px;
   line-height: 1.55;
   opacity: 0.6;
-  /* margin-top: 22px; */
+  margin-top: 22px;
   color: white;
   font-family: "tildasans-thin";
   text-align: center;
@@ -996,6 +998,10 @@ ion-icon {
   width: 50px;
   height: 150px;
   position: relative;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 950px) {
