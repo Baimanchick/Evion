@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/HomePage.css";
 import Slider1 from "./Slider1";
+import Slider2 from "./Slider2";
+
+import { ReactComponent as CloseSvg } from '../images/close-outline.svg';
+import { ReactComponent as ChatSvg } from '../images/chatbubble-ellipses-outline.svg';
+
 
 function HomePage() {
+
+  const [ hasContent, setHasContent ] = useState(false);
+  const [ hasContent2, setHasContent2 ] = useState(false);
+  const [ hasContent3, setHasContent3 ] = useState(false);
+  const [ hasContent4, setHasContent4 ] = useState(false);
+
+  const [ message, setMessage ] = useState(false);
+
+  const handleInputBefore = () => {
+    console.log("before")
+  }
+
+
   return (
-    <div className="container">
+    <div>
       <div class="home_section">
         <h1 class="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
@@ -13,6 +31,30 @@ function HomePage() {
           Создание комфортных условий для владельцев электромобилей.
         </p>
       </div>
+
+      <div className="notification" onClick={() => setMessage(!message)}>
+        <div style={{ position: "absolute", bottom: "45%" }}>
+          { message ? (
+              <div className="communication">
+                <div className="whatsapp animate__fadeIn">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <div className="call animate__fadeIn">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+              </div>
+            ) : 
+                null }
+        </div>
+        <label>
+          { message ? (
+            <CloseSvg className={`close ${message == true ? ("animated") : ("")}`}/>
+          ) : (
+            <ChatSvg className={`chat ${message == false ? ("animated") : ("")}`}/>
+          ) }
+        </label>
+      </div>
+
       <div class="home_section-img">
         <img
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
@@ -233,7 +275,7 @@ function HomePage() {
                     Получайте моментальные оповещения о новой локации ЭЗС
                   </div>
                 </div>
-                <div className="info__item">
+                <div className="info__item">                                                                                                      
                   <div
                     className="info__item__title_img"
                     style={{ justifyContent: "flex-end" }}
@@ -352,6 +394,114 @@ function HomePage() {
         </div>
         <div className="greenBlock2"></div>
       </div>
+
+
+      <div className="home_section-form">
+        <div className="containerC">
+          <div className="form_block__title">
+            Рассчитайте стоимость <br /> электрозарядной станции
+          </div>
+          <div className="form_block__description">
+            Стоимость станции будет зависеть от количества необходимых вам функций
+          </div>
+          <div className="form_block__items">
+            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent(true)) : (setHasContent(false))}  className={`input ${hasContent ? ( "hasContent" ) : ("")}`} />
+            <label className="l1">Ваше имя</label>
+            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent2(true)) : (setHasContent2(false))}  className={`input2 ${hasContent2 ? ( "hasContent2" ) : ("")}`} />
+            <label className="l2">Ваше E-mail</label>
+            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent3(true)) : (setHasContent3(false))}  className={`input3 ${hasContent3 ? ( "hasContent3" ) : ("")}`} />
+            <label className="l3">Объём(квт)</label>
+            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent4(true)) : (setHasContent4(false))} className={`input4 ${hasContent4 ? ( "hasContent4" ) : ("")}`} />
+            <label className="l4">Адрес</label>
+            <button>Получить предложение</button>
+            <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных <br /> <span>и соглашаетесь c политикой конфиденциальности</span></p>
+          </div>
+        </div> 
+      </div>
+
+
+      <div className="home_section-partners">
+        <div className="containerC">
+          <div className="parthers__items">
+            <div className="parthers__title">Партнеры</div>
+            <div className="parthers__text">Совместными усилиями мы достигнем новых вершин</div>
+            <div className="pathers__logo">
+              <Slider2/>
+            </div>
+            <div className="parthers__block">
+              <div className="parthers__left">
+                <span>17 целей для преобразования нашего мира</span>
+                <h3>Вклад в достижение 17 ЦУР ООН</h3>
+                <p>Компания "EVION" оказывает влияние на достижение 5 из 17 целей <span style={{ color: "#ff8562", letterSpacing: "normal", fontFamily: "tildasans-thin", fontSize: "18px", lineHeight: "1.55" }}>устойчивого развития ООН (ЦУР)</span> через реализацию своей деятельности, а также обеспечивая устойчивость внутренних процессов в области воздействия на окружающую среду, социальной сферы и качества управления.</p>
+              </div>
+              <div className="parthers__right">
+                <img src="https://thumb.tildacdn.com/tild3236-3739-4238-b835-653634393061/-/format/webp/___1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="home-section_footer">
+        <div className="containerC">
+          <div className="footer__title">Контакты</div>
+          <div className="footer__text">Поддержите развитие зеленых технологий...</div>
+          <div className="footer__items">
+            <ul className="navigation__footer">
+              <li>Реквизиты</li>
+              <li style={{ fontSize: "16px" }}>ОсОО "ЭВИОН"</li>
+              <li style={{ fontSize: "16px" }}>ИНН 01403202310108</li>
+              <li style={{ fontSize: "16px" }}>ОКПО 31829086</li>
+              <li style={{ fontSize: "16px" }}>Айыл Банк</li>
+              <li style={{ fontSize: "16px" }}>Р/счет 1350150020000942</li>
+              <li style={{ fontSize: "16px" }}>Халык Банк</li>
+              <li style={{ fontSize: "16px" }}>Рас./счёт: 1250820101119963</li>
+              <li style={{ fontSize: "16px" }}>БИК:125008</li>
+            </ul>
+            <ul className="navigation__footer">
+              <li>Адрес</li>
+              <li>Кыргызская Республика"</li>
+              <li>г. Бишкек</li>
+              <li>Головной офис:</li>
+              <li>ул. Панфилова 178.</li>
+              <li>7 этаж, 713 кабинет</li>
+              <li>Центр электромобилей:</li>
+              <li>ул. Анкара 1/16/1</li>
+            </ul>
+            <ul className="navigation__footer">
+              <li>Контакты</li>
+              <li>+996 500 333 351"</li>
+              <li>(WhatsApp)</li>
+              <li>+996 500 333 351</li>
+              <li style={{ color: "#ff8562" }}>www.evion.kg</li>
+              <li>evionkg@gmail.com</li>
+            </ul>
+            <ul className="navigation__footer">
+              <li>Наша миссия</li>
+               <p>Миссия проекта – обеспечить быстрое, экологичное и экономичное передвижение по дорогам Кыргызстана, сделать возможным беспрепятственное путешествие от Нарына до Баткена на электромобиле.</p>
+            </ul>
+          </div>
+        </div>
+        <div className="footer__end">
+          <div className="containerC">
+            <div className="footer__info__items">
+              <div className="footer__info__y">
+                © 2023 EVION
+                <span>политика конфиденциальности</span>
+              </div>
+              <div className="footer__info__social">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon> 
+                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 }
