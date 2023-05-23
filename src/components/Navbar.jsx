@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
 // import "../BurgerMenu";
+import "../css/BurgerMenu.css";
 
 function Navbar() {
   return (
@@ -33,12 +34,10 @@ function Navbar() {
           Рассчитать стоимость
         </button>
       </div>
-      {/* <h2 className="nav-branding">EVION</h2> */}
-      <div className="hamburger">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
+      {/* <h2 className="nav-branding">EVION</h2>
+      <div className="menu-btn">
+        <div className="menu-btn__burger"></div>
+      </div> */}
     </header>
   );
 }

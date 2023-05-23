@@ -116,11 +116,12 @@ header {
   margin-left: 10px;
   border: none;
 }
-.nav-branding {
+
+/* .nav-branding {
   display: none;
-}
-@media (max-width: 900px) {
-  .container_home {
-    width: 100%;
+} */
+/* @media screen and (max-width: 975px) {
+  header {
+    position: relative;
   }
-}
+} */
