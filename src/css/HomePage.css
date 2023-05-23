@@ -1037,3 +1037,11 @@ ion-icon {
     display: flex;
   }
 }
+@media (max-width: 960px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+}
