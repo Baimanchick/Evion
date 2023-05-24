@@ -1051,3 +1051,19 @@ a {
     row-gap: 35px;
   }
 }
+
+@media (max-width: 840px) {
+  .home_section-img img {
+    width: 700px;
+    height: 600px;
+    object-fit: contain;
+  }
+  .greenBlock {
+    position: absolute;
+    top: 500px;
+    z-index: -1;
+    background-color: #f2f7fa;
+    left: 0;
+    right: 0;
+  }
+}
