@@ -27,6 +27,9 @@ function Navbar() {
         <a href="#" component={Link} to="/">
           EVION
         </a>
+        <div className="burger" style={{ display: "none" }}>
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
       </div>
       <div className="header_right">
         <a href="tel:+996500333351">+996 500 333351</a>
