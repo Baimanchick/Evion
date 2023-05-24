@@ -24,9 +24,9 @@ function HomePage() {
   return (
     <div>
       <div class="home_section">
-        <h1 class="home_section-tittle">
+        <div class="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
-        </h1>
+        </div>
         <p class="home_section-subtittle">
           Создание комфортных условий для владельцев электромобилей.
         </p>
