@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "tildasans-reg";
-  src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-med";
-  src: url("../fonts/TildaSans-Bold.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-semibold";
-  src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-thin";
-  src: url("../fonts/TildaSans-Light.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* .container__main{
   max-width: 1400px;
   margin: 0 auto;
@@ -853,9 +828,10 @@
   font-family: "tildasans-thin";
 }
 
-.footer__info__y span {
+.footer__info__y a {
   font-family: "tildasans-thin";
   text-decoration: underline;
+  color: #fff;
 }
 
 .footer__info__social {

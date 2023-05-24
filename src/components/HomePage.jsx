@@ -5,6 +5,7 @@ import Slider2 from "./Slider2";
 
 import { ReactComponent as CloseSvg } from "../images/close-outline.svg";
 import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline.svg";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -124,7 +125,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="home_section-how-we-works">
+      <div id="section-1" className="home_section-how-we-works">
         <div className="title__how-we-works">Как мы работаем</div>
         <div className="how-we-works__items">
           <div className="stepsBlock">
@@ -246,7 +247,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="home_section-mobile_app">
+      <div id="section-2" className="home_section-mobile_app">
         <div className="mobileApp__title">
           Гибкое и легкое управление <br /> через приложение
         </div>
@@ -393,7 +394,7 @@ function HomePage() {
         <div className="greenBlock2"></div>
       </div>
 
-      <div className="home_section-form">
+      <div id="section-4" className="home_section-form">
         <div className="containerC">
           <div className="form_block__title">
             Рассчитайте стоимость <br /> электрозарядной станции
@@ -493,7 +494,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="home-section_footer">
+      <div id="section-3" className="home-section_footer">
         <div className="containerC">
           <div className="footer__title">Контакты</div>
           <div className="footer__text">
@@ -545,7 +546,7 @@ function HomePage() {
             <div className="footer__info__items">
               <div className="footer__info__y">
                 © 2023 EVION
-                <span>политика конфиденциальности</span>
+                <a href="/prvacy">политика конфиденциальности</a>
               </div>
               <div className="footer__info__social">
                 <ion-icon name="logo-facebook"></ion-icon>
