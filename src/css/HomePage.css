@@ -844,7 +844,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 15px 40px 15px;
 }
 
 .footer__info__y {
@@ -1045,8 +1045,6 @@ a {
 }
 
 
-
-
 @media screen and (max-width: 420px){
   header{
     width: 100%;
@@ -1059,56 +1057,90 @@ a {
     align-items: center;
     background-color: #000000;
   }
-  .header_left{
+  .header_left {
     display: none;
   }
-  .header_right{
+  .header_right {
     display: none;
   }
-  .header_logo{
+  .header_logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .header_logo a{
+  .header_logo a {
     color: #fff;
     font-size: 16px;
     line-height: 1.35;
     font-family: "tildasans-semibold";
   }
-  .burger{
+  .burger {
     display: block !important;
     padding-right: 5px;
   }
-  .burger ion-icon{
+  .burger ion-icon {
     color: white;
     font-size: 40px;
   }
-  .home_section{
+  .home_section {
     /* padding-bottom: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .home_section-img img{
+  .home_section-img img {
     width: 300px;
     height: 153px;
     object-fit: contain;
   }
-  .home_section-tittle{
+  .home_section-tittle {
     max-width: 350px;
     font-size: 54px;
   }
-  .home_section-subtittle{
+  .home_section-subtittle {
     font-size: 20px;
     max-width: 350px;
   }
-  .greenBlock{
+  .greenBlock {
     position: absolute;
     top: 620px;
   }
+  .footer__items {
+    display: flex;
+    flex-wrap: wrap;
+    /* row-gap: 30px; */
+    flex-direction: column;
+  }
+  .navigation__footer {
+    margin: 0px 25px 85px 25px;
+  }
+  .navigation__footer li {
+    font-size: 16px;
+  }
+  /* .containerC {
+    padding: 0px 20px 0px 20px;
+  } */
+  .footer__info__y {
+    font-size: 12px;
+  }
+  .parthers__block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+  }
+  .parthers__right img {
+    width: 350px;
+    height: 280px;
+    object-fit: contain;
+  }
+  .parthers__right span {
+    font-size: 10px;
+  }
+}
   .home_section-target-info{
     display: flex;
     justify-content: center;
