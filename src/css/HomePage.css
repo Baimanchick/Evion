@@ -1044,9 +1044,8 @@ a {
   }
 }
 
-
-@media screen and (max-width: 420px){
-  header{
+@media screen and (max-width: 420px) {
+  header {
     width: 100%;
     min-height: 64px;
     padding: 10px;
@@ -1148,159 +1147,158 @@ a {
     font-size: 24px;
   }
 }
-  .home_section-target-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .home_section-target-info h1{
-    font-family: "tildasans-semibold";
-    margin-bottom: 25px;
-  }
-  .home_section-target-info p {
-    font-family: "tildasans-thin";
-    text-align: center;
-    font-size: 24px;
-    max-width: 350px;
-  }
-  .sertificate_container-image img{
-    width: 350px;
-    height: 186px;
-    object-fit: cover;
-  }
-  .sertificate_container-image{
-    margin-bottom: 75px;
-  }
-  .title__how-we-works{
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-  .stepsBlock__items{
-    display: flex;
-    justify-content: space-between;
-  }
-  .steps__line{
-    position: absolute;
-    top: 17px;
-    left: 35px;
-    width: 2px;
-    height: 158px;
-    background-color: #e6e6e6;
-  }
-  .stepsAboveBlock{
-    padding-left: 20px;
-  }
-  .stepsContents{
-    margin-top: 0;
-    padding-left: 22px;
-  }
-  .stepsContentsTitle{
-    font-size: 16px;
-    display: block;
-    width: 291px;
-  }
-  .stepsContentsText{
-    font-size: 12px;
-    margin-top: 8px;
-    width: 291px;
-  }
-  .home_section-project{
-    padding-top: 90px;
-    margin-top: 0px;
-    padding-bottom: 90px;
-    background-color: #ededed;
-  }
-  .home_section-project-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 75px;
-  }
-  .home_section-project-title h2{
-    font-size: 30px;
-    font-family: "tildasans-semibold";
-  }
-  .home_section-project-title p {
-    font-size: 20px;
-    width: 350px;
-  }
-  .cards{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
-  }
-  .cards__title{
-    font-size: 20px;
-    width: 290px;
-  }
-  .cards__text{
-    font-size: 12px;
-    width: 290px;
-    line-height: 1.55;
-  }
-  .home_section-mobile_app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .mobileApp__title{
-    font-size: 30px;
-    width: 350px;
-  }
-  .mobileApp__text{
-    font-size: 20px;
-    padding-bottom: 75px;
-  }
-  .mobileApp__item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-  }
-  .info__items{
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-    align-items: flex-start;
-  }
-  .info__item__title_img{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 18px;
-  }
-  .info__item__title{
-    font-size: 18px;
-    padding-left: 20px;
-  }
-  .info__item__text{
-    text-align: left !important;
-    font-size: 12px;
-    max-width: 303px;
-    margin-left: 40px;
-  }
-  .info__item{
-    margin-left: 20px;
-  }
-  .mobileApp__img img{
-    padding: 0px 30px 0px 60px;
-    width: 300px;
-    height: 255px;
-  }
-  .carousel__content p{
-    margin-left: 0 !important;
-  }
-  .names{
-    margin-left: 0 !important;
-  }
-  .info__electro{
-    margin-left: 0 !important;
-  }
+.home_section-target-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home_section-target-info h1 {
+  font-family: "tildasans-semibold";
+  margin-bottom: 25px;
+}
+.home_section-target-info p {
+  font-family: "tildasans-thin";
+  text-align: center;
+  font-size: 24px;
+  max-width: 350px;
+}
+.sertificate_container-image img {
+  width: 350px;
+  height: 186px;
+  object-fit: cover;
+}
+.sertificate_container-image {
+  margin-bottom: 75px;
+}
+.title__how-we-works {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.stepsBlock__items {
+  display: flex;
+  justify-content: space-between;
+}
+.steps__line {
+  position: absolute;
+  top: 17px;
+  left: 35px;
+  width: 2px;
+  height: 158px;
+  background-color: #e6e6e6;
+}
+.stepsAboveBlock {
+  padding-left: 20px;
+}
+.stepsContents {
+  margin-top: 0;
+  padding-left: 22px;
+}
+.stepsContentsTitle {
+  font-size: 16px;
+  display: block;
+  width: 291px;
+}
+.stepsContentsText {
+  font-size: 12px;
+  margin-top: 8px;
+  width: 291px;
+}
+.home_section-project {
+  padding-top: 90px;
+  margin-top: 0px;
+  padding-bottom: 90px;
+  background-color: #ededed;
+}
+.home_section-project-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+.home_section-project-title h2 {
+  font-size: 30px;
+  font-family: "tildasans-semibold";
+}
+.home_section-project-title p {
+  font-size: 20px;
+  width: 350px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.cards__title {
+  font-size: 20px;
+  width: 290px;
+}
+.cards__text {
+  font-size: 12px;
+  width: 290px;
+  line-height: 1.55;
+}
+.home_section-mobile_app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobileApp__title {
+  font-size: 30px;
+  width: 350px;
+}
+.mobileApp__text {
+  font-size: 20px;
+  padding-bottom: 75px;
+}
+.mobileApp__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+}
+.info__items {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: flex-start;
+}
+.info__item__title_img {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+}
+.info__item__title {
+  font-size: 18px;
+  padding-left: 20px;
+}
+.info__item__text {
+  text-align: left !important;
+  font-size: 12px;
+  max-width: 303px;
+  margin-left: 40px;
+}
+.info__item {
+  margin-left: 20px;
+}
+.mobileApp__img img {
+  padding: 0px 30px 0px 60px;
+  width: 300px;
+  height: 255px;
+}
+.carousel__content p {
+  margin-left: 0 !important;
+}
+.names {
+  margin-left: 0 !important;
+}
+.info__electro {
+  margin-left: 0 !important;
 }
