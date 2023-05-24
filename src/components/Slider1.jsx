@@ -34,16 +34,9 @@ function Slider1() {
             Месяц назад установили быструю зарядную станцию возле моего
             магазина. Инженер грамотный, сделал все аккуратно.
           </p>
-          <div>Тынчтык Дыйканбаев. Компания "ЭлАвто"</div>
+          <div className="names">Тынчтык Дыйканбаев. Компания "ЭлАвто"</div>
           <div
-            style={{
-              color: "#7a7a7a",
-              fontSize: "14px",
-              lineHeight: "1.55",
-              fontFamily: "tildasans-thin",
-              textAlign: "center",
-              marginLeft: "35px",
-            }}
+            className="electro"
           >
             Зарядная станция 40 квт
           </div>
@@ -56,17 +49,10 @@ function Slider1() {
             приложение очень удобное и было бы здорово если подключили бы способ
             оплаты через карты.
           </p>
-          <div>Анна Полякова</div>
+          <div className="names">Анна Полякова</div>
           <div
             style={{
-              color: "#7a7a7a",
-              fontSize: "14px",
-              lineHeight: "1.55",
-              fontFamily: "tildasans-thin",
-              textAlign: "center",
-              marginLeft: "35px",
-            }}
-          >
+              }} className="electro">
             Быстрая зарядная станция 120квт
           </div>
         </div>
