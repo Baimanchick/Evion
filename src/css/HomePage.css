@@ -1043,3 +1043,66 @@ a {
     display: flex;
   }
 }
+@media screen and (max-width: 400px){
+  header{
+    width: 100%;
+    min-height: 64px;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  .header_left{
+    display: none;
+  }
+  .header_right{
+    display: none;
+  }
+  .header_logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .header_logo a{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.35;
+    font-family: "tildasans-semibold";
+  }
+  .burger{
+    display: block !important;
+    padding-right: 5px;
+  }
+  .burger ion-icon{
+    color: white;
+    font-size: 40px;
+  }
+  .home_section{
+    /* padding-bottom: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home_section-img img{
+    width: 300px;
+    height: 153px;
+    object-fit: contain;
+  }
+  .home_section-tittle{
+    max-width: 350px;
+    font-size: 54px;
+  }
+  .home_section-subtittle{
+    font-size: 20px;
+    max-width: 350px;
+  }
+  .greenBlock{
+    position: absolute;
+    top: 620px;
+  }
+}
