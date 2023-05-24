@@ -1119,9 +1119,6 @@ a {
   .navigation__footer li {
     font-size: 16px;
   }
-  /* .containerC {
-    padding: 0px 20px 0px 20px;
-  } */
   .footer__info__y {
     font-size: 12px;
   }
@@ -1140,7 +1137,6 @@ a {
   .parthers__right span {
     font-size: 10px;
   }
-}
   .home_section-target-info{
     display: flex;
     justify-content: center;
