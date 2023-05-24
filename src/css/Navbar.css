@@ -48,7 +48,7 @@
   display: flex;
   padding-right: 5px;
 }
-.header_left-item a {
+.nav-item a {
   font-size: 16px;
   text-decoration: none;
   margin-left: 25px;

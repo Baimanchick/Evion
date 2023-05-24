@@ -3,23 +3,20 @@ import "../css/HomePage.css";
 import Slider1 from "./Slider1";
 import Slider2 from "./Slider2";
 
-import { ReactComponent as CloseSvg } from '../images/close-outline.svg';
-import { ReactComponent as ChatSvg } from '../images/chatbubble-ellipses-outline.svg';
-
+import { ReactComponent as CloseSvg } from "../images/close-outline.svg";
+import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline.svg";
 
 function HomePage() {
+  const [hasContent, setHasContent] = useState(false);
+  const [hasContent2, setHasContent2] = useState(false);
+  const [hasContent3, setHasContent3] = useState(false);
+  const [hasContent4, setHasContent4] = useState(false);
 
-  const [ hasContent, setHasContent ] = useState(false);
-  const [ hasContent2, setHasContent2 ] = useState(false);
-  const [ hasContent3, setHasContent3 ] = useState(false);
-  const [ hasContent4, setHasContent4 ] = useState(false);
-
-  const [ message, setMessage ] = useState(false);
+  const [message, setMessage] = useState(false);
 
   const handleInputBefore = () => {
-    console.log("before")
-  }
-
+    console.log("before");
+  };
 
   return (
     <div>
@@ -34,24 +31,25 @@ function HomePage() {
 
       <div className="notification" onClick={() => setMessage(!message)}>
         <div style={{ position: "absolute", bottom: "45%" }}>
-          { message ? (
-              <div className="communication">
-                <div className="whatsapp animate__fadeIn">
-                  <ion-icon name="logo-whatsapp"></ion-icon>
-                </div>
-                <div className="call animate__fadeIn">
-                  <ion-icon name="call-outline"></ion-icon>
-                </div>
+          {message ? (
+            <div className="communication">
+              <div className="whatsapp animate__fadeIn">
+                <ion-icon name="logo-whatsapp"></ion-icon>
               </div>
-            ) : 
-                null }
+              <div className="call animate__fadeIn">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+            </div>
+          ) : null}
         </div>
         <label>
-          { message ? (
-            <CloseSvg className={`close ${message == true ? ("animated") : ("")}`}/>
+          {message ? (
+            <CloseSvg
+              className={`close ${message == true ? "animated" : ""}`}
+            />
           ) : (
-            <ChatSvg className={`chat ${message == false ? ("animated") : ("")}`}/>
-          ) }
+            <ChatSvg className={`chat ${message == false ? "animated" : ""}`} />
+          )}
         </label>
       </div>
 
@@ -275,7 +273,7 @@ function HomePage() {
                     Получайте моментальные оповещения о новой локации ЭЗС
                   </div>
                 </div>
-                <div className="info__item">                                                                                                      
+                <div className="info__item">
                   <div
                     className="info__item__title_img"
                     style={{ justifyContent: "flex-end" }}
@@ -395,44 +393,97 @@ function HomePage() {
         <div className="greenBlock2"></div>
       </div>
 
-
       <div className="home_section-form">
         <div className="containerC">
           <div className="form_block__title">
             Рассчитайте стоимость <br /> электрозарядной станции
           </div>
           <div className="form_block__description">
-            Стоимость станции будет зависеть от количества необходимых вам функций
+            Стоимость станции будет зависеть от количества необходимых вам
+            функций
           </div>
           <div className="form_block__items">
-            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent(true)) : (setHasContent(false))}  className={`input ${hasContent ? ( "hasContent" ) : ("")}`} />
+            <input
+              type="text"
+              onChange={(e) =>
+                e.target.value != ""
+                  ? setHasContent(true)
+                  : setHasContent(false)
+              }
+              className={`input ${hasContent ? "hasContent" : ""}`}
+            />
             <label className="l1">Ваше имя</label>
-            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent2(true)) : (setHasContent2(false))}  className={`input2 ${hasContent2 ? ( "hasContent2" ) : ("")}`} />
+            <input
+              type="text"
+              onChange={(e) =>
+                e.target.value != ""
+                  ? setHasContent2(true)
+                  : setHasContent2(false)
+              }
+              className={`input2 ${hasContent2 ? "hasContent2" : ""}`}
+            />
             <label className="l2">Ваше E-mail</label>
-            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent3(true)) : (setHasContent3(false))}  className={`input3 ${hasContent3 ? ( "hasContent3" ) : ("")}`} />
+            <input
+              type="text"
+              onChange={(e) =>
+                e.target.value != ""
+                  ? setHasContent3(true)
+                  : setHasContent3(false)
+              }
+              className={`input3 ${hasContent3 ? "hasContent3" : ""}`}
+            />
             <label className="l3">Объём(квт)</label>
-            <input type="text" onChange={(e) => e.target.value != "" ? (setHasContent4(true)) : (setHasContent4(false))} className={`input4 ${hasContent4 ? ( "hasContent4" ) : ("")}`} />
+            <input
+              type="text"
+              onChange={(e) =>
+                e.target.value != ""
+                  ? setHasContent4(true)
+                  : setHasContent4(false)
+              }
+              className={`input4 ${hasContent4 ? "hasContent4" : ""}`}
+            />
             <label className="l4">Адрес</label>
             <button>Получить предложение</button>
-            <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных <br /> <span>и соглашаетесь c политикой конфиденциальности</span></p>
+            <p>
+              Нажимая на кнопку, вы даете согласие на обработку персональных
+              данных <br />{" "}
+              <span>и соглашаетесь c политикой конфиденциальности</span>
+            </p>
           </div>
-        </div> 
+        </div>
       </div>
-
 
       <div className="home_section-partners">
         <div className="containerC">
           <div className="parthers__items">
             <div className="parthers__title">Партнеры</div>
-            <div className="parthers__text">Совместными усилиями мы достигнем новых вершин</div>
+            <div className="parthers__text">
+              Совместными усилиями мы достигнем новых вершин
+            </div>
             <div className="pathers__logo">
-              <Slider2/>
+              <Slider2 />
             </div>
             <div className="parthers__block">
               <div className="parthers__left">
                 <span>17 целей для преобразования нашего мира</span>
                 <h3>Вклад в достижение 17 ЦУР ООН</h3>
-                <p>Компания "EVION" оказывает влияние на достижение 5 из 17 целей <span style={{ color: "#ff8562", letterSpacing: "normal", fontFamily: "tildasans-thin", fontSize: "18px", lineHeight: "1.55" }}>устойчивого развития ООН (ЦУР)</span> через реализацию своей деятельности, а также обеспечивая устойчивость внутренних процессов в области воздействия на окружающую среду, социальной сферы и качества управления.</p>
+                <p>
+                  Компания "EVION" оказывает влияние на достижение 5 из 17 целей{" "}
+                  <span
+                    style={{
+                      color: "#ff8562",
+                      letterSpacing: "normal",
+                      fontFamily: "tildasans-thin",
+                      fontSize: "18px",
+                      lineHeight: "1.55",
+                    }}
+                  >
+                    устойчивого развития ООН (ЦУР)
+                  </span>{" "}
+                  через реализацию своей деятельности, а также обеспечивая
+                  устойчивость внутренних процессов в области воздействия на
+                  окружающую среду, социальной сферы и качества управления.
+                </p>
               </div>
               <div className="parthers__right">
                 <img src="https://thumb.tildacdn.com/tild3236-3739-4238-b835-653634393061/-/format/webp/___1.png" />
@@ -442,11 +493,12 @@ function HomePage() {
         </div>
       </div>
 
-
       <div className="home-section_footer">
         <div className="containerC">
           <div className="footer__title">Контакты</div>
-          <div className="footer__text">Поддержите развитие зеленых технологий...</div>
+          <div className="footer__text">
+            Поддержите развитие зеленых технологий...
+          </div>
           <div className="footer__items">
             <ul className="navigation__footer">
               <li>Реквизиты</li>
@@ -479,7 +531,12 @@ function HomePage() {
             </ul>
             <ul className="navigation__footer">
               <li>Наша миссия</li>
-               <p>Миссия проекта – обеспечить быстрое, экологичное и экономичное передвижение по дорогам Кыргызстана, сделать возможным беспрепятственное путешествие от Нарына до Баткена на электромобиле.</p>
+              <p>
+                Миссия проекта – обеспечить быстрое, экологичное и экономичное
+                передвижение по дорогам Кыргызстана, сделать возможным
+                беспрепятственное путешествие от Нарына до Баткена на
+                электромобиле.
+              </p>
             </ul>
           </div>
         </div>
@@ -492,7 +549,7 @@ function HomePage() {
               </div>
               <div className="footer__info__social">
                 <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon> 
+                <ion-icon name="logo-instagram"></ion-icon>
                 <ion-icon name="logo-youtube"></ion-icon>
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </div>
@@ -500,8 +557,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 }
