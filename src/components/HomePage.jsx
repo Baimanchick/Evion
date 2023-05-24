@@ -6,6 +6,7 @@ import Slider2 from "./Slider2";
 import { ReactComponent as CloseSvg } from "../images/close-outline.svg";
 import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline.svg";
 import { Link } from "react-router-dom";
+import Slider3 from "./Slider3";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -462,7 +463,12 @@ function HomePage() {
               Совместными усилиями мы достигнем новых вершин
             </div>
             <div className="pathers__logo">
-              <Slider2 />
+              <div className="slider2">
+                <Slider2/>
+              </div>
+              <div className="slider3">
+                <Slider3/>
+              </div>
             </div>
             <div className="parthers__block">
               <div className="parthers__left">
