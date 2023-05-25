@@ -15,6 +15,8 @@ function AdminPage() {
 
   console.log(spamsDB)
 
+  //baika132213@gmail.com
+
   return (
     <div>
       <nav className='navbar'>
