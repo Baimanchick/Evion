@@ -516,6 +516,28 @@
   position: relative;
 }
 
+.center{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.acceptData{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 19px;
+  background-color: #009975;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  padding: 15px 0px 15px 0px;
+  color: white;
+}
+
 .form_block__items > input {
   padding: 26px 20px 10px 20px;
   width: 100%;
@@ -548,7 +570,7 @@
   position: absolute;
   top: 81px;
   font-size: 16px;
-  left: 220px;
+  left: 240px;
   pointer-events: none;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
@@ -591,7 +613,7 @@
   position: absolute;
   top: 158px;
   font-size: 16px;
-  left: 220px;
+  left: 240px;
   pointer-events: none;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
@@ -614,12 +636,23 @@
   font-family: "tildasans-thin";
 }
 
+.validEmail{
+  width: 760px;
+  background-color: #ff2638;
+  color: white;
+  font-size: 17px;
+  padding: 15px 0px 15px 15px;
+  font-family: "tildasans-semibold";
+  text-align: left;
+  display: block;
+}
+
 .l3 {
   color: #999;
   position: absolute;
   top: 237px;
   font-size: 16px;
-  left: 220px;
+  left: 240px;
   pointer-events: none;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
@@ -647,7 +680,7 @@
   position: absolute;
   top: 315px;
   font-size: 16px;
-  left: 220px;
+  left: 240px;
   pointer-events: none;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
