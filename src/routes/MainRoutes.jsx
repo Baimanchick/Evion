@@ -5,6 +5,7 @@ import HomePage from "../components/HomePage";
 import PrvacyPage from "../pages/PrvacyPage";
 import NotFounedPage from "../pages/NotFounedPage";
 import AdminPage from "../pages/AdminPage";
+import AuthPage from "../pages/AuthPage";
 
 function MainRoutes() {
   return (
@@ -14,7 +15,8 @@ function MainRoutes() {
       </Route>
       <Route path="/prvacy" element={<PrvacyPage />} />
       <Route path="*" element={<NotFounedPage />} />
-      <Route path="/admin" element={<AdminPage/>}></Route>
+      <Route path="/admin" element={<AdminPage />}></Route>
+      <Route path="/auth" element={<AuthPage />}></Route>
     </Routes>
   );
 }
