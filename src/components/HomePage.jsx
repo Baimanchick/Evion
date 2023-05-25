@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/HomePage.css";
 import Slider1 from "./Slider1";
 import Slider2 from "./Slider2";
@@ -7,6 +7,7 @@ import { ReactComponent as CloseSvg } from "../images/close-outline.svg";
 import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline.svg";
 import { Link } from "react-router-dom";
 import Slider3 from "./Slider3";
+import { useEmailContext } from "../contexts/EmailsContext";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -14,19 +15,62 @@ function HomePage() {
   const [hasContent3, setHasContent3] = useState(false);
   const [hasContent4, setHasContent4] = useState(false);
 
+  const [ hasData, setHasData ] = useState(false);
+
+  const [ formValue, setFormValue ] = useState({
+    name: "",
+    email: "",
+    kilowatt: "",
+    address: ""
+  })
+
   const [message, setMessage] = useState(false);
 
-  const handleInputBefore = () => {
-    console.log("before");
-  };
+  const { addEmails } = useEmailContext();
+
+  const [ validEmail, setValidEmail ] = useState(false);
+
+  const handleChange = (e) => {
+    const obj = {
+      ...formValue,
+      [e.target.name]: e.target.value
+    }
+    setFormValue(obj);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+      if(!formValue.email.includes('@')) {
+        setValidEmail(true);
+        return;
+      } else {
+        setValidEmail(false)
+        addEmails(formValue);
+      }
+
+    setHasContent(false)
+    setHasContent2(false)
+    setHasContent3(false)
+    setHasContent4(false)
+
+    setFormValue({
+      name: "",
+      email: "",
+      kilowatt: "",
+      address: ""
+    })
+
+    setHasData(true);
+  }
 
   return (
     <div>
-      <div class="home_section">
-        <div class="home_section-tittle">
+      <div className="home_section">
+        <div className="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
         </div>
-        <p class="home_section-subtittle">
+        <p className="home_section-subtittle">
           Создание комфортных условий для владельцев электромобилей.
         </p>
       </div>
@@ -55,17 +99,17 @@ function HomePage() {
         </label>
       </div>
 
-      <div class="home_section-img">
+      <div className="home_section-img">
         <img
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
           alt=""
         />
       </div>
       <div className="greenBlock"></div>
-      <div class="home_section-target">
-        <div class="home_section-target-info">
+      <div className="home_section-target">
+        <div className="home_section-target-info">
           <h1>Наша главная цель</h1>
-          <div class="target_line">
+          <div className="target_line">
             <span></span>
           </div>
           <p>
@@ -75,12 +119,12 @@ function HomePage() {
           </p>
         </div>
       </div>
-      <div class="home_section-sertificate">
-        <div class="sertificate_container">
+      <div className="home_section-sertificate">
+        <div className="sertificate_container">
           <div className="sertificate">
             <div>
               <img
-                class="sertificate_container-logo"
+                className="sertificate_container-logo"
                 src="https://static.tildacdn.com/tild3035-3862-4135-b633-353266316437/6Artboard_34.svg"
                 alt=""
               />
@@ -93,7 +137,7 @@ function HomePage() {
           <div className="sertificate">
             <div>
               <img
-                class="sertificate_container-logo"
+                className="sertificate_container-logo"
                 src="https://static.tildacdn.com/tild6638-3938-4132-b831-613462346536/6Artboard_34_copy.svg"
                 alt=""
               />
@@ -106,7 +150,7 @@ function HomePage() {
           <div className="sertificate">
             <div>
               <img
-                class="sertificate_container-logo"
+                className="sertificate_container-logo"
                 src="https://static.tildacdn.com/lib/tildaicon/31643538-3131-4563-b735-636634373338/Tilda_Icons_47dlvr_speed.svg"
                 alt=""
               />
@@ -118,7 +162,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div class="sertificate_container-image">
+        <div className="sertificate_container-image">
           <img
             src="https://thumb.tildacdn.com/tild3537-3138-4435-a332-343530393433/-/resize/560x/-/format/webp/3c28f7470f0ec11cde19.png"
             alt=""
@@ -404,53 +448,87 @@ function HomePage() {
             Стоимость станции будет зависеть от количества необходимых вам
             функций
           </div>
-          <div className="form_block__items">
-            <input
-              type="text"
-              onChange={(e) =>
-                e.target.value != ""
-                  ? setHasContent(true)
-                  : setHasContent(false)
-              }
-              className={`input ${hasContent ? "hasContent" : ""}`}
-            />
-            <label className="l1">Ваше имя</label>
-            <input
-              type="text"
-              onChange={(e) =>
-                e.target.value != ""
-                  ? setHasContent2(true)
-                  : setHasContent2(false)
-              }
-              className={`input2 ${hasContent2 ? "hasContent2" : ""}`}
-            />
-            <label className="l2">Ваше E-mail</label>
-            <input
-              type="text"
-              onChange={(e) =>
-                e.target.value != ""
-                  ? setHasContent3(true)
-                  : setHasContent3(false)
-              }
-              className={`input3 ${hasContent3 ? "hasContent3" : ""}`}
-            />
-            <label className="l3">Объём(квт)</label>
-            <input
-              type="text"
-              onChange={(e) =>
-                e.target.value != ""
-                  ? setHasContent4(true)
-                  : setHasContent4(false)
-              }
-              className={`input4 ${hasContent4 ? "hasContent4" : ""}`}
-            />
-            <label className="l4">Адрес</label>
-            <button>Получить предложение</button>
-            <p>
-              Нажимая на кнопку, вы даете согласие на обработку персональных
-              данных <br />{" "}
-              <span>и соглашаетесь c политикой конфиденциальности</span>
-            </p>
+          <div>
+            { hasData ? (
+              <div className="center">
+                <div className="acceptData">
+                  Спасибо вам! Ваш запрос принят. Скоро с вами свяжутся.
+                </div>
+              </div>
+            ) : (
+              <form className="form_block__items" onSubmit={(e) => handleSubmit(e)}>
+              <input
+                type="text"
+                name="name"
+                value={formValue.name}
+                onChange={(e) => {
+                  handleChange(e)
+                  e.target.value != ""
+                    ? setHasContent(true)
+                    : setHasContent(false)
+                  }
+                }
+                className={`input ${hasContent ? "hasContent" : ""}`}
+              />
+              <label className="l1">Ваше имя</label>
+              <input
+                type="text"
+                name="email"
+                value={formValue.email}
+                style={ validEmail ? { border: "1px solid #ff2638" } : { border: "2px solid #b6babd" } }
+                onChange={(e) => {
+                  handleChange(e);
+                  e.target.value != ""
+                    ? setHasContent2(true)
+                    : setHasContent2(false)
+                  }
+                }
+                className={`input2 ${hasContent2 ? "hasContent2" : ""}`}
+              />
+              <label className="l2">Ваше E-mail</label>
+              <input
+                type="text"
+                name="kilowatt"
+                value={formValue.kilowatt}
+                onChange={(e) => {
+                  handleChange(e);
+                  e.target.value != ""
+                    ? setHasContent3(true)
+                    : setHasContent3(false)
+                  }
+                }
+                className={`input3 ${hasContent3 ? "hasContent3" : ""}`}
+              />
+              <label className="l3">Объём(квт)</label>
+              <input
+                type="text"
+                name="address"
+                value={formValue.address}
+                onChange={(e) => {
+                  handleChange(e);
+                  e.target.value != ""
+                    ? setHasContent4(true)
+                    : setHasContent4(false)
+                  }
+                }
+                className={`input4 ${hasContent4 ? "hasContent4" : ""}`}
+              />
+              <label className="l4">Адрес</label>
+              { validEmail ? 
+                (
+                  <span className="validEmail">Пожалуйста введите правильный e-mail</span>  
+                )
+               : (
+                null
+              ) }
+              <button>Получить предложение</button>
+              <p>
+                Нажимая на кнопку, вы даете согласие на обработку персональных
+                данных <br />{" "}
+                <span>и соглашаетесь c политикой конфиденциальности</span>
+              </p>
+            </form>
+            ) }
           </div>
         </div>
       </div>

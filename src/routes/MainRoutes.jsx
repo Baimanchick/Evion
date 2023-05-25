@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout";
 import HomePage from "../components/HomePage";
 import PrvacyPage from "../pages/PrvacyPage";
 import NotFounedPage from "../pages/NotFounedPage";
+import AdminPage from "../pages/AdminPage";
 
 function MainRoutes() {
   return (
@@ -13,6 +14,7 @@ function MainRoutes() {
       </Route>
       <Route path="/prvacy" element={<PrvacyPage />} />
       <Route path="*" element={<NotFounedPage />} />
+      <Route path="/admin" element={<AdminPage/>}></Route>
     </Routes>
   );
 }
