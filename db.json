@@ -1,5 +1,62 @@
 {
-  "emails": [],
+  "emails": [
+    {
+      "name": "Islam",
+      "email": "islamxdaamduu@gmail.com",
+      "kilowatt": "190",
+      "address": "ala-archa 90",
+      "id": 1
+    },
+    {
+      "name": "Sergey",
+      "email": "islamxdaamduu@gmail.com",
+      "kilowatt": "177",
+      "address": "lebedinovka 177",
+      "id": 2
+    },
+    {
+      "name": "Sergey",
+      "email": "islamxdaamduu@gmail.com",
+      "kilowatt": "300",
+      "address": "7/6 Aaly Tokombaev St, Bishkek 720060",
+      "id": 3
+    },
+    {
+      "name": "Николай Сторонский",
+      "user__email": "islamxdaamduu@gmail.com",
+      "kilowatt": "300",
+      "address": "7/6 Aaly Tokombaev St, Bishkek 720060",
+      "id": 4
+    },
+    {
+      "name": "aiai.kg",
+      "user__email": "islamxdaamduu@gmail.com",
+      "kilowatt": "300",
+      "address": "Мин-Куш 83",
+      "id": 5
+    },
+    {
+      "name": "Sergey",
+      "user__email": "islamxdaamduu@gmail.com",
+      "kilowatt": "177",
+      "address": "test3",
+      "id": 6
+    },
+    {
+      "name": "Mairambek",
+      "user__email": "islamxdaamduu@gmail.com",
+      "kilowatt": "177",
+      "address": "Мин-Куш 83",
+      "id": 7
+    },
+    {
+      "name": "Baimurat",
+      "user__email": "baika@gmail.com",
+      "kilowatt": "900",
+      "address": "7/6 Aaly Tokombaev St, Bishkek 720060",
+      "id": 8
+    }
+  ],
   "spams": [
     {
       "id": 1,

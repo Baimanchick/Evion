@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/HomePage.css";
 import Slider1 from "./Slider1";
 import Slider2 from "./Slider2";
@@ -8,6 +8,7 @@ import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline
 import { Link } from "react-router-dom";
 import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
+import emailjs from '@emailjs/browser';
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -19,12 +20,14 @@ function HomePage() {
 
   const [ formValue, setFormValue ] = useState({
     name: "",
-    email: "",
+    user__email: "",
     kilowatt: "",
     address: ""
   })
 
   const [message, setMessage] = useState(false);
+  
+  const form = useRef()
 
   const { addEmails } = useEmailContext();
 
@@ -39,9 +42,17 @@ function HomePage() {
   }
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
 
-      if(!formValue.email.includes('@')) {
+    emailjs.sendForm('service_2u8r3xd', 'template_xe9nuau', form.current, '9_P_srz1wdW9abOTP')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
+      if(!formValue.user__email.includes('@')) {
         setValidEmail(true);
         return;
       } else {
@@ -56,7 +67,7 @@ function HomePage() {
 
     setFormValue({
       name: "",
-      email: "",
+      user__email: "",
       kilowatt: "",
       address: ""
     })
@@ -456,7 +467,7 @@ function HomePage() {
                 </div>
               </div>
             ) : (
-              <form className="form_block__items" onSubmit={(e) => handleSubmit(e)}>
+              <form ref={form} className="form_block__items" onSubmit={(e) => handleSubmit(e)}>
               <input
                 type="text"
                 name="name"
@@ -473,7 +484,7 @@ function HomePage() {
               <label className="l1">Ваше имя</label>
               <input
                 type="text"
-                name="email"
+                name="user__email"
                 value={formValue.email}
                 style={ validEmail ? { border: "1px solid #ff2638" } : { border: "2px solid #b6babd" } }
                 onChange={(e) => {
