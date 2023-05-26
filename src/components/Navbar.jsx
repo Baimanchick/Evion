@@ -10,13 +10,13 @@ function Navbar() {
       <div className="header_left">
         <ul>
           <li className="nav-item">
-            <a href="#howitworks">Как мы работаем</a>
+            <a href="#section-1">Как мы работаем</a>
           </li>
           <li className="nav-item">
-            <a href="#blog">Проекты</a>
+            <a href="#section-2">Проекты</a>
           </li>
           <li className="nav-item">
-            <a href="#contacts">Контакты</a>
+            <a href="#section-3">Контакты</a>
           </li>
           <li className="nav-item">
             <a href="/about">ESG</a>
@@ -33,14 +33,10 @@ function Navbar() {
       </div>
       <div className="header_right">
         <a href="tel:+996500333351">+996 500 333351</a>
-        <button href="#section-2" className="header_right-button">
+        <a href="#section-4" className="header_right-button">
           Рассчитать стоимость
-        </button>
+        </a>
       </div>
-      {/* <h2 className="nav-branding">EVION</h2>
-      <div className="menu-btn">
-        <div className="menu-btn__burger"></div>
-      </div> */}
     </header>
   );
 }

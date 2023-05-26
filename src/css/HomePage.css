@@ -1051,11 +1051,8 @@ a {
   }
 }
 
-
-
-
-@media screen and (max-width: 420px){
-  header{
+@media screen and (max-width: 420px) {
+  header {
     width: 100%;
     min-height: 64px;
     padding: 10px;
@@ -1066,63 +1063,66 @@ a {
     align-items: center;
     background-color: #000000;
   }
-  .header_left{
+  .header_left {
     display: none;
   }
-  .header_right{
+  .header_right {
     display: none;
   }
-  .header_logo{
+
+  .header_logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .header_logo a{
+  .header_logo a {
     color: #fff;
     font-size: 16px;
     line-height: 1.35;
     font-family: "tildasans-semibold";
   }
-  .burger{
+
+  .burger {
     display: block !important;
     padding-right: 5px;
   }
-  .burger ion-icon{
+  .burger ion-icon {
     color: white;
     font-size: 40px;
   }
-  .home_section{
+
+  .home_section {
     /* padding-bottom: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .home_section-img img{
+  .home_section-img img {
     width: 300px;
     height: 153px;
     object-fit: contain;
   }
-  .home_section-tittle{
+  .home_section-tittle {
     max-width: 350px;
     font-size: 54px;
   }
-  .home_section-subtittle{
+  .home_section-subtittle {
     font-size: 20px;
     max-width: 350px;
   }
-  .greenBlock{
+  .greenBlock {
     position: absolute;
     top: 620px;
   }
-  .home_section-target-info{
+  .home_section-target-info {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .home_section-target-info h1{
+  .home_section-target-info h1 {
     font-family: "tildasans-semibold";
     margin-bottom: 25px;
   }
@@ -1132,23 +1132,23 @@ a {
     font-size: 24px;
     max-width: 350px;
   }
-  .sertificate_container-image img{
+  .sertificate_container-image img {
     width: 350px;
     height: 186px;
     object-fit: cover;
   }
-  .sertificate_container-image{
+  .sertificate_container-image {
     margin-bottom: 75px;
   }
-  .title__how-we-works{
+  .title__how-we-works {
     font-size: 30px;
     margin-bottom: 40px;
   }
-  .stepsBlock__items{
+  .stepsBlock__items {
     display: flex;
     justify-content: space-between;
   }
-  .steps__line{
+  .steps__line {
     position: absolute;
     top: 17px;
     left: 35px;
@@ -1156,37 +1156,37 @@ a {
     height: 158px;
     background-color: #e6e6e6;
   }
-  .stepsAboveBlock{
+  .stepsAboveBlock {
     padding-left: 20px;
   }
-  .stepsContents{
+  .stepsContents {
     margin-top: 0;
     padding-left: 22px;
   }
-  .stepsContentsTitle{
+  .stepsContentsTitle {
     font-size: 16px;
     display: block;
     width: 291px;
   }
-  .stepsContentsText{
+  .stepsContentsText {
     font-size: 12px;
     margin-top: 8px;
     width: 291px;
   }
-  .home_section-project{
+  .home_section-project {
     padding-top: 90px;
     margin-top: 0px;
     padding-bottom: 90px;
     background-color: #ededed;
   }
-  .home_section-project-title{
+  .home_section-project-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 75px;
   }
-  .home_section-project-title h2{
+  .home_section-project-title h2 {
     font-size: 30px;
     font-family: "tildasans-semibold";
   }
@@ -1194,81 +1194,81 @@ a {
     font-size: 20px;
     width: 350px;
   }
-  .cards{
+  .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 20px;
   }
-  .cards__title{
+  .cards__title {
     font-size: 20px;
     width: 290px;
   }
-  .cards__text{
+  .cards__text {
     font-size: 12px;
     width: 290px;
     line-height: 1.55;
   }
-  .home_section-mobile_app{
+  .home_section-mobile_app {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .mobileApp__title{
+  .mobileApp__title {
     font-size: 30px;
     width: 350px;
   }
-  .mobileApp__text{
+  .mobileApp__text {
     font-size: 20px;
     padding-bottom: 75px;
   }
-  .mobileApp__item{
+  .mobileApp__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 350px;
   }
-  .info__items{
+  .info__items {
     display: flex;
     flex-direction: column;
     gap: 45px;
     align-items: flex-start;
   }
-  .info__item__title_img{
+  .info__item__title_img {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
     font-size: 18px;
   }
-  .info__item__title{
+  .info__item__title {
     font-size: 18px;
     padding-left: 20px;
   }
-  .info__item__text{
+  .info__item__text {
     text-align: left !important;
     font-size: 12px;
     max-width: 303px;
     margin-left: 40px;
   }
-  .info__item{
+  .info__item {
     margin-left: 20px;
   }
-  .mobileApp__img img{
+  .mobileApp__img img {
     padding: 0px 30px 0px 60px;
     width: 300px;
     height: 255px;
   }
-  .carousel__content p{
+  .carousel__content p {
     margin-left: 0 !important;
   }
-  .names{
+  .names {
     margin-left: 0 !important;
   }
-  .info__electro{
+  .info__electro {
     margin-left: 0 !important;
   }
 }
