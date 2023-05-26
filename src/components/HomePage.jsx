@@ -26,13 +26,14 @@ function HomePage() {
   })
 
   const [message, setMessage] = useState(false);
+  const [ validEmail, setValidEmail ] = useState(false)
+  const [ bottomLine, setBottomLine ] = useState(false);
   
   const form = useRef()
 
   const { addEmails } = useEmailContext();
 
-  const [ validEmail, setValidEmail ] = useState(false);
-
+  
   const handleChange = (e) => {
     const obj = {
       ...formValue,
@@ -59,7 +60,7 @@ function HomePage() {
         setValidEmail(false)
         addEmails(formValue);
       }
-
+      
     setHasContent(false)
     setHasContent2(false)
     setHasContent3(false)
@@ -74,6 +75,7 @@ function HomePage() {
 
     setHasData(true);
   }
+ 
 
   return (
     <div>
