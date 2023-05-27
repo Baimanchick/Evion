@@ -6,6 +6,9 @@ import PrvacyPage from "../pages/PrvacyPage";
 import NotFounedPage from "../pages/NotFounedPage";
 import AdminPage from "../pages/AdminPage";
 import AuthPage from "../pages/AuthPage";
+import ESGAbout from "../pages/ESGAbout";
+import Faq from "../pages/Faq";
+import ESGLayout from "../layout/ESGLayout";
 
 function MainRoutes() {
   return (
@@ -17,6 +20,10 @@ function MainRoutes() {
       <Route path="*" element={<NotFounedPage />} />
       <Route path="/admin" element={<AdminPage />}></Route>
       <Route path="/auth" element={<AuthPage />}></Route>
+      <Route element={<ESGLayout/>}>
+        <Route path='/about' element={<ESGAbout/>}></Route>
+        <Route path='/faq' element={<Faq/>}></Route>
+      </Route>
     </Routes>
   );
 }
