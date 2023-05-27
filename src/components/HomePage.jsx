@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
 import emailjs from '@emailjs/browser';
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -76,6 +77,7 @@ function HomePage() {
     setHasData(true);
   }
  
+  const [ hoverPlus, setHoverPlus ] = useState(false)
 
   return (
     <div>
@@ -117,6 +119,12 @@ function HomePage() {
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
           alt=""
         />
+        <div className="plus">
+          <ion-icon name="add-outline"></ion-icon>
+          {/* <div className="plus-text" style={{ display: "none" }}>Быстрые зарядные станции</div> */}
+        </div>
+
+
       </div>
       <div className="greenBlock"></div>
       <div className="home_section-target">
