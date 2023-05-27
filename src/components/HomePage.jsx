@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
 import emailjs from "@emailjs/browser";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
@@ -26,12 +27,12 @@ function HomePage() {
   });
 
   const [message, setMessage] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const [bottomLine, setBottomLine] = useState(false);
 
   const form = useRef();
 
   const { addEmails } = useEmailContext();
-
-  const [validEmail, setValidEmail] = useState(false);
 
   const handleChange = (e) => {
     const obj = {
@@ -83,6 +84,8 @@ function HomePage() {
     setHasData(true);
   };
 
+  const [hoverPlus, setHoverPlus] = useState(false);
+
   return (
     <div>
       <div className="home_section">
@@ -123,6 +126,10 @@ function HomePage() {
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
           alt=""
         />
+        <div className="plus">
+          <ion-icon name="add-outline"></ion-icon>
+          {/* <div className="plus-text" style={{ display: "none" }}>Быстрые зарядные станции</div> */}
+        </div>
       </div>
       <div className="greenBlock"></div>
       <div className="home_section-target">
