@@ -34,8 +34,6 @@ function EmailContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initState);
   // const [currentPage, setCurrentPage] = useState(1);
 
-
-
   async function getEmails() {
     try {
       const res = await axios.get(`${BASE_URL}`);
