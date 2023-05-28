@@ -3,6 +3,37 @@
   margin: 0 auto;
 } */
 
+@font-face {
+  font-family: "tildasans-reg";
+  src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-med";
+  src: url("../fonts/TildaSans-Bold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-600";
+  src: url("../fonts/TildaSans-Medium.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-semibold";
+  src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-thin";
+  src: url("../fonts/TildaSans-Light.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 .container {
   max-width: 1400px;
 }
@@ -74,7 +105,7 @@
   display: flex;
   justify-content: center;
 }
-.target_line span {
+.target_line .target-line_span {
   content: "";
   background-color: rgb(0, 0, 0);
   width: 100px;
@@ -516,7 +547,7 @@
   position: relative;
 }
 
-.center{
+.center {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -524,7 +555,7 @@
   margin-top: 25px;
 }
 
-.plus{
+.plus {
   position: absolute;
   z-index: 1;
   top: 52%;
@@ -538,11 +569,11 @@
   align-items: center;
 }
 
-.plus ion-icon{
+.plus ion-icon {
   color: white;
 }
 
-.acceptData{
+.acceptData {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -654,7 +685,7 @@
   font-family: "tildasans-thin";
 }
 
-.validEmail{
+.validEmail {
   width: 760px;
   background-color: #ff2638;
   color: white;
@@ -1072,13 +1103,12 @@ a {
   }
 }
 
-
-.slider3{
+.slider3 {
   display: none;
 }
 
-@media screen and (max-width: 420px){
-  header{
+@media screen and (max-width: 420px) {
+  header {
     width: 100%;
     min-height: 64px;
     padding: 10px;
@@ -1324,41 +1354,41 @@ a {
   .info__electro {
     margin-left: 0 !important;
   }
-  .bigIMG__title{
+  .bigIMG__title {
     padding-top: 110px;
   }
-  .form_block__items > input{
+  .form_block__items > input {
     width: 310px;
   }
-  .form_block__items > label{
+  .form_block__items > label {
     left: 40px;
   }
-  .slider3{
+  .slider3 {
     display: block;
     margin-bottom: 90px;
   }
-  .slider2{
+  .slider2 {
     display: none;
   }
-  .parthers__text{
+  .parthers__text {
     margin-bottom: 70px;
   }
-  .parthers__left span{
+  .parthers__left span {
     font-size: 10px;
   }
-  .parthers__left h3{
+  .parthers__left h3 {
     font-size: 24px;
     width: 330px;
   }
-  .parthers__left p{
+  .parthers__left p {
     font-size: 14px;
     width: 330px;
     line-height: 1.45;
   }
-  .parthers__left{
+  .parthers__left {
     margin-left: 20px;
   }
-  .notification{
+  .notification {
     position: fixed;
     margin: auto;
     /* top: 0; */
@@ -1368,10 +1398,8 @@ a {
   }
 }
 
-
-
 @media screen and (min-device-width: 678px) and (max-device-width: 850px) {
-  header{
+  header {
     width: 100%;
     min-height: 64px;
     padding: 10px;
@@ -1420,10 +1448,10 @@ a {
     height: 317px;
     object-fit: contain;
   }
-  .home_section-sertificate{
+  .home_section-sertificate {
     row-gap: 35px;
   }
-  .how-we-works__items{
+  .how-we-works__items {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1459,22 +1487,22 @@ a {
     margin-top: 8px;
     width: 291px;
   }
-  .stepsBlock{
+  .stepsBlock {
     flex-direction: column;
     align-items: flex-start;
   }
-  .stepsContents{
+  .stepsContents {
     width: 640px;
   }
-  .stepsContentsTitle{
+  .stepsContentsTitle {
     font-size: 18px;
     width: 100%;
   }
-  .stepsContentsText{
+  .stepsContentsText {
     font-size: 14px;
     width: 540px;
   }
-  .cards{
+  .cards {
     flex-direction: column;
     row-gap: 30px;
   }
@@ -1499,10 +1527,10 @@ a {
     justify-content: center;
     width: 640px;
   }
-  .mobileApp__items{
+  .mobileApp__items {
     flex-direction: column;
   }
-  .containerC{
+  .containerC {
     max-width: 640px;
     margin: 0 auto;
   }
@@ -1538,14 +1566,17 @@ a {
     width: 540px;
     height: 480px;
   }
-  .l1, .l2, .l3, .l4{
+  .l1,
+  .l2,
+  .l3,
+  .l4 {
     left: 20px;
   }
-  .parthers__right img{
+  .parthers__right img {
     width: 280px;
     height: 224px;
   }
-  .footer__items{
+  .footer__items {
     flex-direction: column;
     row-gap: 75px;
   }

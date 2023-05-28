@@ -136,7 +136,7 @@ function HomePage() {
         <div className="home_section-target-info">
           <h1>Наша главная цель</h1>
           <div className="target_line">
-            <span></span>
+            <span className="target-line_span"></span>
           </div>
           <p>
             Комплексное развитие сферы электротранспорта и электрозарядной
