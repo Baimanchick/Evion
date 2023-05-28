@@ -3,6 +3,7 @@ import { ACTIONS } from "../utils/consts";
 import { useContext } from "react";
 import { auth } from "../fireBase";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { notifyError } from "../components/Toastify";
 // import { notifyError } from "../components/Toastify";
 
 const authContext = createContext();
@@ -32,7 +33,7 @@ function AuthContext({ children }) {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      console.log(error.code);
+      notifyError(error.code);
     }
   }
 

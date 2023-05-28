@@ -8,7 +8,7 @@ import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline
 import { Link } from "react-router-dom";
 import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { hover } from "@testing-library/user-event/dist/hover";
 
 function HomePage() {
@@ -17,67 +17,74 @@ function HomePage() {
   const [hasContent3, setHasContent3] = useState(false);
   const [hasContent4, setHasContent4] = useState(false);
 
-  const [ hasData, setHasData ] = useState(false);
+  const [hasData, setHasData] = useState(false);
 
-  const [ formValue, setFormValue ] = useState({
+  const [formValue, setFormValue] = useState({
     name: "",
     user__email: "",
     kilowatt: "",
-    address: ""
-  })
+    address: "",
+  });
 
   const [message, setMessage] = useState(false);
-  const [ validEmail, setValidEmail ] = useState(false)
-  const [ bottomLine, setBottomLine ] = useState(false);
-  
-  const form = useRef()
+  const [validEmail, setValidEmail] = useState(false);
+  const [bottomLine, setBottomLine] = useState(false);
+
+  const form = useRef();
 
   const { addEmails } = useEmailContext();
 
-  
   const handleChange = (e) => {
     const obj = {
       ...formValue,
-      [e.target.name]: e.target.value
-    }
+      [e.target.name]: e.target.value,
+    };
     setFormValue(obj);
-  }
+  };
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
 
-    emailjs.sendForm('service_2u8r3xd', 'template_xe9nuau', form.current, '9_P_srz1wdW9abOTP')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
+    emailjs
+      .sendForm(
+        "service_2u8r3xd",
+        "template_xe9nuau",
+        form.current,
+        "9_P_srz1wdW9abOTP"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
-      if(!formValue.user__email.includes('@')) {
-        setValidEmail(true);
-        return;
-      } else {
-        setValidEmail(false)
-        addEmails(formValue);
-      }
-      
-    setHasContent(false)
-    setHasContent2(false)
-    setHasContent3(false)
-    setHasContent4(false)
+    if (!formValue.user__email.includes("@")) {
+      setValidEmail(true);
+      return;
+    } else {
+      setValidEmail(false);
+      addEmails(formValue);
+    }
+
+    setHasContent(false);
+    setHasContent2(false);
+    setHasContent3(false);
+    setHasContent4(false);
 
     setFormValue({
       name: "",
       user__email: "",
       kilowatt: "",
-      address: ""
-    })
+      address: "",
+    });
 
     setHasData(true);
-  }
- 
-  const [ hoverPlus, setHoverPlus ] = useState(false)
+  };
+
+  const [hoverPlus, setHoverPlus] = useState(false);
 
   return (
     <div>
@@ -95,7 +102,7 @@ function HomePage() {
           {message ? (
             <div className="communication">
               <div className="whatsapp animate__fadeIn">
-                <ion-icon name="logo-whatsapp"></ion-icon>
+                <ion-icon component={Link} name="logo-whatsapp"></ion-icon>
               </div>
               <div className="call animate__fadeIn">
                 <ion-icon name="call-outline"></ion-icon>
@@ -123,15 +130,13 @@ function HomePage() {
           <ion-icon name="add-outline"></ion-icon>
           {/* <div className="plus-text" style={{ display: "none" }}>Быстрые зарядные станции</div> */}
         </div>
-
-
       </div>
       <div className="greenBlock"></div>
       <div className="home_section-target">
         <div className="home_section-target-info">
           <h1>Наша главная цель</h1>
           <div className="target_line">
-            <span></span>
+            <span className="target-line_span"></span>
           </div>
           <p>
             Комплексное развитие сферы электротранспорта и электрозарядной
@@ -470,86 +475,88 @@ function HomePage() {
             функций
           </div>
           <div>
-            { hasData ? (
+            {hasData ? (
               <div className="center">
                 <div className="acceptData">
                   Спасибо вам! Ваш запрос принят. Скоро с вами свяжутся.
                 </div>
               </div>
             ) : (
-              <form ref={form} className="form_block__items" onSubmit={(e) => handleSubmit(e)}>
-              <input
-                type="text"
-                name="name"
-                value={formValue.name}
-                onChange={(e) => {
-                  handleChange(e)
-                  e.target.value != ""
-                    ? setHasContent(true)
-                    : setHasContent(false)
+              <form
+                ref={form}
+                className="form_block__items"
+                onSubmit={(e) => handleSubmit(e)}
+              >
+                <input
+                  type="text"
+                  name="name"
+                  value={formValue.name}
+                  onChange={(e) => {
+                    handleChange(e);
+                    e.target.value != ""
+                      ? setHasContent(true)
+                      : setHasContent(false);
+                  }}
+                  className={`input ${hasContent ? "hasContent" : ""}`}
+                />
+                <label className="l1">Ваше имя</label>
+                <input
+                  type="text"
+                  name="user__email"
+                  value={formValue.email}
+                  style={
+                    validEmail
+                      ? { border: "1px solid #ff2638" }
+                      : { border: "2px solid #b6babd" }
                   }
-                }
-                className={`input ${hasContent ? "hasContent" : ""}`}
-              />
-              <label className="l1">Ваше имя</label>
-              <input
-                type="text"
-                name="user__email"
-                value={formValue.email}
-                style={ validEmail ? { border: "1px solid #ff2638" } : { border: "2px solid #b6babd" } }
-                onChange={(e) => {
-                  handleChange(e);
-                  e.target.value != ""
-                    ? setHasContent2(true)
-                    : setHasContent2(false)
-                  }
-                }
-                className={`input2 ${hasContent2 ? "hasContent2" : ""}`}
-              />
-              <label className="l2">Ваше E-mail</label>
-              <input
-                type="text"
-                name="kilowatt"
-                value={formValue.kilowatt}
-                onChange={(e) => {
-                  handleChange(e);
-                  e.target.value != ""
-                    ? setHasContent3(true)
-                    : setHasContent3(false)
-                  }
-                }
-                className={`input3 ${hasContent3 ? "hasContent3" : ""}`}
-              />
-              <label className="l3">Объём(квт)</label>
-              <input
-                type="text"
-                name="address"
-                value={formValue.address}
-                onChange={(e) => {
-                  handleChange(e);
-                  e.target.value != ""
-                    ? setHasContent4(true)
-                    : setHasContent4(false)
-                  }
-                }
-                className={`input4 ${hasContent4 ? "hasContent4" : ""}`}
-              />
-              <label className="l4">Адрес</label>
-              { validEmail ? 
-                (
-                  <span className="validEmail">Пожалуйста введите правильный e-mail</span>  
-                )
-               : (
-                null
-              ) }
-              <button>Получить предложение</button>
-              <p>
-                Нажимая на кнопку, вы даете согласие на обработку персональных
-                данных <br />{" "}
-                <span>и соглашаетесь c политикой конфиденциальности</span>
-              </p>
-            </form>
-            ) }
+                  onChange={(e) => {
+                    handleChange(e);
+                    e.target.value != ""
+                      ? setHasContent2(true)
+                      : setHasContent2(false);
+                  }}
+                  className={`input2 ${hasContent2 ? "hasContent2" : ""}`}
+                />
+                <label className="l2">Ваше E-mail</label>
+                <input
+                  type="text"
+                  name="kilowatt"
+                  value={formValue.kilowatt}
+                  onChange={(e) => {
+                    handleChange(e);
+                    e.target.value != ""
+                      ? setHasContent3(true)
+                      : setHasContent3(false);
+                  }}
+                  className={`input3 ${hasContent3 ? "hasContent3" : ""}`}
+                />
+                <label className="l3">Объём(квт)</label>
+                <input
+                  type="text"
+                  name="address"
+                  value={formValue.address}
+                  onChange={(e) => {
+                    handleChange(e);
+                    e.target.value != ""
+                      ? setHasContent4(true)
+                      : setHasContent4(false);
+                  }}
+                  className={`input4 ${hasContent4 ? "hasContent4" : ""}`}
+                />
+                <label className="l4">Адрес</label>
+                {validEmail ? (
+                  <span className="validEmail">
+                    Пожалуйста введите правильный e-mail
+                  </span>
+                ) : null}
+                <button>Получить предложение</button>
+                <p>
+                  Нажимая на кнопку, вы даете согласие на обработку персональных
+                  данных <br />{" "}
+                  <span>и соглашаетесь c политикой конфиденциальности</span>
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </div>
@@ -563,10 +570,10 @@ function HomePage() {
             </div>
             <div className="pathers__logo">
               <div className="slider2">
-                <Slider2/>
+                <Slider2 />
               </div>
               <div className="slider3">
-                <Slider3/>
+                <Slider3 />
               </div>
             </div>
             <div className="parthers__block">
