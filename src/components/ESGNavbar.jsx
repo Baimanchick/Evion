@@ -30,14 +30,7 @@ function ESGNavbar() {
             <div>
               <a href="#" className="esg__navbar__logo_link">
                 <div className="esg__navbar__logo_title">
-                  <div className="logo__title">
-                    <a
-                      href="/"
-                      style={{ textDecoration: "none", color: "#16b85f" }}
-                    >
-                      EVION
-                    </a>
-                  </div>
+                  <div className="logo__title">EVION</div>
                 </div>
               </a>
             </div>
