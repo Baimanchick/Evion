@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { usePhoneContext } from '../contexts/PhonesContext';
 import '../css/faq.css';
 
 function Faq() {
@@ -23,6 +24,39 @@ function Faq() {
         panel.style.maxHeight = panel.scrollHeight + "px";
       } 
     });
+  }
+
+
+  const [ formValue, setFormValue ] = useState({
+    phone: ""
+  })
+  const [ hasData, setHasData ] = useState(false);
+  const { addPhones2 } = usePhoneContext();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if(!formValue.phone.trim()) {
+      alert("Заполните все поля");
+      return;
+    }
+
+    addPhones2(formValue);
+
+    setHasData(true);
+
+    setFormValue({
+      phone: ""
+    })
+
+  }
+
+  const handleChange = (e) => {
+    const obj = {
+      ...formValue,
+      [e.target.name]: e.target.value
+    }
+    setFormValue(obj)
   }
 
   return (
@@ -230,10 +264,18 @@ function Faq() {
                   </div>
                 </div>
                 <div className='t704__form'>
-                  <form className='form__mobilePhone'>
-                    <input type="text" placeholder='Ваш мобильный номер'/>
-                    <button>Отправить</button>
-                  </form>
+                  { hasData ? (
+                    <div className="center">
+                      <div className="acceptData">
+                        Спасибо вам! Ваш запрос принят. Скоро с вами свяжутся.
+                      </div>
+                    </div>
+                  ) : (
+                    <form className='form__mobilePhone' onSubmit={(e) => handleSubmit(e)}>
+                      <input type="text" name='phone' value={formValue.phone} placeholder='Ваш мобильный номер' onChange={(e) => handleChange(e)} />
+                      <button>Отправить</button>
+                    </form>
+                  ) }
                 </div>
               </div>
             </div>
