@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 // import "../css/BurgerMenu.css";
 
 function Navbar() {
-  const [isMobile, setisMobile] = useState(false);
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -26,10 +25,7 @@ function Navbar() {
 
   return (
     <header>
-      <div
-        className={isMobile ? "header_left-mobile" : "header_left"}
-        onClick={() => setisMobile(false)}
-      >
+      <div className="header_left">
         <ul>
           <li className={`nav-item`}>
             <a
@@ -64,7 +60,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className={isMobile ? "header_logo-mobile" : "header_logo"}>
+      <div className="header_logo">
         <a href="#" component={Link} to="/">
           EVION
         </a>
@@ -76,7 +72,7 @@ function Navbar() {
           <ion-icon name={click ? "menu-outline" : "close"}></ion-icon>
         </div>
       </div>
-      <div className={isMobile ? "header_right-mobile" : "header_right"}>
+      <div className="header_right">
         <a className="phone" href="tel:+996500333351">
           +996 500 333351
         </a>
