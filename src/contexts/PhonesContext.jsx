@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
-import { ACTIONS, PHONES_URL } from "../utils/consts";
+import { ACTIONS, PHONES_URL, PHONES_URL2 } from "../utils/consts";
 
 const phoneContext = createContext();
 
@@ -11,6 +11,8 @@ export function usePhoneContext() {
 const initState = {
   phones: [],
   onePhone: null,
+  phones2: [],
+  onePhone2: null
 };
 
 function reducer(state, action) {
@@ -19,6 +21,10 @@ function reducer(state, action) {
       return { ...state, phones: action.payload };
     case ACTIONS.onePhone:
       return { ...state, onePhone: action.payload };
+    case ACTIONS.phones2:
+      return { ...state, phones2: action.payload };
+    case ACTIONS.onePhone2:
+      return { ...state, onePhone2: action.payload}; 
     default:
       return state;
   }
@@ -48,10 +54,36 @@ function PhonesContext({ children }) {
     }
   }
 
+
+  async function getPhones2() {
+    try {
+      const res = await axios.get(`${PHONES_URL2}`);
+      dispatch({
+        type: ACTIONS.phones2,
+        payload: res.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function addPhones2(newPhone) {
+    try {
+      await axios.post(`${PHONES_URL2}`, newPhone);
+      getPhones2();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const value = {
     phones: state.phones,
     getPhones,
-    addPhones
+    addPhones,
+    onePhone: state.onePhone,
+    phones2: state.phones2,
+    onePhone2: state.onePhone2,
+    addPhones2
   };
 
   return (
