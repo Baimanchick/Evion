@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "tildasans-reg";
+    src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "tildasans-med";
+    src: url("../fonts/TildaSans-Bold.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "tildasans-600";
+    src: url("../fonts/TildaSans-Medium.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "tildasans-semibold";
+    src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "tildasans-thin";
+    src: url("../fonts/TildaSans-Light.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+.t-main-content{
+    padding-top: 210px;
+}
+
+.t-section__container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.t-section__wrapper{
+    margin-bottom: 90px;
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+
+.t-section__title{
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.23;
+    color: #000;
+    font-family: "tildasans-semibold";
+}
+
+.t-section__text p{
+    max-width: 560px;
+    font-size: 24px;
+    line-height: 1.55;
+    font-family: "tildasans-thin";
+    color: #000;
+}
+
+.t989__btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.t989__btn button{
+    padding: 10px 18px 10px;
+    border-radius: 50px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.active{
+    background-color: #000 !important;
+    color: gray !important;
+}
+
+.t899{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.t899__items{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+}
+
+.t899__item img{
+    width: 360px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.t899__item__title{
+    font-size: 20px;
+    line-height: 1.35;
+    font-family: "tildasans-semibold";
+    max-width: 360px;
+    margin-top: 10px;
+}
+
+.t899__item__text{
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 1.55;
+    font-family: "tildasans-thin";
+}
+
+.t899__item__date{
+    margin-top: 15px;
+    font-size: 10px;
+    color: gray;
+    font-family: "tildasans-thin";
+}
+
+.d-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.load-more-button{
+    color: white;
+    background-color: #000;
+    border-radius: 3px;
+    opacity: 1;
+    font-size: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    border: none;
+    height: 60px;
+}
+
+.scrollUpBTN{
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    position: fixed;
+    z-index: 300;
+    bottom: 80px;
+    left: 33px;
+}
+
+.scrollUpBTN ion-icon{
+    color: white;
+}
