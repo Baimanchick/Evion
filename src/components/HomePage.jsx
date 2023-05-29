@@ -103,10 +103,14 @@ function HomePage() {
           {message ? (
             <div className="communication">
               <div className="whatsapp animate__fadeIn">
-                <ion-icon component={Link} name="logo-whatsapp"></ion-icon>
+                <a href="https://wa.me/996500333351" style={{ color: "transparent" }}>
+                  <ion-icon component={Link} name="logo-whatsapp"></ion-icon>
+                </a>
               </div>
               <div className="call animate__fadeIn">
-                <ion-icon name="call-outline"></ion-icon>
+                <a href="tel:+996500333351">
+                  <ion-icon name="call-outline"></ion-icon>
+                </a>
               </div>
             </div>
           ) : null}

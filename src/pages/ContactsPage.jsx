@@ -11,17 +11,21 @@ function ContactsPage() {
           <div className="phone-number">+996 (500) 333-351</div>
           <div className="gmail-evion">evionkg@gmail.com</div>
           <div className="icons-evion">
-            <ion-icon
-              style={{
-                width: "64px",
-                height: "44px",
-              }}
-              name="call-outline"
-            ></ion-icon>
-            <ion-icon
-              style={{ width: "64px", height: "44px" }}
-              name="mail-outline"
-            ></ion-icon>
+            <a href="tel:+996500333351" style={{ color: "black" }}>
+              <ion-icon
+                style={{
+                  width: "64px",
+                  height: "44px",
+                }}
+                name="call-outline"
+              ></ion-icon>
+            </a>
+            <a href="mailto:evionkg@gmail.com" style={{ color: "black" }}>
+              <ion-icon
+                style={{ width: "64px", height: "44px" }}
+                name="mail-outline"
+              ></ion-icon>
+            </a>
           </div>
         </div>
       </div>

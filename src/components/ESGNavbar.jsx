@@ -19,7 +19,7 @@ function ESGNavbar() {
                       <div>
                         <a href='#' className='esg__navbar__logo_link'>
                             <div className='esg__navbar__logo_title'>
-                                <div className='logo__title'>EVION</div>
+                                <div className='logo__title'><a href="/" style={{ textDecoration: "none", color: "#16b85f" }}>EVION</a></div>
                             </div>
                         </a>
                     </div>
@@ -30,7 +30,7 @@ function ESGNavbar() {
                     <ul className='esg__navbar_right_navigation'>
                         <li style={{ cursor: "pointer" }}><a href='/faq' style={{ textDecoration: "none", color: "black", fontFamily: "tildasans-reg" }}>FAQ</a></li>
                         <li style={{ cursor: "pointer" }}><a href='/blogs' style={{ textDecoration: "none", color: "black", fontFamily: "tildasans-reg" }}>Блог</a></li>
-                        <li style={{ cursor: "pointer" }}><a href='/' style={{ textDecoration: "none", color: "black", fontFamily: "tildasans-reg" }}>Контакты</a></li>
+                        <li style={{ cursor: "pointer" }}><a href='/contacts' style={{ textDecoration: "none", color: "black", fontFamily: "tildasans-reg" }}>Контакты</a></li>
                     </ul>
                 </div>
             </div>
