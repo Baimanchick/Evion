@@ -10,6 +10,7 @@ import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
 import emailjs from "@emailjs/browser";
 import { hover } from "@testing-library/user-event/dist/hover";
+import { notifyError } from "./Toastify";
 
 function HomePage() {
   const [hasContent, setHasContent] = useState(false);
