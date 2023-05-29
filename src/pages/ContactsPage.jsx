@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/contact.css";
 import { Link } from "react-router-dom";
+import { usePhoneContext } from "../contexts/PhonesContext";
 
 function ContactsPage() {
+  const [ formValue, setFormValue ] = useState({
+    question: "",
+    name: "",
+    email: "",
+    phone: ""
+  })
+  const [ hasData, setHasData ] = useState(false);
+  const { addPhones } = usePhoneContext();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if(!formValue.email.trim() || !formValue.name.trim() || !formValue.phone.trim()) {
+      alert("Заполните все поля");
+      return;
+    }
+
+    addPhones(formValue);
+
+    setHasData(true);
+
+    setFormValue({
+      question: "",
+      name: "",
+      email: "",
+      phone: ""
+    })
+
+  }
+
+  const handleChange = (e) => {
+    const obj = {
+      ...formValue,
+      [e.target.name]: e.target.value
+    }
+    setFormValue(obj)
+  }
+  
   return (
     <div>
       <div className="contacty">
@@ -11,46 +50,69 @@ function ContactsPage() {
           <div className="phone-number">+996 (500) 333-351</div>
           <div className="gmail-evion">evionkg@gmail.com</div>
           <div className="icons-evion">
-            <ion-icon
-              style={{
-                width: "64px",
-                height: "44px",
-              }}
-              name="call-outline"
-            ></ion-icon>
-            <ion-icon
-              style={{ width: "64px", height: "44px" }}
-              name="mail-outline"
-            ></ion-icon>
+            <a href="tel:+996500333351" style={{ color: "black" }}>
+              <ion-icon
+                style={{
+                  width: "64px",
+                  height: "44px",
+                }}
+                name="call-outline"
+              ></ion-icon>
+            </a>
+            <a href="mailto:evionkg@gmail.com" style={{ color: "black" }}>
+              <ion-icon
+                style={{ width: "64px", height: "44px" }}
+                name="mail-outline"
+              ></ion-icon>
+            </a>
           </div>
         </div>
       </div>
 
       <div className="container-_-">
-        <form className="form-evion">
+       { hasData ? (
+              <div className="center">
+                <div className="acceptData">
+                  Спасибо вам! Ваш запрос принят. Скоро с вами свяжутся.
+                </div>
+              </div>
+       ) : (
+        <form className="form-evion" onSubmit={(e) => handleSubmit(e)}>
           <div className="title-evion-question">Вопрос</div>
           <input
             placeholder="Опишите задачу, которую хотите решить"
             className="special-input"
             type="text"
+            name="question"
+            value={formValue.question}
+            onChange={(e) => handleChange(e)}
           />
           <div className="title-evion-question">Имя*</div>
           <input
             placeholder="Как к вам обращаться"
             className="input-evion"
             type="text"
+            name="name"
+            value={formValue.name}
+            onChange={(e) => handleChange(e)}
           />
           <div className="title-evion-question">Телеофн*</div>
           <input
             placeholder="+996 (999) 999-999"
             className="input-evion"
             type="number"
+            name="phone"
+            value={formValue.phone}
+            onChange={(e) => handleChange(e)}
           />
           <div className="title-evion-question">Ваш Email*</div>
           <input
             placeholder="Email для связи"
             className="input-evion"
             type="text"
+            name="email"
+            value={formValue.email}
+            onChange={(e) => handleChange(e)}
           />
           <button className="btn-question">Sumbit</button>
           <p className="confirm">
@@ -58,6 +120,7 @@ function ContactsPage() {
             <a href="/prvacy">согласие на обработку персональных данных</a>
           </p>
         </form>
+       ) }
       </div>
 
       <div className="home-section_footer">
