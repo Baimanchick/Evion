@@ -93,9 +93,11 @@ function HomePage() {
         <div className="home_section-tittle">
           Быстрые зарядные станции <br /> "под ключ"
         </div>
-        <p className="home_section-subtittle">
-          Создание комфортных условий для владельцев электромобилей.
-        </p>
+        <div data-aos="fade-up">
+          <p className="home_section-subtittle">
+            Создание комфортных условий для владельцев электромобилей.
+          </p>
+        </div>
       </div>
 
       <div className="notification" onClick={() => setMessage(!message)}>
@@ -135,7 +137,9 @@ function HomePage() {
       <div className="greenBlock"></div>
       <div className="home_section-target">
         <div className="home_section-target-info">
-          <h1>Наша главная цель</h1>
+          <div data-aos="fade-up">
+            <h1>Наша главная цель</h1>
+          </div>
           <div className="target_line">
             <span className="target-line_span"></span>
           </div>

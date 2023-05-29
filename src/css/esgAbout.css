@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   background: url("../images/evion.jpg");
+  background-position: center;
   height: 350px;
   margin-top: 110px;
 }
@@ -50,7 +51,8 @@
 .our-wins_proof {
   margin-top: 100px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 70px;
   /* margin-left: 75px; */
 }
 .target_line_span {
@@ -101,3 +103,15 @@
   font-size: 36px;
   font-weight: normal;
 }
+.big-title {
+  font-size: 68px;
+  margin-top: 75px;
+  color: white;
+}
+/* @media screen and (max-width: 390px) {
+  .big-title {
+    font-size: 15px;
+    margin-top: 40px;
+    padding: 70px;
+  }
+} */

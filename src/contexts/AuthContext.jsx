@@ -33,7 +33,7 @@ function AuthContext({ children }) {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      notifyError(error.code);
+      notifyError("Wrong password/gmail");
     }
   }
 
