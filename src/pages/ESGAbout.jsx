@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/esgAbout.css";
 import Slider4 from "../components/Slider4";
 
 function ESGAbout() {
+  const [ count, setCount ] = useState(0);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      let currentCount = count;
+
+      const interval = setInterval(() => {
+        if (currentCount < 14) {
+          setCount(prevCount => prevCount + 1);
+          currentCount += 1;
+        } else {
+          clearInterval(interval);
+        }
+      }, 100);
+
+      return () => {
+        clearInterval(interval);
+      };
+    }, 4000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
+
+
+
+
   return (
     <div>
       <div id="about" className="our_company">
@@ -51,7 +80,7 @@ function ESGAbout() {
             </div>
 
             <div className="our-projects__item">
-              <h2>14 проектов</h2>
+              <h2>{count} проектов</h2>
               <div className="target_line_span">
                 <span className="target-line-span"></span>
               </div>

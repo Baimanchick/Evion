@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import "../BurgerMenu";
 // import "../css/BurgerMenu.css";
 
-
-
 function Navbar() {
+  const [click, setClick] = useState(false);
 
-  const [ bottomLine, setBottomLine ] = useState(false);
-  const [ bottomLine2, setBottomLine2 ] = useState(false);
-  const [ bottomLine3, setBottomLine3 ] = useState(false);
-  const [ bottomLine4, setBottomLine4 ] = useState(false);
-
+  const handleClick = () => setClick(!click);
+  const [bottomLine, setBottomLine] = useState(false);
+  const [bottomLine2, setBottomLine2] = useState(false);
+  const [bottomLine3, setBottomLine3] = useState(false);
+  const [bottomLine4, setBottomLine4] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -27,13 +27,32 @@ function Navbar() {
       <div className="header_left">
         <ul>
           <li className={`nav-item`}>
-            <a href="#section-1" className={`nav-item ${bottomLine && !bottomLine2 ? "active-nav" : ""}`}>Как мы работаем</a>
+            <a
+              href="#section-1"
+              className={`nav-item ${
+                bottomLine && !bottomLine2 ? "active-nav" : ""
+              }`}
+            >
+              Как мы работаем
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#section-2" className={`nav-item ${bottomLine2 && !bottomLine3 ? "active-nav" : ""}`}>Проекты</a>
+            <a
+              href="#section-2"
+              className={`nav-item ${
+                bottomLine2 && !bottomLine3 ? "active-nav" : ""
+              }`}
+            >
+              Проекты
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#section-3" className={`nav-item ${bottomLine3 ? "active-nav" : ""}`}>Контакты</a>
+            <a
+              href="#section-3"
+              className={`nav-item ${bottomLine3 ? "active-nav" : ""}`}
+            >
+              Контакты
+            </a>
           </li>
           <li className="nav-item">
             <a href="/about">ESG</a>
@@ -44,20 +63,22 @@ function Navbar() {
         <a href="#" component={Link} to="/">
           EVION
         </a>
-        <div className="burger" style={{ display: "none" }}>
-          <ion-icon name="menu-outline"></ion-icon>
+        <div
+          className="burger"
+          onClick={handleClick}
+          style={{ display: "none" }}
+        >
+          <ion-icon name={click ? "menu-outline" : "close"}></ion-icon>
         </div>
       </div>
       <div className="header_right">
-        <a href="tel:+996500333351">+996 500 333351</a>
+        <a className="phone" href="tel:+996500333351">
+          +996 500 333351
+        </a>
         <a href="#section-4" className="header_right-button">
           Рассчитать стоимость
         </a>
       </div>
-      {/* <h2 className="nav-branding">EVION</h2>
-      <div className="menu-btn">
-        <div className="menu-btn__burger"></div>
-      </div> */}
     </header>
   );
 }

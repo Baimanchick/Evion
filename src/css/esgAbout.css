@@ -51,9 +51,7 @@
 .our-wins_proof {
   margin-top: 100px;
   display: flex;
-  /* justify-content: space-between; */
   gap: 70px;
-  /* margin-left: 75px; */
 }
 .target_line_span {
   display: flex;
