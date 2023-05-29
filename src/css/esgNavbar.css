@@ -34,7 +34,7 @@
   height: 110px;
   width: 100%;
   z-index: 110;
-  /* position: absolute; */
+  position: fixed;
   top: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
   transition: background-color 300ms linear;

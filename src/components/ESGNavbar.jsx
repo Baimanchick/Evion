@@ -1,5 +1,5 @@
-import React from 'react';
-import '../css/esgNavbar.css';
+import React from "react";
+import "../css/esgNavbar.css";
 
 function ESGNavbar() {
   return (
@@ -33,10 +33,22 @@ function ESGNavbar() {
                         <li style={{ cursor: "pointer" }}><a href='/' style={{ textDecoration: "none", color: "black", fontFamily: "tildasans-reg" }}>Контакты</a></li>
                     </ul>
                 </div>
+              </a>
             </div>
+          </div>
         </div>
+        <div className="esg__navbar__right">
+          <div className="esg__navbar__right_wrapper">
+            <ul className="esg__navbar_right_navigation">
+              <li>FAQ</li>
+              <li>Блог</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default ESGNavbar
+export default ESGNavbar;
