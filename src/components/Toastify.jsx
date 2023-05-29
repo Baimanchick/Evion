@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export function notify(msg) {
   return toast.success(msg, {
-    position: "top-left",
+    position: "top-center",
     autoClose: 1000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -22,7 +22,7 @@ function Toastify() {
   return (
     <ToastContainer
       position="top-center"
-      autoClose={2000}
+      autoClose={1000}
       hideProgressBar={false}
       newestOnTop={false}
       closeOnClick
@@ -30,7 +30,7 @@ function Toastify() {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme="light"
+      theme="dark"
     />
   );
 }

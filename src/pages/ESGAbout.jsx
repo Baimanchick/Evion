@@ -21,7 +21,7 @@ function ESGAbout() {
       return () => {
         clearInterval(interval);
       };
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearTimeout(timeout);
@@ -34,10 +34,8 @@ function ESGAbout() {
 
   return (
     <div>
-      <div className="our_company">
-        <div style={{ fontSize: "68px", marginTop: "75px", color: "white" }}>
-          КОМПАНИЯ "ЭВИОН"
-        </div>
+      <div id="about" className="our_company">
+        <div className="big-title">КОМПАНИЯ "ЭВИОН"</div>
       </div>
 
       <div className="information">
@@ -60,7 +58,7 @@ function ESGAbout() {
         </p>
       </div>
 
-      <div className="our-wins">
+      <div id="wins" className="our-wins">
         <div className="containerABCD">
           <div className="titles">
             <h2>Наши успехи</h2>
@@ -117,7 +115,7 @@ function ESGAbout() {
         </div>
       </div>
 
-      <div className="slider_about">
+      <div id="team" className="slider_about">
         <Slider4 />
       </div>
 

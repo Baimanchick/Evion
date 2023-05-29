@@ -5,6 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
+import { notify } from "../components/Toastify";
 
 function AdminPage() {
   const { getEmails, emails, spamEmails, getSpams, spamsDB } =
@@ -38,7 +39,7 @@ function AdminPage() {
                 onClick={(e) => {
                   signOut(auth)
                     .then(() => {
-                      console.log("Вы вышли");
+                      notify("Вы успешно вышли вышли");
                     })
                     .catch((item) => {
                       console.log(item);
