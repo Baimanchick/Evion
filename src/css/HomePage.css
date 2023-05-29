@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "tildasans-reg";
-  src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-med";
-  src: url("../fonts/TildaSans-Bold.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-semibold";
-  src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "tildasans-thin";
-  src: url("../fonts/TildaSans-Light.woff") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* .container__main{
   max-width: 1400px;
   margin: 0 auto;
@@ -541,6 +516,28 @@
   position: relative;
 }
 
+.center {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.acceptData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 19px;
+  background-color: #009975;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  padding: 15px 0px 15px 0px;
+  color: white;
+}
+
 .form_block__items > input {
   padding: 26px 20px 10px 20px;
   width: 100%;
@@ -637,6 +634,17 @@
   color: #999;
   display: block;
   font-family: "tildasans-thin";
+}
+
+.validEmail {
+  width: 760px;
+  background-color: #ff2638;
+  color: white;
+  font-size: 17px;
+  padding: 15px 0px 15px 15px;
+  font-family: "tildasans-semibold";
+  text-align: left;
+  display: block;
 }
 
 .l3 {
@@ -844,7 +852,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 15px 40px 15px;
 }
 
 .footer__info__y {
@@ -853,9 +861,10 @@
   font-family: "tildasans-thin";
 }
 
-.footer__info__y span {
+.footer__info__y a {
   font-family: "tildasans-thin";
   text-decoration: underline;
+  color: #fff;
 }
 
 .footer__info__social {
@@ -1051,6 +1060,10 @@ a {
   }
 }
 
+.slider3 {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   header {
     width: 100%;
@@ -1069,7 +1082,6 @@ a {
   .header_right {
     display: none;
   }
-
   .header_logo {
     display: flex;
     justify-content: space-between;
@@ -1082,7 +1094,6 @@ a {
     line-height: 1.35;
     font-family: "tildasans-semibold";
   }
-
   .burger {
     display: block !important;
     padding-right: 5px;
@@ -1091,7 +1102,6 @@ a {
     color: white;
     font-size: 40px;
   }
-
   .home_section {
     /* padding-bottom: 10px; */
     display: flex;
@@ -1115,6 +1125,36 @@ a {
   .greenBlock {
     position: absolute;
     top: 620px;
+  }
+  .footer__items {
+    display: flex;
+    flex-wrap: wrap;
+    /* row-gap: 30px; */
+    flex-direction: column;
+  }
+  .navigation__footer {
+    margin: 0px 25px 85px 25px;
+  }
+  .navigation__footer li {
+    font-size: 16px;
+  }
+  .footer__info__y {
+    font-size: 12px;
+  }
+  .parthers__block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-left: 15px; */
+  }
+  .parthers__right img {
+    width: 350px;
+    height: 280px;
+    object-fit: contain;
+  }
+  .parthers__right span {
+    font-size: 10px;
   }
   .home_section-target-info {
     display: flex;
@@ -1270,5 +1310,47 @@ a {
   }
   .info__electro {
     margin-left: 0 !important;
+  }
+  .bigIMG__title {
+    padding-top: 110px;
+  }
+  .form_block__items > input {
+    width: 310px;
+  }
+  .form_block__items > label {
+    left: 40px;
+  }
+  .slider3 {
+    display: block;
+    margin-bottom: 90px;
+  }
+  .slider2 {
+    display: none;
+  }
+  .parthers__text {
+    margin-bottom: 70px;
+  }
+  .parthers__left span {
+    font-size: 10px;
+  }
+  .parthers__left h3 {
+    font-size: 24px;
+    width: 330px;
+  }
+  .parthers__left p {
+    font-size: 14px;
+    width: 330px;
+    line-height: 1.45;
+  }
+  .parthers__left {
+    margin-left: 20px;
+  }
+  .notification {
+    position: fixed;
+    margin: auto;
+    /* top: 0; */
+    right: 0;
+    bottom: 20px;
+    left: 280px;
   }
 }

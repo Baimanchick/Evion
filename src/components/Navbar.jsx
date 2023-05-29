@@ -1,22 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
 // import "../BurgerMenu";
 // import "../css/BurgerMenu.css";
 
 function Navbar() {
+  const [bottomLine, setBottomLine] = useState(false);
+  const [bottomLine2, setBottomLine2] = useState(false);
+  const [bottomLine3, setBottomLine3] = useState(false);
+  const [bottomLine4, setBottomLine4] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setBottomLine(window.scrollY > 1250);
+      setBottomLine2(window.scrollY > 3050);
+      setBottomLine3(window.scrollY > 6750);
+    });
+  }, []);
+
   return (
     <header>
       <div className="header_left">
         <ul>
-          <li className="nav-item">
-            <a href="#section-1">Как мы работаем</a>
+          <li className={`nav-item`}>
+            <a
+              href="#section-1"
+              className={`nav-item ${
+                bottomLine && !bottomLine2 ? "active-nav" : ""
+              }`}
+            >
+              Как мы работаем
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#section-2">Проекты</a>
+            <a
+              href="#section-2"
+              className={`nav-item ${
+                bottomLine2 && !bottomLine3 ? "active-nav" : ""
+              }`}
+            >
+              Проекты
+            </a>
           </li>
           <li className="nav-item">
-            <a href="#section-3">Контакты</a>
+            <a
+              href="#section-3"
+              className={`nav-item ${bottomLine3 ? "active-nav" : ""}`}
+            >
+              Контакты
+            </a>
           </li>
           <li className="nav-item">
             <a href="/about">ESG</a>
