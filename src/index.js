@@ -6,6 +6,7 @@ import EmailContext from "./contexts/EmailsContext";
 import AuthContext from "./contexts/AuthContext";
 import BlogsContext from "./contexts/BlogsContext";
 import Toastify from "./components/Toastify";
+import PhonesContext from "./contexts/PhonesContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,8 +14,10 @@ root.render(
     <EmailContext>
       <AuthContext>
         <BlogsContext>
-          <App />
-          <Toastify />
+          <PhonesContext>
+            <App />
+            <Toastify />
+          </PhonesContext>
         </BlogsContext>
       </AuthContext>
     </EmailContext>

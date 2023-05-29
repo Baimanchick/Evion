@@ -100,7 +100,8 @@
       "text": "",
       "img": "https://static.tildacdn.com/tild3737-6133-4463-b834-613863383236/IMG_4149.jpeg",
       "category": "Подсказки"
-    },{
+    },
+    {
       "id": 5,
       "title": "Сколько может проехать электромобиль на одном заряде?",
       "text": "Посмотрим на важные факторы",
@@ -120,6 +121,29 @@
       "text": "На этой неделе были проведены работы по установке зарядных станций мощностей 120 кВт",
       "img": "https://static.tildacdn.com/tild3231-6161-4464-b934-326239313636/image.png",
       "category": "Новости"
+    }
+  ],
+  "phones": [
+    {
+      "id": 1,
+      "question": "What?",
+      "name": "Islam",
+      "phone": "+9969960854",
+      "email": "i@gmail.com"
+    },
+    {
+      "question": "lol&",
+      "name": "Sergey",
+      "email": "islamaibekov08@gmail.com",
+      "phone": "9964789438875",
+      "id": 2
+    },
+    {
+      "question": "asdf",
+      "name": "asdfa",
+      "email": "sdfasdfasdf",
+      "phone": "3423423",
+      "id": 3
     }
   ]
 }
