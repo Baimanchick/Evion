@@ -1,171 +1,169 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "tildasans-reg";
-    src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  @font-face {
-    font-family: "tildasans-med";
-    src: url("../fonts/TildaSans-Bold.woff") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  @font-face {
-    font-family: "tildasans-semibold";
-    src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  @font-face {
-    font-family: "tildasans-thin";
-    src: url("../fonts/TildaSans-Light.woff") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-
-
-.esg__navbar{
-    background-color: rgba(255,255,255,1);
-    height: 110px;
-    width: 100%;
-    z-index: 110;
-    position: absolute;
-    top: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0);
-    transition: background-color 300ms linear;
+  font-family: "tildasans-reg";
+  src: url("../fonts/TildaSans-Regular.woff ") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-med";
+  src: url("../fonts/TildaSans-Bold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-semibold";
+  src: url("../fonts/TildaSans-Semibold.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "tildasans-thin";
+  src: url("../fonts/TildaSans-Light.woff") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
-.esg__navbar-container{
-    height: 110px;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    display: table;
-    position: relative;
+.esg__navbar {
+  background-color: rgba(255, 255, 255, 1);
+  height: 110px;
+  width: 100%;
+  z-index: 110;
+  /* position: absolute; */
+  top: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+  transition: background-color 300ms linear;
 }
 
-.esg__navbar__left{
-    padding-left: 20px;
-    padding-right: 100.5px;
-    text-align: right;
-    left: 0;
-    width: 50%;
-    box-sizing: border-box;
-    position: absolute;
-    height: 100%;
+.esg__navbar-container {
+  height: 110px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: table;
+  position: relative;
 }
 
-.esg__navbar__left__menuwrapper{
-    display: inline-table;
-    height: 100%;
-    vertical-align: middle;
-    box-sizing: content-box;
+.esg__navbar__left {
+  padding-left: 20px;
+  padding-right: 100.5px;
+  text-align: right;
+  left: 0;
+  width: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
 }
 
-.esh__navbar__navigation{
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0;
+.esg__navbar__left__menuwrapper {
+  display: inline-table;
+  height: 100%;
+  vertical-align: middle;
+  box-sizing: content-box;
 }
 
-.esh__navbar__navigation li{
-    padding: 0 15px 0 0;
-    clear: both;
-    font-family: "tildasans-reg";
-    font-size: 16px;
-    display: inline-block;
-    margin: 0;
-    color: #000000;
-    white-space: nowrap;
-    box-sizing: content-box;
-    list-style-type: none;
+.esh__navbar__navigation {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
 }
 
-.esg__navbar__logo{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: table;
-    height: inherit;
-    z-index: 100;
-    box-sizing: content-box;
+.esh__navbar__navigation li {
+  padding: 0 15px 0 0;
+  clear: both;
+  font-family: "tildasans-reg";
+  font-size: 16px;
+  display: inline-block;
+  margin: 0;
+  color: #000000;
+  white-space: nowrap;
+  box-sizing: content-box;
+  list-style-type: none;
 }
 
-.esg__navbar__logo2{
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    z-index: 100;
+.esg__navbar__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: table;
+  height: inherit;
+  z-index: 100;
+  box-sizing: content-box;
 }
 
-.esg__navbar__logo_link{
-    color: #16b85f;
-    font-family: "tildasans-semibold";
-    letter-spacing: 2px;
-    text-decoration: none;
-    box-sizing: content-box;
-    transition-duration: 0.3s;
+.esg__navbar__logo2 {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 100;
 }
 
-.esg__navbar__logo_link:hover{
-    color: #259959 !important;
+.esg__navbar__logo_link {
+  color: #16b85f;
+  font-family: "tildasans-semibold";
+  letter-spacing: 2px;
+  text-decoration: none;
+  box-sizing: content-box;
+  transition-duration: 0.3s;
 }
 
-.esg__navbar__logo_title{
-    color: #16b85f;
-    font-weight: 700;
-    letter-spacing: 2px;
-    display: inline-block;
-    font-size: 24px;
-    white-space: nowrap;
-    font-family: "tildasans-reg";
+.esg__navbar__logo_link:hover {
+  color: #259959 !important;
 }
 
-.logo__title{
-    font-size: 30px;
+.esg__navbar__logo_title {
+  color: #16b85f;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-size: 24px;
+  white-space: nowrap;
+  font-family: "tildasans-reg";
 }
 
-.esg__navbar__right{
-    padding-right: 20px !important;
-    padding-left: 100.5px !important;
-    text-align: left;
-    right: 0;
-    width: 50%;
-    box-sizing: border-box;
-    position: absolute;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.logo__title {
+  font-size: 30px;
 }
 
-.esg__navbar__right_wrapper{
-    display: inline-table;
-    height: 100%;
-    vertical-align: middle;
-    box-sizing: content-box;
-    text-align: left;  
+.esg__navbar__right {
+  padding-right: 20px !important;
+  padding-left: 100.5px !important;
+  text-align: left;
+  right: 0;
+  width: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.esg__navbar_right_navigation{
-    display: table-cell;
-    vertical-align: middle;
+.esg__navbar__right_wrapper {
+  display: inline-table;
+  height: 100%;
+  vertical-align: middle;
+  box-sizing: content-box;
+  text-align: left;
 }
 
-.esg__navbar_right_navigation li{
-    padding: 0 15px 0 0;
-    clear: both;
-    font-family: "tildasans-reg";
-    font-size: 16px;
-    display: inline-block;
-    margin: 0;
-    color: #000000;
-    white-space: nowrap;
-    list-style-type: none;
+.esg__navbar_right_navigation {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.esg__navbar_right_navigation li {
+  padding: 0 15px 0 0;
+  clear: both;
+  font-family: "tildasans-reg";
+  font-size: 16px;
+  display: inline-block;
+  margin: 0;
+  color: #000000;
+  white-space: nowrap;
+  list-style-type: none;
 }
