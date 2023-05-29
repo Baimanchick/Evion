@@ -9,6 +9,7 @@ import AuthPage from "../pages/AuthPage";
 import ESGAbout from "../pages/ESGAbout";
 import Faq from "../pages/Faq";
 import ESGLayout from "../layout/ESGLayout";
+import BlogPage from "../pages/BlogPage";
 
 function MainRoutes() {
   return (
@@ -23,6 +24,7 @@ function MainRoutes() {
       <Route element={<ESGLayout/>}>
         <Route path='/about' element={<ESGAbout/>}></Route>
         <Route path='/faq' element={<Faq/>}></Route>
+        <Route path='/blogs' element={<BlogPage/>}></Route>
       </Route>
     </Routes>
   );
