@@ -10,6 +10,7 @@ import ESGAbout from "../pages/ESGAbout";
 import Faq from "../pages/Faq";
 import ESGLayout from "../layout/ESGLayout";
 import ContactsPage from "../pages/ContactsPage";
+import BlogPage from "../pages/BlogPage";
 
 function MainRoutes() {
   return (
@@ -21,9 +22,10 @@ function MainRoutes() {
       <Route path="*" element={<NotFounedPage />} />
       <Route path="/admin" element={<AdminPage />}></Route>
       <Route path="/auth" element={<AuthPage />}></Route>
-      <Route element={<ESGLayout />}>
-        <Route path="/about" element={<ESGAbout />}></Route>
-        <Route path="/faq" element={<Faq />}></Route>
+      <Route element={<ESGLayout/>}>
+        <Route path='/about' element={<ESGAbout/>}></Route>
+        <Route path='/faq' element={<Faq/>}></Route>
+        <Route path='/blogs' element={<BlogPage/>}></Route>
         <Route path="/contacts" element={<ContactsPage />}></Route>
       </Route>
     </Routes>
