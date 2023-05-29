@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import "../BurgerMenu";
 // import "../css/BurgerMenu.css";
 
 function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   const [bottomLine, setBottomLine] = useState(false);
   const [bottomLine2, setBottomLine2] = useState(false);
   const [bottomLine3, setBottomLine3] = useState(false);
@@ -59,12 +63,18 @@ function Navbar() {
         <a href="#" component={Link} to="/">
           EVION
         </a>
-        <div className="burger" style={{ display: "none" }}>
-          <ion-icon name="menu-outline"></ion-icon>
+        <div
+          className="burger"
+          onClick={handleClick}
+          style={{ display: "none" }}
+        >
+          <ion-icon name={click ? "menu-outline" : "close"}></ion-icon>
         </div>
       </div>
       <div className="header_right">
-        <a href="tel:+996500333351">+996 500 333351</a>
+        <a className="phone" href="tel:+996500333351">
+          +996 500 333351
+        </a>
         <a href="#section-4" className="header_right-button">
           Рассчитать стоимость
         </a>
