@@ -105,10 +105,14 @@ function HomePage() {
           {message ? (
             <div className="communication">
               <div className="whatsapp animate__fadeIn">
-                <ion-icon component={Link} name="logo-whatsapp"></ion-icon>
+                <a href="https://wa.me/996500333351" style={{ color: "transparent" }}>
+                  <ion-icon component={Link} name="logo-whatsapp"></ion-icon>
+                </a>
               </div>
               <div className="call animate__fadeIn">
-                <ion-icon name="call-outline"></ion-icon>
+                <a href="tel:+996500333351">
+                  <ion-icon name="call-outline"></ion-icon>
+                </a>
               </div>
             </div>
           ) : null}
@@ -666,10 +670,23 @@ function HomePage() {
                 <a href="/prvacy">политика конфиденциальности</a>
               </div>
               <div className="footer__info__social">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-youtube"></ion-icon>
-                <ion-icon name="logo-whatsapp"></ion-icon>
+                <a href="https://www.facebook.com/people/Evion-KG/pfbid0yLWBFJELw9xAZhuXhvftWacprnuNeJ7cbYwS6HHJKUpH6G4jcimTkR7FB9D2cQLwl/?mibextid=ZbWKwL">
+                  {" "}
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+
+                <a href="https://instagram.com/evion_kg?igshid=MzRlODBiNWFlZA==">
+                  {" "}
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://youtube.com/@EVIONKG">
+                  {" "}
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=996500333351&text&type=phone_number&app_absent=0">
+                  {" "}
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
               </div>
             </div>
           </div>
