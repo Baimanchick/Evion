@@ -80,7 +80,7 @@ function BlogPage() {
                             <img src={`${item.img}`} />
                             <div className='t899__item__title'>{ item.title }</div>
                             <div className='t899__item__text'>{ item.text }</div>
-                            <div className='t899__item__date'>19.04.2023</div>
+                            
                         </div>
                     )) }
                 </div>

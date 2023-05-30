@@ -99,8 +99,14 @@
 
 .t899__items{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 1em;  
     width: 100%;
+}
+
+.t899__item{
+    margin-bottom: 35px;
 }
 
 .t899__item img{

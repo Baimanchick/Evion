@@ -100,7 +100,7 @@ function ContactsPage() {
               value={formValue.name}
               onChange={(e) => handleChange(e)}
             />
-            <div className="title-evion-question">Телеофн*</div>
+            <div className="title-evion-question">Телефон*</div>
             <input
               placeholder="+996 (999) 999-999"
               className="input-evion"

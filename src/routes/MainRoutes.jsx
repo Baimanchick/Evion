@@ -11,6 +11,9 @@ import Faq from "../pages/Faq";
 import ESGLayout from "../layout/ESGLayout";
 import ContactsPage from "../pages/ContactsPage";
 import BlogPage from "../pages/BlogPage";
+import MessagesDetail from "../pages/MessagesDetail";
+import AdminBlogPage from "../pages/AdminBlogPage";
+import AdminBlogAddPage from "../pages/AdminBlogAddPage";
 
 function MainRoutes() {
   return (
@@ -21,6 +24,9 @@ function MainRoutes() {
       <Route path="/prvacy" element={<PrvacyPage />} />
       <Route path="*" element={<NotFounedPage />} />
       <Route path="/admin" element={<AdminPage />}></Route>
+      <Route path="/admin/blogs" element={<AdminBlogPage />}></Route>
+      <Route path="/admin/blogs/add" element={<AdminBlogAddPage />}></Route>
+      <Route path="/detail/:id" element={<MessagesDetail/>}></Route>
       <Route path="/auth" element={<AuthPage />}></Route>
       <Route element={<ESGLayout />}>
         <Route path="/about" element={<ESGAbout />}></Route>
