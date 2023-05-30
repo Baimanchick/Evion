@@ -14,6 +14,7 @@ import BlogPage from "../pages/BlogPage";
 import MessagesDetail from "../pages/MessagesDetail";
 import AdminBlogPage from "../pages/AdminBlogPage";
 import AdminBlogAddPage from "../pages/AdminBlogAddPage";
+import BlockDetailsPage from "../pages/BlockDetailsPage";
 
 function MainRoutes() {
   return (
@@ -26,7 +27,7 @@ function MainRoutes() {
       <Route path="/admin" element={<AdminPage />}></Route>
       <Route path="/admin/blogs" element={<AdminBlogPage />}></Route>
       <Route path="/admin/blogs/add" element={<AdminBlogAddPage />}></Route>
-      <Route path="/detail/:id" element={<MessagesDetail/>}></Route>
+      <Route path="/detail/:id" element={<MessagesDetail />}></Route>
       <Route path="/auth" element={<AuthPage />}></Route>
       <Route element={<ESGLayout />}>
         <Route path="/about" element={<ESGAbout />}></Route>
@@ -34,6 +35,7 @@ function MainRoutes() {
         <Route path="/blogs" element={<BlogPage />}></Route>
         <Route path="/contacts" element={<ContactsPage />}></Route>
       </Route>
+      <Route path="/details/:id" element={<BlockDetailsPage />} />
     </Routes>
   );
 }
