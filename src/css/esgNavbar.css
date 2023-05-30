@@ -167,5 +167,29 @@
   white-space: nowrap;
   list-style-type: none;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
+  .esg__navbar {
+    position: relative;
+    height: 390px;
+  }
+  .esg__navbar__left {
+    top: 100px;
+    left: 145px;
+    text-align: center;
+  }
+  .esh__navbar__navigation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .esg__navbar__right {
+    top: 200px;
+    right: 130px;
+  }
+  .esg__navbar_right_navigation {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
 }

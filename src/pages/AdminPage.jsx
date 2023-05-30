@@ -41,7 +41,7 @@ function AdminPage() {
                 onClick={(e) => {
                   signOut(auth)
                     .then(() => {
-                      notify("Вы успешно вышли вышли");
+                      notify("Вы успешно вышли ");
                     })
                     .catch((item) => {
                       console.log(item);

@@ -3,7 +3,7 @@ import "../css/esgAbout.css";
 import Slider4 from "../components/Slider4";
 
 function ESGAbout() {
-  const [ count, setCount ] = useState(0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -11,7 +11,7 @@ function ESGAbout() {
 
       const interval = setInterval(() => {
         if (currentCount < 14) {
-          setCount(prevCount => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
           currentCount += 1;
         } else {
           clearInterval(interval);
@@ -28,10 +28,6 @@ function ESGAbout() {
     };
   }, []);
 
-
-
-
-
   return (
     <div>
       <div id="about" className="our_company">
@@ -39,14 +35,14 @@ function ESGAbout() {
       </div>
 
       <div className="information">
-        <h2 style={{ fontSize: "24px", fontWeight: "normal" }}>
+        <p style={{ fontSize: "24px", fontWeight: "normal" }}>
           Осуществляет свою деятельность, согласно КОНЦЕПЦИИ зеленой <br />{" "}
           экономики в Кыргызской Республике "Кыргызстан - страна зеленой <br />{" "}
           экономики" , утвержденной постановлением Жогорку Кенеша <br />{" "}
           Кыргызской Республики от 28 июня 2018 года № 2532-VI. Мы <br />{" "}
           поддерживаем международные инициативы и принципы ESG в <br /> области
           устойчивого развития.
-        </h2>
+        </p>
         <div className="target_line-span">
           <span className="target-line_span"></span>
         </div>

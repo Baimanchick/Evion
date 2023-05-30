@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
 import { ACTIONS, API, BASE_URL, LIMIT, SPAMS_URL } from "../utils/consts";
+import { notify } from "../components/Toastify";
 
 const emailContext = createContext();
 
@@ -90,6 +91,7 @@ function EmailContext({ children }) {
       });
       await axios.delete(`${BASE_URL}/${ID}`);
       getEmails();
+      notify("Вы успешно перенесли в спам");
     } catch (error) {
       console.log(error);
     }
