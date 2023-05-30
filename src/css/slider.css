@@ -152,7 +152,7 @@
   object-fit: contain;
 }
 
-.wrapper__right h2 {
+.wrapper__rightt h2 {
   font-size: 36px;
 }
 
@@ -166,7 +166,7 @@
   align-items: center;
 }
 
-.wrapper__right p {
+.wrapper__rightt p {
   font-family: "tildasans-thin";
   margin-top: 30px;
   font-size: 20px;
@@ -232,5 +232,36 @@
     width: 140px;
     height: auto;
     object-fit: contain;
+  }
+  .wrapper__left img {
+    width: 300px;
+    height: 203px;
+  }
+  .first-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wrapper__rightt h2 {
+    font-size: 22px;
+  }
+  .wrapper__rightt p {
+    font-size: 16px;
+  }
+  .wrapper__rightt {
+    margin-left: 0;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .slick-dots {
+    margin-left: 0 !important;
+  }
+  .slick-next {
+    right: 25px !important;
+  }
+  .slick-prev {
+    left: 5px !important;
   }
 }

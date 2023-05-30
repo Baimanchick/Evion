@@ -52,7 +52,7 @@ function Slider4() {
               alt=""
             />
           </div>
-          <div className="wrapper__right">
+          <div className="wrapper__rightt">
             <h2>
               More about countless and <br /> breathtaking Canadian Lakes
             </h2>
