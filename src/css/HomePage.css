@@ -76,6 +76,7 @@
 .home_section-target {
   background-color: #f2f7fa;
   padding: 0px 0 100px 0;
+  font-family: "tildasans-reg";
 }
 
 .greenBlock {
@@ -128,6 +129,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "tildasans-reg";
 }
 
 .home_section-sertificate {
@@ -514,6 +516,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
+  font-family: "tildasans-reg";
 }
 
 .home_section-form {
@@ -527,6 +530,7 @@
   font-size: 42px;
   line-height: 1.23;
   color: #000000;
+  font-family: "tildasans-reg";
 }
 
 .form_block__description {

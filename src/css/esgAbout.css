@@ -22,6 +22,7 @@
   /* position: absolute; */
   margin-top: 100px;
   margin-left: 170px;
+  font-family: "tildasans-reg";
 }
 .our {
   margin-top: 16px;
@@ -39,6 +40,7 @@
 .titles {
   /* margin-left: 75px; */
   padding-top: 95px;
+  font-family: "tildasans-reg";
 }
 .titles p {
   margin-top: 30px;
@@ -79,6 +81,7 @@
 .our-projects__item h2 {
   font-size: 30px;
   font-weight: 700;
+  font-family: "tildasans-reg";
 }
 .evolution {
   display: flex;
@@ -103,11 +106,13 @@
 .wrapper--right h2 {
   font-size: 36px;
   font-weight: normal;
+  font-family: "tildasans-reg";
 }
 .big-title {
   font-size: 68px;
   margin-top: 75px;
   color: white;
+  font-family: "tildasans-semibold";
 }
 @media screen and (max-width: 420px) {
   .big-title {
@@ -115,11 +120,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "tildasans-semibold";
     /* padding: 40px; */
   }
   .information {
     margin: 95px auto;
     margin-left: 20px;
+    font-family: "tildasans-reg";
   }
   .our-wins {
     height: 1200px;
@@ -151,6 +158,7 @@
   }
   .wrapper--right h2 {
     font-size: 27px;
+    font-family: "tildasans-reg";
   }
   .paragra {
     font-size: 20px;
@@ -160,5 +168,6 @@
   }
   .wrapper--right {
     margin-left: 15px;
+    font-family: "tildasans-reg";
   }
 }
