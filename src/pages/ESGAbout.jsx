@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../css/esgAbout.css";
 import Slider4 from "../components/Slider4";
+import { Link } from "react-router-dom";
 
 function ESGAbout() {
-  const [ count, setCount ] = useState(0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -11,7 +12,7 @@ function ESGAbout() {
 
       const interval = setInterval(() => {
         if (currentCount < 14) {
-          setCount(prevCount => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
           currentCount += 1;
         } else {
           clearInterval(interval);
@@ -27,10 +28,6 @@ function ESGAbout() {
       clearTimeout(timeout);
     };
   }, []);
-
-
-
-
 
   return (
     <div>
@@ -199,16 +196,55 @@ function ESGAbout() {
         </div>
         <div className="footer__end">
           <div className="containerC">
-            <div className="footer__info__items">
-              <div className="footer__info__y">
-                © 2023 EVION
-                <a href="/prvacy">политика конфиденциальности</a>
+            <div className="all">
+              <div className="footer__info__item_1">
+                <div className="footer_logo">
+                  {" "}
+                  <a href="#" component={Link} to="/">
+                    EVION
+                  </a>
+                </div>
+                <div className="footer__info__social">
+                  <a href="https://www.facebook.com/people/Evion-KG/pfbid0yLWBFJELw9xAZhuXhvftWacprnuNeJ7cbYwS6HHJKUpH6G4jcimTkR7FB9D2cQLwl/?mibextid=ZbWKwL">
+                    {" "}
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+
+                  <a href="https://instagram.com/evion_kg?igshid=MzRlODBiNWFlZA==">
+                    {" "}
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                  <a href="https://youtube.com/@EVIONKG">
+                    {" "}
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                  <a href="https://api.whatsapp.com/send/?phone=996500333351&text&type=phone_number&app_absent=0">
+                    {" "}
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                  </a>
+                </div>
+
+                <div className="footer__info__y">
+                  © 2023 EVION
+                  <a href="/prvacy">политика конфиденциальности</a>
+                </div>
               </div>
-              <div className="footer__info__social">
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-youtube"></ion-icon>
-                <ion-icon name="logo-whatsapp"></ion-icon>
+              <div className="footer_info_item_2">
+                <ul className="footer_links_1">
+                  <div className="about_evion">Об EVION</div>
+                  <li>кто мы</li>
+                  <li>наша миссия</li>
+                  <li>проекты</li>
+                  <li>партнеры</li>
+                </ul>
+              </div>
+              <div className="footer_info_item_3">
+                <ul className="footer_links_2">
+                  <div className="our_services">Наши услуги</div>
+                  <li>Установка ЭЗС</li>
+                  <li>TOUCH App</li>
+                  <li>Зарядочные станции</li>
+                </ul>
               </div>
             </div>
           </div>
