@@ -58,6 +58,11 @@
 
 .navbar__logo {
   font-size: 24px;
+  font-family: "tildasans-reg";
+}
+
+.navbar__logo span{
+  font-family: "tildasans-reg";
 }
 
 .navbar__button button {
@@ -100,6 +105,7 @@
 
 .user__username {
   text-align: center;
+  font-family: "tildasans-reg";
 }
 
 .emails__message__block {
@@ -118,6 +124,7 @@
   margin-left: 30px;
   margin-bottom: 30px;
   margin-top: 20px;
+  font-family: "tildasans-reg";
 }
 
 /* .emails__message__items{
@@ -141,6 +148,7 @@
 .manage__blogs__title{
   font-size: 24px;
   padding: 25px 0px 0px 25px;
+  font-family: "tildasans-reg";
 }
 
 .manage__blogs__btns{

@@ -178,3 +178,31 @@
 .scrollUpBTN ion-icon{
     color: white;
 }
+
+.form__add__blog{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.form__add__blog input{
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.form__title{
+    margin-bottom: 15px;
+    font-family: "tildasans-semibold";
+    font-size: 24px;
+}
+
+.form__add__blog button{
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(30, 182, 88);
+    color: white;
+    font-family: "tildasans-semibold";
+}

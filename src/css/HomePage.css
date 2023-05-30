@@ -76,6 +76,7 @@
 .home_section-target {
   background-color: #f2f7fa;
   padding: 0px 0 100px 0;
+  font-family: "tildasans-reg";
 }
 
 .greenBlock {
@@ -128,6 +129,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "tildasans-reg";
 }
 
 .home_section-sertificate {
@@ -514,6 +516,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
+  font-family: "tildasans-reg";
 }
 
 .home_section-form {
@@ -527,6 +530,7 @@
   font-size: 42px;
   line-height: 1.23;
   color: #000000;
+  font-family: "tildasans-reg";
 }
 
 .form_block__description {
@@ -897,23 +901,37 @@
   color: white;
 }
 
-.footer__info__items {
+.all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_logo a {
+  color: rgb(0, 143, 29);
+  font-weight: bold;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+/* .footer__info__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 15px 40px 15px;
-}
+} */
 
 .footer__info__y {
   display: flex;
   flex-direction: column;
   font-family: "tildasans-thin";
+  margin-top: 30px;
+  color: #7a7a7a;
 }
 
 .footer__info__y a {
   font-family: "tildasans-thin";
   text-decoration: underline;
-  color: #fff;
+  color: #daa520;
 }
 
 .footer__info__social {
@@ -922,10 +940,50 @@
   align-items: center;
   width: 100%;
   max-width: 144px;
+  margin-top: 20px;
 }
 
 ion-icon {
-  font-size: 30px;
+  font-size: 28px;
+  background-color: rgb(0, 143, 29);
+  color: #000000;
+  border-radius: 28%;
+}
+
+.footer_info_item_2 {
+  margin-top: 20px;
+}
+
+.footer_info_item_3 {
+  margin-top: 20px;
+}
+
+.footer__info__item_1 {
+  margin-top: 20px;
+}
+
+.about_evion {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.footer_links_1 li {
+  font-family: "tildasans-thin";
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.our_services {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.footer_links_2 li {
+  font-family: "tildasans-thin";
+  list-style: none;
+  margin-bottom: 8px;
 }
 
 .notification {
@@ -1065,9 +1123,9 @@ a {
 /* a:hover {
   transform: translateY(-10px);
 } */
-.footer__info__social a:hover {
+/* .footer__info__social a:hover {
   transform: translateY(-10px);
-}
+} */
 
 @media screen and (max-width: 950px) {
   .home_section-tittle {
@@ -1135,16 +1193,15 @@ a {
     position: absolute;
     top: 100px;
     margin-right: 150px;
-    /* justify-content: space-between; */
+    justify-content: space-between;
   }
   .header_left {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
   }
   .header_right {
-    border-top: 1px solid white;
+    /* border-top: 1px solid white; */
     position: absolute;
     top: 180px;
     display: flex;
@@ -1152,7 +1209,7 @@ a {
     align-items: center;
     margin-left: 70px;
     justify-content: center;
-    width: 70%;
+    /* width: 70%; */
   }
   .header_right a {
     margin: 3px;
@@ -1167,7 +1224,6 @@ a {
     top: 120px;
     opacity: 1;
   } */
-
   .header_logo {
     display: flex;
     justify-content: space-between;
