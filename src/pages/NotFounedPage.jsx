@@ -4,7 +4,7 @@ import "../css/NotFounedPage.css";
 function NotFounedPage() {
   return (
     <div className="containerQWE">
-      <a className="link" href="/">
+      <a className="linkq" href="/">
         Извините, но такой страницы не существует :(
       </a>
     </div>
