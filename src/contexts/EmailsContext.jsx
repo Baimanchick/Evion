@@ -46,6 +46,18 @@ function EmailContext({ children }) {
     }
   }
 
+  async function getOneEmail(id) {
+    try {
+      const res = await axios.get(`${BASE_URL}/${id}`)
+      dispatch({
+        type: ACTIONS.oneEmail,
+        payload: res.data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   async function getSpams() {
     try {
       const res = await axios.get(`${SPAMS_URL}`);
@@ -91,6 +103,7 @@ function EmailContext({ children }) {
     spamEmails,
     getSpams,
     spams: state.spamsDB,
+    getOneEmail
   };
 
   return (

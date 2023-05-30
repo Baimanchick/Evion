@@ -55,7 +55,7 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a href="/about">ESG</a>
+            <a href="/about">Подробнее</a>
           </li>
         </ul>
       </div>

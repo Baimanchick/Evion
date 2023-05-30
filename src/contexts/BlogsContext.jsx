@@ -39,6 +39,24 @@ function BlogsContext({ children }) {
     }
   }
 
+  async function deleteBlog(id) {
+    try {
+      await axios.delete(`${BLOGS_URL}/${id}`);
+      getBlogs()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async function addBlog(newBlog) {
+    try {
+      await axios.post(`${BLOGS_URL}`, newBlog);
+      getBlogs()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
 //   async function addEmails(newEmail) {
 //     try {
 //       await axios.post(`${BASE_URL}`, newEmail);
@@ -51,6 +69,8 @@ function BlogsContext({ children }) {
   const value = {
     blogs: state.blogs,
     getBlogs,
+    deleteBlog,
+    addBlog
   };
 
   return (

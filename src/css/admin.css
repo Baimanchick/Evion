@@ -128,6 +128,45 @@
     background-color: white;
 } */
 
+.manage__blogs{
+    background-color: #d4f3eb;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    top: 230px;
+    margin-top: 100px;
+}
+
+.manage__blogs__title{
+  font-size: 24px;
+  padding: 25px 0px 0px 25px;
+}
+
+.manage__blogs__btns{
+  padding: 25px 0px 0px 25px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+.manage__blogs__btns button{
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.manage__blogs__btns button:first-child{
+  background-color: #009975;
+}
+
+.manage__blogs__btns button:last-child{
+  background-color: #515050;
+}
+
 .clientIMG {
   width: 48px;
   height: 48px;
@@ -157,6 +196,7 @@
 }
 
 .more__btn {
+  cursor: pointer;
   border: none;
   background-color: #009975;
   color: white;
@@ -170,6 +210,7 @@
   color: white;
   padding: 10px 25px 10px 25px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .emails__message__info {
@@ -188,4 +229,87 @@
   color: #515050;
   opacity: 0.7;
   font-family: "tildasans-reg";
+}
+
+
+.detailPageBlock{
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.detailGreenBlock{
+  width: 100%;
+  height: auto;
+  background-color: #d4f3eb;
+  padding: 30px 15px 30px 15px;
+  border-radius: 5px;
+}
+
+.detailGreenBlock__title{
+  font-size: 24px;
+}
+
+.detailGreenBlock__information{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+}
+
+.detailGreenBlock__information h1{
+  font-size: 22px;
+  /* border-bottom: 1px solid #a8eddb; */
+}
+
+.detailGreenBlock__information > h1 > span{
+  color: #ea2550;
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.email{
+  font-size: 22px;
+}
+
+.email > span{
+  color: #ea2550;
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.kilowatt_info{
+  font-size: 22px;
+}
+
+.kilowatt_info > span{
+  font-size: 30px;
+  color: #ea2550;
+  margin-left: 15px;
+}
+
+.address_info{
+  font-size: 22px;
+}
+
+.address_info > span{
+  font-size: 30px;
+  color: #ea2550;
+  margin-left: 15px;
+}
+
+.delete__message{
+  padding: 15px 20px 15px 20px;
+  background-color: #fa1b56;
+  color: white;
+  width: 100px;
+  margin-top: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.delete__message:hover{
+  background-color: #ec2258;
 }

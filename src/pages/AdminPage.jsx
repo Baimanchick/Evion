@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useEmailContext } from "../contexts/EmailsContext";
 import "../css/admin.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
@@ -11,6 +11,8 @@ function AdminPage() {
   const { getEmails, emails, spamEmails, getSpams, spamsDB } =
     useEmailContext();
   const { user } = useAuthContext();
+  
+  const navigate = useNavigate();
 
   useEffect(() => {
     getEmails();
@@ -66,6 +68,13 @@ function AdminPage() {
               />
               <div className="user__username">{user?.email}</div>
             </div>
+            <div className="manage__blogs">
+              <div className="manage__blogs__title">Управление блога:</div>
+              <div className="manage__blogs__btns">
+                <button onClick={() => navigate("/admin/blogs/add")}>Добавить блог</button>
+                <button onClick={() => navigate("/admin/blogs")}>Посмотреть все блоги</button>
+              </div>
+            </div>
             <div className="emails__message__block">
               <h1>Сообщение</h1>
               <div className="emails__message__items">
@@ -73,7 +82,7 @@ function AdminPage() {
                   <div className="emails__items" key={item.id}>
                     <div className="emails__message__item">
                       <img
-                        src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+                        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
                         className="clientIMG"
                       />
                       <div className="emails__message__info">
@@ -86,7 +95,7 @@ function AdminPage() {
                       </div>
                     </div>
                     <div className="emails__message_buttons">
-                      <button className="more__btn">Подробнее</button>
+                      <button className="more__btn" onClick={() => navigate(`/detail/${item.id}`)}>Подробнее</button>
                       <button
                         className="span__btn"
                         onClick={() => spamEmails(item.id)}
