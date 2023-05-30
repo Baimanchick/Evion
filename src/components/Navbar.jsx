@@ -9,6 +9,7 @@ function Navbar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
   const [bottomLine, setBottomLine] = useState(false);
   const [bottomLine2, setBottomLine2] = useState(false);
   const [bottomLine3, setBottomLine3] = useState(false);
