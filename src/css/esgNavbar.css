@@ -193,3 +193,37 @@
     row-gap: 15px;
   }
 }
+
+@media screen and (min-device-width: 678px) and (max-device-width: 850px) {
+  .esg__navbar {
+    position: relative;
+    height: 425px;
+  }
+  .esg__navbar__left {
+    top: 130px;
+    left: 235px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .esh__navbar__navigation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .esg__navbar__right {
+    top: 250px;
+    right: 140px;
+    font-size: 18px;
+  }
+  .esg__navbar_right_navigation {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .logo__title {
+    top: 30px;
+    display: flex;
+    text-align: center;
+  }
+}

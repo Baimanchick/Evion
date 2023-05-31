@@ -171,3 +171,32 @@
     font-family: "tildasans-reg";
   }
 }
+@media screen and (min-device-width: 678px) and (max-device-width: 850px) {
+  .our_company {
+    width: 768px;
+    height: 445px;
+  }
+  .big-title {
+    width: 600px;
+    height: 221px;
+    font-size: 68px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .information {
+    width: 786px;
+    height: 400px;
+    margin-left: 40px;
+    text-align: center;
+  }
+  .our-wins {
+    width: 768px;
+    height: 752px;
+  }
+  .our-wins_proof {
+    display: flex;
+    flex-direction: column;
+    margin-top: 59px;
+  }
+}
