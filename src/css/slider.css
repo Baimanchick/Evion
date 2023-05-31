@@ -266,3 +266,36 @@
     left: 5px !important;
   }
 }
+@media screen and (min-device-width: 678px) and (max-device-width: 850px) {
+  .wrapper__left img {
+    width: 550px;
+    height: 372px;
+  }
+  .first-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wrapper__rightt h2 {
+    font-size: 32px;
+  }
+  .wrapper__rightt p {
+    font-size: 18px;
+  }
+  .wrapper__rightt {
+    margin-left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .slick-dots {
+    margin-left: 0 !important;
+  }
+  .slick-next {
+    right: 25px !important;
+  }
+  .slick-prev {
+    left: 5px !important;
+  }
+}

@@ -170,27 +170,18 @@
 @media screen and (max-width: 420px) {
   .esg__navbar {
     position: relative;
-    height: 330px;
-  }
-  .esg__navbar__left {
-    top: 100px;
-    left: 139px;
-    text-align: center;
   }
   .esh__navbar__navigation {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
-  }
-  .esg__navbar__right {
-    top: 220px;
-    right: 140px;
+    row-gap: 10px;
+    margin-top: 40px;
   }
   .esg__navbar_right_navigation {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 10px;
+    margin-top: 40px;
   }
 }
 

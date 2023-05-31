@@ -174,30 +174,58 @@
 }
 @media screen and (min-device-width: 678px) and (max-device-width: 850px) {
   .our_company {
-    width: 768px;
+    width: 100%;
     height: 445px;
   }
   .big-title {
     width: 600px;
     height: 221px;
-    font-size: 68px;
+    font-size: 58px;
     text-align: center;
     display: flex;
     align-items: center;
   }
   .information {
-    width: 786px;
-    height: 400px;
     margin-left: 40px;
-    text-align: center;
+  }
+  .containerABCD {
+    margin-left: 70px;
   }
   .our-wins {
-    width: 768px;
-    height: 752px;
+    height: 1250px;
   }
   .our-wins_proof {
+    flex-wrap: wrap;
+  }
+  .target_line_span .target-line-span {
+    width: 350px;
+  }
+
+  .evolution {
     display: flex;
     flex-direction: column;
-    margin-top: 59px;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper--left img {
+    width: 600px;
+    height: 514px;
+    margin-top: 55px;
+    margin-bottom: 90px;
+    margin-left: 5px;
+  }
+  .wrapper--right h2 {
+    font-size: 37px;
+    font-family: "tildasans-reg";
+  }
+  .paragra {
+    font-size: 22px;
+  }
+  .paragrap {
+    font-size: 16px;
+  }
+  .wrapper--right {
+    margin-left: 15px;
+    font-family: "tildasans-reg";
   }
 }
