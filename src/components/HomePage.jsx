@@ -472,7 +472,7 @@ function HomePage() {
           <div className="bigIMG__text">
             Стоимость зарядной станции с установкой от 100 000сом
           </div>
-          <div className="bigIMG__button">Рассчитать стоимость</div>
+          <div className="bigIMG__button"><a href="#section-4">Рассчитать стоимость</a></div>
         </div>
         <div className="greenBlock2"></div>
       </div>
