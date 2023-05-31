@@ -60,7 +60,7 @@ function AdminBlogPage() {
                                 </div>
                             </div>
                             <div className="emails__message_buttons" style={{ justifyContent: "normal", gap: "15px" }}>
-                                <button className="more__btn">Подробнее</button>
+                                {/* <button className="more__btn">Подробнее</button> */}
                                 <button
                                     className="span__btn" onClick={() => deleteBlog(item.id)}>
                                     Удалить

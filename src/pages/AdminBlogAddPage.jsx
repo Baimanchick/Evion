@@ -6,6 +6,7 @@ import { auth } from '../fireBase';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useBlogContext } from '../contexts/BlogsContext';
+import { useNavigate } from 'react-router-dom';
 
 
 function AdminBlogAddPage() {
@@ -13,6 +14,8 @@ function AdminBlogAddPage() {
     const { user } = useAuthContext();
     const { addBlog } = useBlogContext();
     
+    const navigate = useNavigate()
+
     const [ formValue, setFormValue ] = useState({
         title: "",
         img: "",
@@ -20,7 +23,7 @@ function AdminBlogAddPage() {
     })
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         try {
             addBlog(formValue);
             setFormValue({
@@ -28,6 +31,7 @@ function AdminBlogAddPage() {
                 img: "",
                 text: ""
             })
+            navigate("/admin/blogs")
         } catch (error) {
             console.log(error)
         }
