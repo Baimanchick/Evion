@@ -7,12 +7,16 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [ click2, setClick2 ] = useState(false);
 
-  const handleClick = () => setClick(!click);
   const [bottomLine, setBottomLine] = useState(false);
   const [bottomLine2, setBottomLine2] = useState(false);
   const [bottomLine3, setBottomLine3] = useState(false);
   const [bottomLine4, setBottomLine4] = useState(false);
+
+  const handleClick2 = () => setClick(!click);
+
+  const handleClick = () => setClick2(!click2);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -23,15 +27,16 @@ function Navbar() {
   }, []);
 
   return (
-    <header>
-      <div className="header_left">
-        <ul>
+    <header style={ click ? { marginBottom: "135px" } : { marginBottom: "" } } className={`${ click2 ? "mb-7" : "" }`} >
+      <div className={`header_left ${ click2 ? "header_nav_ipad" : "" }`}>
+        <ul className={`header_nav`} style={ click ? { display: "flex", gap: "15px" } : { display: "" } }>
           <li className={`nav-item`}>
             <a
               href="#section-1"
               className={`nav-item ${
                 bottomLine && !bottomLine2 ? "active-nav" : ""
               }`}
+              onClick={() => setClick2(false)}
             >
               Как мы работаем
             </a>
@@ -42,6 +47,7 @@ function Navbar() {
               className={`nav-item ${
                 bottomLine2 && !bottomLine3 ? "active-nav" : ""
               }`}
+              onClick={() => setClick2(false)}
             >
               Проекты
             </a>
@@ -50,6 +56,7 @@ function Navbar() {
             <a
               href="#section-3"
               className={`nav-item ${bottomLine3 ? "active-nav" : ""}`}
+              onClick={() => setClick2(false)}
             >
               Контакты
             </a>
@@ -63,15 +70,14 @@ function Navbar() {
         <a href="#" component={Link} to="/">
           EVION
         </a>
-        <div
-          className="burger"
-          onClick={handleClick}
-          style={{ display: "none" }}
-        >
-          <ion-icon name={click ? "menu-outline" : "close"}></ion-icon>
+        <div className="burger" onClick={handleClick2}>
+          <ion-icon name={click ? "close" : "menu-outline"}></ion-icon>
+        </div>
+        <div className="burger__for_ipad" onClick={handleClick}>
+          <ion-icon name={click2 ? "close" : "menu-outline"}></ion-icon>
         </div>
       </div>
-      <div className="header_right">
+      <div className="header_right" style={ click ? { display: "flex", marginTop: "45px" } : { display: "" } }>
         <a className="phone" href="tel:+996500333351">
           +996 500 333351
         </a>
