@@ -79,6 +79,15 @@
   font-size: 20px;
 }
 
+.footer__info__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info__y {
+  padding-bottom: 10px;
+}
+
 @media screen and (max-width: 420px) {
   .form-evion {
     max-width: 320px;
