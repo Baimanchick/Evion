@@ -77,7 +77,7 @@ function Navbar() {
           <ion-icon name={click2 ? "close" : "menu-outline"}></ion-icon>
         </div>
       </div>
-      <div className="header_right" style={ click ? { display: "flex", marginTop: "45px" } : { display: "" } }>
+      <div className="header_right" style={ click ? { display: "flex", marginTop: "45px", justifyContent: "center", alignItems: "center", width: "65%" } : { display: "" } }>
         <a className="phone" href="tel:+996500333351">
           +996 500 333351
         </a>
