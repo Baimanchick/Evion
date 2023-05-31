@@ -678,20 +678,32 @@ function HomePage() {
                 <div className="footer__info__social">
                   <a href="https://www.facebook.com/people/Evion-KG/pfbid0yLWBFJELw9xAZhuXhvftWacprnuNeJ7cbYwS6HHJKUpH6G4jcimTkR7FB9D2cQLwl/?mibextid=ZbWKwL">
                     {" "}
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon
+                      className="footer_icon"
+                      name="logo-facebook"
+                    ></ion-icon>
                   </a>
 
                   <a href="https://instagram.com/evion_kg?igshid=MzRlODBiNWFlZA==">
                     {" "}
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon
+                      className="footer_icon"
+                      name="logo-instagram"
+                    ></ion-icon>
                   </a>
                   <a href="https://youtube.com/@EVIONKG">
                     {" "}
-                    <ion-icon name="logo-youtube"></ion-icon>
+                    <ion-icon
+                      className="footer_icon"
+                      name="logo-youtube"
+                    ></ion-icon>
                   </a>
                   <a href="https://api.whatsapp.com/send/?phone=996500333351&text&type=phone_number&app_absent=0">
                     {" "}
-                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon
+                      className="footer_icon"
+                      name="logo-whatsapp"
+                    ></ion-icon>
                   </a>
                 </div>
 

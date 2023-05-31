@@ -75,3 +75,58 @@
   font-family: "tildasans-thin";
   font-size: 20px;
 }
+
+@media screen and (max-width: 420px) {
+  .form-evion {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .special-input {
+    width: 350px;
+    height: 102px;
+    margin-right: 80px;
+  }
+  .input-evion {
+    width: 350px;
+  }
+  .btn-question {
+    width: 350px;
+  }
+  .contacty {
+    width: 390px;
+    height: 350px;
+    margin-right: 130px;
+  }
+  .gmail-evion {
+    width: 124px;
+    font-size: 16px;
+    height: 16px;
+    font-family: "tildasans-thin";
+  }
+  .phone-number {
+    width: 124px;
+    font-size: 14px;
+    font-family: "tildasans-thin";
+  }
+  .conntact {
+    width: 129px;
+    font-size: 30px;
+    font-family: "tildasans-thin";
+    margin-top: 20px;
+  }
+  .home-section_footer {
+    width: 390px;
+    /* height: 1111px; */
+  }
+  .footer__info__social ion-icon {
+    color: black;
+    font-size: 28px;
+  }
+  .footer__info__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__info__y {
+    padding-bottom: 10px;
+  }
+}
