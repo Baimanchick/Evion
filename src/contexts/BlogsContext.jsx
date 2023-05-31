@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
-import { ACTIONS, BASE_URL, BLOGS_URL, } from "../utils/consts";
+import { ACTIONS, BASE_URL, BLOGS_URL } from "../utils/consts";
+import { async } from "q";
 
 const blogContext = createContext();
 
@@ -26,7 +27,7 @@ function reducer(state, action) {
 
 function BlogsContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initState);
-  
+
   async function getBlogs() {
     try {
       const res = await axios.get(`${BLOGS_URL}`);
@@ -42,40 +43,52 @@ function BlogsContext({ children }) {
   async function deleteBlog(id) {
     try {
       await axios.delete(`${BLOGS_URL}/${id}`);
-      getBlogs()
+      getBlogs();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
   async function addBlog(newBlog) {
     try {
       await axios.post(`${BLOGS_URL}`, newBlog);
-      getBlogs()
+      getBlogs();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
-//   async function addEmails(newEmail) {
-//     try {
-//       await axios.post(`${BASE_URL}`, newEmail);
-//       getEmails();
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
+  async function getOneBlog(id) {
+    try {
+      const { data } = await axios.get(`${BLOGS_URL}/${id}`);
+      dispatch({
+        type: ACTIONS.oneBlog,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  //   async function addEmails(newEmail) {
+  //     try {
+  //       await axios.post(`${BASE_URL}`, newEmail);
+  //       getEmails();
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
 
   const value = {
     blogs: state.blogs,
+    oneBlog: state.oneBlog,
     getBlogs,
     deleteBlog,
-    addBlog
+    addBlog,
+    getOneBlog,
   };
 
-  return (
-    <blogContext.Provider value={value}>{children}</blogContext.Provider>
-  );
+  return <blogContext.Provider value={value}>{children}</blogContext.Provider>;
 }
 
 export default BlogsContext;

@@ -6,9 +6,10 @@
   align-items: center;
   font-size: xx-large;
 }
-.link {
+.linkq {
   transition: 0.7s ease;
+  color: black;
 }
-.link:hover {
+.linkq:hover {
   color: red;
 }
