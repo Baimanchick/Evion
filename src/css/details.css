@@ -1,0 +1,68 @@
+.detailss img {
+  width: 760px;
+  height: 495px;
+}
+.ionicon {
+  background-color: white;
+}
+.s-ion-icon {
+  background-color: white;
+}
+.ionicon .s-ion-icon {
+  background-color: white;
+}
+.detailss {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.text-details {
+  width: 750px;
+  font-size: 18px;
+  font-family: "tildasans-thin";
+}
+.title-db {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "tildasans-reg";
+}
+.navick {
+  display: flex;
+}
+.navick div {
+  max-width: 100%;
+  margin: 10px auto;
+}
+
+.target_line-span-evionchick {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.target_line-span-evionchick .target-line_span-evioxchick {
+  content: "";
+  background-color: #7a7a7a;
+  width: 100%;
+  height: 1px;
+  /* margin: 20px 0; */
+}
+@media screen and (max-width: 420px) {
+  .detailss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-details {
+    width: 290px;
+  }
+  .detailss img {
+    width: 300px;
+    height: 227px;
+  }
+  .title-db {
+    font-size: 18px;
+  }
+}

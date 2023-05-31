@@ -170,11 +170,11 @@
 @media screen and (max-width: 420px) {
   .esg__navbar {
     position: relative;
-    height: 390px;
+    height: 330px;
   }
   .esg__navbar__left {
     top: 100px;
-    left: 145px;
+    left: 139px;
     text-align: center;
   }
   .esh__navbar__navigation {
@@ -183,8 +183,8 @@
     row-gap: 15px;
   }
   .esg__navbar__right {
-    top: 200px;
-    right: 130px;
+    top: 220px;
+    right: 140px;
   }
   .esg__navbar_right_navigation {
     text-align: center;
