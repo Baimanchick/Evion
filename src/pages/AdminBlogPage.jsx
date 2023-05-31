@@ -5,6 +5,8 @@ import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";    
 
+import ReactHtmlParser from 'react-html-parser';
+
 function AdminBlogPage() {
     const { getBlogs, blogs, deleteBlog, addBlog } = useBlogContext();
     const { user } = useAuthContext();
@@ -53,7 +55,7 @@ function AdminBlogPage() {
                                         { item.title }
                                     </div>
                                     <div className="emails__message__info__request">
-                                    { item.text }
+                                      {item.text}
                                     </div>
                                 </div>
                             </div>

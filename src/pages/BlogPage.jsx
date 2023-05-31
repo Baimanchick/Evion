@@ -105,7 +105,7 @@ function BlogPage() {
                   <img src={`${item.img}`} />
                 </a>
                 <div className="t899__item__title">{item.title}</div>
-                <div className="t899__item__text">{item.text}</div>
+                <div className="t899__item__text">{item.text.length > 50 ? `${item.text.slice(0, 50)}...` : item.text}</div>
               </div>
             ))}
           </div>
