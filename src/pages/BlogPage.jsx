@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useBlogContext } from "../contexts/BlogsContext";
 import "../css/blog.css";
 import { Link } from "react-router-dom";
+import ReactHtmlParser from "react-html-parser";
 
 function BlogPage() {
   const [loadedBlogs, setLoadedBlogs] = useState(6);
@@ -105,7 +106,15 @@ function BlogPage() {
                   <img src={`${item.img}`} />
                 </a>
                 <div className="t899__item__title">{item.title}</div>
-                <div className="t899__item__text">{item.text.length > 50 ? `${item.text.slice(0, 50)}...` : item.text}</div>
+                <div className="t899__item__text">
+                  {ReactHtmlParser(
+                    `${
+                      item.text.length > 50
+                        ? `${item.text.slice(0, 50)}...`
+                        : item.text
+                    }`
+                  )}
+                </div>
               </div>
             ))}
           </div>
