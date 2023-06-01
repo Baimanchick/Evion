@@ -12,7 +12,7 @@ const initState = {
   phones: [],
   onePhone: null,
   phones2: [],
-  onePhone2: null
+  onePhone2: null,
 };
 
 function reducer(state, action) {
@@ -24,7 +24,7 @@ function reducer(state, action) {
     case ACTIONS.phones2:
       return { ...state, phones2: action.payload };
     case ACTIONS.onePhone2:
-      return { ...state, onePhone2: action.payload}; 
+      return { ...state, onePhone2: action.payload };
     default:
       return state;
   }
@@ -32,7 +32,7 @@ function reducer(state, action) {
 
 function PhonesContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initState);
-  
+
   async function getPhones() {
     try {
       const res = await axios.get(`${PHONES_URL}`);
@@ -54,6 +54,14 @@ function PhonesContext({ children }) {
     }
   }
 
+  async function deletePhone(id) {
+    try {
+      await axios.delete(`${PHONES_URL}/${id}`);
+      getPhones();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   async function getPhones2() {
     try {
@@ -80,10 +88,12 @@ function PhonesContext({ children }) {
     phones: state.phones,
     getPhones,
     addPhones,
+    deletePhone,
     onePhone: state.onePhone,
     phones2: state.phones2,
     onePhone2: state.onePhone2,
-    addPhones2
+    addPhones2,
+    getPhones2,
   };
 
   return (

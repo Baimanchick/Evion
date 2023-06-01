@@ -82,7 +82,7 @@
 @media screen and (max-width: 420px) {
   .form-evion {
     max-width: 320px;
-    margin: 0 auto;
+    margin-left: 22px;
   }
   .special-input {
     width: 350px;
@@ -98,24 +98,32 @@
   .contacty {
     width: 390px;
     height: 350px;
-    margin-right: 130px;
+    /* margin-right: 130px; */
+  }
+  .titles-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 10px;
+    padding-top: 60px;
   }
   .gmail-evion {
-    width: 124px;
+    /* width: 124px; */
     font-size: 16px;
-    height: 16px;
+    /* height: 16px; */
     font-family: "tildasans-thin";
   }
   .phone-number {
-    width: 124px;
+    /* width: 124px; */
     font-size: 14px;
     font-family: "tildasans-thin";
   }
   .conntact {
-    width: 129px;
+    /* width: 129px; */
     font-size: 30px;
     font-family: "tildasans-thin";
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .home-section_footer {
     width: 390px;

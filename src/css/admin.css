@@ -61,7 +61,7 @@
   font-family: "tildasans-reg";
 }
 
-.navbar__logo span{
+.navbar__logo span {
   font-family: "tildasans-reg";
 }
 
@@ -135,23 +135,33 @@
     background-color: white;
 } */
 
-.manage__blogs{
-    background-color: #d4f3eb;
-    border-radius: 10px;
-    width: 400px;
-    height: 200px;
-    position: fixed;
-    top: 230px;
-    margin-top: 100px;
+.manage__blogs {
+  background-color: #d4f3eb;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  position: fixed;
+  top: 230px;
+  margin-top: 100px;
 }
 
-.manage__blogs__title{
+.manage__blogs2 {
+  background-color: #d4f3eb;
+  border-radius: 10px;
+  width: 400px;
+  height: 150px;
+  position: fixed;
+  top: 450px;
+  margin-top: 100px;
+}
+
+.manage__blogs__title {
   font-size: 24px;
   padding: 25px 0px 0px 25px;
   font-family: "tildasans-reg";
 }
 
-.manage__blogs__btns{
+.manage__blogs__btns {
   padding: 25px 0px 0px 25px;
   display: flex;
   width: 100%;
@@ -159,7 +169,7 @@
   gap: 20px;
 }
 
-.manage__blogs__btns button{
+.manage__blogs__btns button {
   border: none;
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
@@ -167,11 +177,11 @@
   cursor: pointer;
 }
 
-.manage__blogs__btns button:first-child{
+.manage__blogs__btns button:first-child {
   background-color: #009975;
 }
 
-.manage__blogs__btns button:last-child{
+.manage__blogs__btns button:last-child {
   background-color: #515050;
 }
 
@@ -239,14 +249,13 @@
   font-family: "tildasans-reg";
 }
 
-
-.detailPageBlock{
+.detailPageBlock {
   width: 100%;
   height: auto;
   margin-top: 100px;
 }
 
-.detailGreenBlock{
+.detailGreenBlock {
   width: 100%;
   height: auto;
   background-color: #d4f3eb;
@@ -254,11 +263,11 @@
   border-radius: 5px;
 }
 
-.detailGreenBlock__title{
+.detailGreenBlock__title {
   font-size: 24px;
 }
 
-.detailGreenBlock__information{
+.detailGreenBlock__information {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -266,48 +275,48 @@
   row-gap: 15px;
 }
 
-.detailGreenBlock__information h1{
+.detailGreenBlock__information h1 {
   font-size: 22px;
   /* border-bottom: 1px solid #a8eddb; */
 }
 
-.detailGreenBlock__information > h1 > span{
+.detailGreenBlock__information > h1 > span {
   color: #ea2550;
   font-size: 30px;
   margin-left: 15px;
 }
 
-.email{
+.email {
   font-size: 22px;
 }
 
-.email > span{
+.email > span {
   color: #ea2550;
   font-size: 30px;
   margin-left: 15px;
 }
 
-.kilowatt_info{
+.kilowatt_info {
   font-size: 22px;
 }
 
-.kilowatt_info > span{
+.kilowatt_info > span {
   font-size: 30px;
   color: #ea2550;
   margin-left: 15px;
 }
 
-.address_info{
+.address_info {
   font-size: 22px;
 }
 
-.address_info > span{
+.address_info > span {
   font-size: 30px;
   color: #ea2550;
   margin-left: 15px;
 }
 
-.delete__message{
+.delete__message {
   padding: 15px 20px 15px 20px;
   background-color: #fa1b56;
   color: white;
@@ -318,6 +327,6 @@
   transition-duration: 0.3s;
 }
 
-.delete__message:hover{
+.delete__message:hover {
   background-color: #ec2258;
 }

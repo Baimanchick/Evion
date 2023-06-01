@@ -4,18 +4,17 @@ import { useBlogContext } from "../contexts/BlogsContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-
-import ReactHtmlParser from "react-html-parser";
+import { usePhoneContext } from "../contexts/PhonesContext";
 import { useNavigate } from "react-router-dom";
 
-function AdminBlogPage() {
-  const { getBlogs, blogs, deleteBlog, addBlog } = useBlogContext();
+function AdminClienContactsPage() {
+  const { getPhones2, phones2, deletePhone } = usePhoneContext();
   const { user } = useAuthContext();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    getBlogs();
+    getPhones2();
   }, []);
 
   return (
@@ -71,9 +70,9 @@ function AdminBlogPage() {
                 className="detailGreenBlock__title"
                 style={{ paddingLeft: "30px", marginBottom: "25px" }}
               >
-                Блог:{" "}
+                Контакты клиентов:{" "}
               </div>
-              {blogs.map((item) => (
+              {phones2.map((item) => (
                 <div className="emails__items">
                   <div className="emails__message__item">
                     <div
@@ -81,11 +80,13 @@ function AdminBlogPage() {
                       style={{ marginLeft: "0" }}
                     >
                       <div className="emails__message__info__name">
-                        {item.title}
+                        {item.phone}
                       </div>
-                      <div className="emails__message__info__request">
-                        {item.text}
-                      </div>
+                      {/* <div className="emails__message__info__request">
+                        <strong>Имя: </strong>
+                        {item.name}, <strong>Телефон: </strong>
+                        {item.phone}, <strong>E-mail: </strong> {item.email}
+                      </div> */}
                     </div>
                   </div>
                   <div
@@ -93,12 +94,12 @@ function AdminBlogPage() {
                     style={{ justifyContent: "normal", gap: "15px" }}
                   >
                     {/* <button className="more__btn">Подробнее</button> */}
-                    <button
+                    {/* <button
                       className="span__btn"
-                      onClick={() => deleteBlog(item.id)}
+                      onClick={() => deletePhone(item.id)}
                     >
                       Удалить
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}
@@ -110,4 +111,6 @@ function AdminBlogPage() {
   );
 }
 
-export default AdminBlogPage;
+export default AdminClienContactsPage;
+
+//AdminClienContactsPage

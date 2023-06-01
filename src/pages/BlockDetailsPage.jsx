@@ -3,8 +3,7 @@ import { useBlogContext } from "../contexts/BlogsContext";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import "../css/details.css";
-import ReactHtmlParser from 'react-html-parser';
-
+import ReactHtmlParser from "react-html-parser";
 
 function BlockDetailsPage() {
   const { oneBlog, getOneBlog } = useBlogContext();
@@ -62,7 +61,9 @@ function BlockDetailsPage() {
           <div className="detailss">
             <div className="title-db">{oneBlog.title}</div>
             <img src={`${oneBlog.img}`} alt="" />
-            <div className="text-details">{ ReactHtmlParser(`${oneBlog.text}`) }</div>
+            <div className={`text-details`}>
+              {ReactHtmlParser(oneBlog.text)}
+            </div>
           </div>
         </div>
       ) : (

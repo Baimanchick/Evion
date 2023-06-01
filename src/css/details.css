@@ -21,10 +21,58 @@
   /* margin-top: 40px; */
 }
 .text-details {
+}
+
+.text-details {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
   width: 750px;
   font-size: 18px;
   font-family: "tildasans-thin";
+  white-space: pre-line;
 }
+
+.text-details p {
+  margin-bottom: 10px;
+}
+
+.text-details h1,
+.text-details h2,
+.text-details h3,
+.text-details h4,
+.text-details h5,
+.text-details h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.text-details ul,
+.text-details ol {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.text-details ul li,
+.text-details ol li {
+  margin-bottom: 5px;
+}
+
+.text-details blockquote {
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #ccc;
+}
+
+.text-details pre {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
 .title-db {
   font-size: 32px;
   font-weight: 600;
@@ -60,6 +108,11 @@
   width: 100%;
   height: 1px;
   /* margin: 20px 0; */
+}
+
+.text-length {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 420px) {
