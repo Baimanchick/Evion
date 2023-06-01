@@ -215,3 +215,11 @@
     margin-left: 15px;
   }
 }
+@media screen and (min-device-width: 678px) and (max-device-width: 850px) {
+  .t899__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

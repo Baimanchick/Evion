@@ -122,6 +122,7 @@
     align-items: center;
     font-family: "tildasans-semibold";
     /* padding: 40px; */
+    margin-top: 20px;
   }
   .information {
     margin: 95px auto;
@@ -133,7 +134,7 @@
     width: 100%;
   }
   .our_company {
-    margin-top: 0;
+    margin-top: 20px;
   }
   .containerABCD {
     /* margin-left: 75px; */

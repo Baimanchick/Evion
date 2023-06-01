@@ -136,10 +136,10 @@ function HomePage() {
           src="https://thumb.tildacdn.com/tild3230-3732-4431-b762-653566366431/-/format/webp/znimok-ekrana-2019-0.jpg"
           alt=""
         />
-        <div className="plus">
+        {/* <div className="plus">
           <ion-icon name="add-outline"></ion-icon>
-          {/* <div className="plus-text" style={{ display: "none" }}>Быстрые зарядные станции</div> */}
-        </div>
+          <div className="plus-text" style={{ display: "none" }}>Быстрые зарядные станции</div>
+        </div> */}
       </div>
       <div className="greenBlock"></div>
       <div className="home_section-target">
@@ -472,7 +472,9 @@ function HomePage() {
           <div className="bigIMG__text">
             Стоимость зарядной станции с установкой от 100 000сом
           </div>
-          <div className="bigIMG__button"><a href="#section-4">Рассчитать стоимость</a></div>
+          <div className="bigIMG__button">
+            <a href="#section-4">Рассчитать стоимость</a>
+          </div>
         </div>
         <div className="greenBlock2"></div>
       </div>
@@ -557,7 +559,7 @@ function HomePage() {
                 />
                 <label className="l4">Адрес</label>
                 {validEmail ? (
-                  <span className="validEmail">
+                  <span className="validEmails">
                     Пожалуйста введите правильный e-mail
                   </span>
                 ) : null}
@@ -584,9 +586,9 @@ function HomePage() {
               <div className="slider2">
                 <Slider2 />
               </div>
-              <div className="slider3">
+              {/* <div className="slider3">
                 <Slider3 />
-              </div>
+              </div> */}
             </div>
             <div className="parthers__block">
               <div className="parthers__left">

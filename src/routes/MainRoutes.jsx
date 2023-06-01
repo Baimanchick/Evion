@@ -15,6 +15,8 @@ import MessagesDetail from "../pages/MessagesDetail";
 import AdminBlogPage from "../pages/AdminBlogPage";
 import AdminBlogAddPage from "../pages/AdminBlogAddPage";
 import BlockDetailsPage from "../pages/BlockDetailsPage";
+import AdminContactsPage from "../pages/AdminContactsPage";
+import AdminClienContactsPage from "../pages/AdminClienContactsPage";
 
 function MainRoutes() {
   return (
@@ -25,6 +27,11 @@ function MainRoutes() {
       <Route path="/prvacy" element={<PrvacyPage />} />
       <Route path="*" element={<NotFounedPage />} />
       <Route path="/admin" element={<AdminPage />}></Route>
+      <Route path="/admin/questions" element={<AdminContactsPage />}></Route>
+      <Route
+        path="/admin/contacts"
+        element={<AdminClienContactsPage />}
+      ></Route>
       <Route path="/admin/blogs" element={<AdminBlogPage />}></Route>
       <Route path="/admin/blogs/add" element={<AdminBlogAddPage />}></Route>
       <Route path="/detail/:id" element={<MessagesDetail />}></Route>

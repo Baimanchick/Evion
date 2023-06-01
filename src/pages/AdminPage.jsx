@@ -11,7 +11,7 @@ function AdminPage() {
   const { getEmails, emails, spamEmails, getSpams, spamsDB } =
     useEmailContext();
   const { user } = useAuthContext();
-  
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -71,8 +71,23 @@ function AdminPage() {
             <div className="manage__blogs">
               <div className="manage__blogs__title">Управление блога:</div>
               <div className="manage__blogs__btns">
-                <button onClick={() => navigate("/admin/blogs/add")}>Добавить блог</button>
-                <button onClick={() => navigate("/admin/blogs")}>Посмотреть все блоги</button>
+                <button onClick={() => navigate("/admin/blogs/add")}>
+                  Добавить блог
+                </button>
+                <button onClick={() => navigate("/admin/blogs")}>
+                  Посмотреть все блоги
+                </button>
+              </div>
+            </div>
+            <div className="manage__blogs2">
+              <div className="manage__blogs__title">Вопросы от клиентов:</div>
+              <div className="manage__blogs__btns">
+                <button onClick={() => navigate("/admin/questions")}>
+                  Посмотреть все вопросы
+                </button>
+                <button onClick={() => navigate("/admin/contacts")}>
+                  Контакты (FAQ)
+                </button>
               </div>
             </div>
             <div className="emails__message__block">
@@ -95,7 +110,12 @@ function AdminPage() {
                       </div>
                     </div>
                     <div className="emails__message_buttons">
-                      <button className="more__btn" onClick={() => navigate(`/detail/${item.id}`)}>Подробнее</button>
+                      <button
+                        className="more__btn"
+                        onClick={() => navigate(`/detail/${item.id}`)}
+                      >
+                        Подробнее
+                      </button>
                       <button
                         className="span__btn"
                         onClick={() => spamEmails(item.id)}

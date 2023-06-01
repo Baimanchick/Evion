@@ -4,18 +4,17 @@ import { useBlogContext } from "../contexts/BlogsContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-
-import ReactHtmlParser from "react-html-parser";
+import { usePhoneContext } from "../contexts/PhonesContext";
 import { useNavigate } from "react-router-dom";
 
-function AdminBlogPage() {
-  const { getBlogs, blogs, deleteBlog, addBlog } = useBlogContext();
+function AdminContactsPage() {
+  const { getPhones, phones, deletePhone } = usePhoneContext();
   const { user } = useAuthContext();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    getBlogs();
+    getPhones();
   }, []);
 
   return (
@@ -71,9 +70,9 @@ function AdminBlogPage() {
                 className="detailGreenBlock__title"
                 style={{ paddingLeft: "30px", marginBottom: "25px" }}
               >
-                Блог:{" "}
+                Вопросы:{" "}
               </div>
-              {blogs.map((item) => (
+              {phones.map((item) => (
                 <div className="emails__items">
                   <div className="emails__message__item">
                     <div
@@ -81,10 +80,12 @@ function AdminBlogPage() {
                       style={{ marginLeft: "0" }}
                     >
                       <div className="emails__message__info__name">
-                        {item.title}
+                        {item.question}
                       </div>
                       <div className="emails__message__info__request">
-                        {item.text}
+                        <strong>Имя: </strong>
+                        {item.name}, <strong>Телефон: </strong>
+                        {item.phone}, <strong>E-mail: </strong> {item.email}
                       </div>
                     </div>
                   </div>
@@ -95,7 +96,7 @@ function AdminBlogPage() {
                     {/* <button className="more__btn">Подробнее</button> */}
                     <button
                       className="span__btn"
-                      onClick={() => deleteBlog(item.id)}
+                      onClick={() => deletePhone(item.id)}
                     >
                       Удалить
                     </button>
@@ -110,4 +111,4 @@ function AdminBlogPage() {
   );
 }
 
-export default AdminBlogPage;
+export default AdminContactsPage;
