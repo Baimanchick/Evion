@@ -102,7 +102,7 @@ function BlogPage() {
           <div className="t899__items">
             {filteredBlogs.slice(0, loadedBlogs).map((item) => (
               <div className="t899__item">
-                <a href={`/details/${item.id}`}>
+                <a href="/details/:id">
                   <img src={`${item.img}`} />
                 </a>
                 <div className="t899__item__title">{item.title}</div>
