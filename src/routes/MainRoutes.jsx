@@ -17,6 +17,7 @@ import AdminBlogAddPage from "../pages/AdminBlogAddPage";
 import BlockDetailsPage from "../pages/BlockDetailsPage";
 import AdminContactsPage from "../pages/AdminContactsPage";
 import AdminClienContactsPage from "../pages/AdminClienContactsPage";
+import Location from "../pages/Location";
 
 function MainRoutes() {
   return (
@@ -42,6 +43,7 @@ function MainRoutes() {
         <Route path="/blogs" element={<BlogPage />}></Route>
         <Route path="/contacts" element={<ContactsPage />}></Route>
       </Route>
+      <Route path="/location" element={<Location />} />
       <Route path="/details/:id" element={<BlockDetailsPage />} />
     </Routes>
   );

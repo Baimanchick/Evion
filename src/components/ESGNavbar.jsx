@@ -36,14 +36,14 @@ function ESGNavbar() {
               <li style={{ cursor: "pointer" }}>
                 {" "}
                 <a
-                  href="#team"
+                  href="/location"
                   style={{
                     textDecoration: "none",
                     color: "black",
                     fontFamily: "tildasans-reg",
                   }}
                 >
-                  Команда
+                  Локации
                 </a>
               </li>
             </ul>

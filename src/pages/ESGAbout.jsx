@@ -22,7 +22,7 @@ function ESGAbout() {
       return () => {
         clearInterval(interval);
       };
-    }, 3000);
+    }, 500);
 
     return () => {
       clearTimeout(timeout);
