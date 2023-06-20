@@ -14,11 +14,31 @@ function Test() {
   });
 
   if (loadError) {
-    return <div>Ошибка загрузки карты</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Ошибка загрузки карты
+      </div>
+    );
   }
 
   if (!isLoaded) {
-    return <div>Загрузка карты...</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Загрузка карты...
+      </div>
+    );
   }
 
   return <Map />;
