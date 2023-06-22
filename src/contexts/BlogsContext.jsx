@@ -70,15 +70,6 @@ function BlogsContext({ children }) {
     }
   }
 
-  //   async function addEmails(newEmail) {
-  //     try {
-  //       await axios.post(`${BASE_URL}`, newEmail);
-  //       getEmails();
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-
   const value = {
     blogs: state.blogs,
     oneBlog: state.oneBlog,

@@ -1,8 +1,13 @@
+.container__location {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .location-container {
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
-  margin-left: 150px;
+  margin-top: 30px;
 }
 .location-paragraph {
   margin-top: 10px;
@@ -10,6 +15,7 @@
   line-height: 1.55;
   font-family: "tildasans-thin";
   color: #000;
+  margin-bottom: 25px;
 }
 .location-title {
   font-size: 42px;
@@ -21,19 +27,32 @@
 .goBack ion-icon {
   font-size: 50px !important;
   margin-top: 20px;
-  margin-left: 19px;
 }
 
-/* Map */
-.map {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
+/* react leafleat */
+.leaflet-container {
   height: 500px;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
 }
 
-.googleMap {
-  width: 100%;
-  height: 100%;
+.cluster-icon {
+  background-color: #333;
+  height: 2em;
+  width: 2em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0px 5px #fff;
+}
+
+/* react leafleat */
+
+@media screen and (min-device-width: 678px) and (max-device-width: 850px) {
+  .location-container {
+    margin-top: 10px;
+  }
 }

@@ -18,6 +18,7 @@ import BlockDetailsPage from "../pages/BlockDetailsPage";
 import AdminContactsPage from "../pages/AdminContactsPage";
 import AdminClienContactsPage from "../pages/AdminClienContactsPage";
 import Location from "../pages/Location";
+import Leafleat from "../pages/Leafleat";
 
 function MainRoutes() {
   return (
