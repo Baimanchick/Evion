@@ -79,6 +79,7 @@ function AdminPage() {
                 </button>
               </div>
             </div>
+
             <div className="manage__blogs2">
               <div className="manage__blogs__title">Вопросы от клиентов:</div>
               <div className="manage__blogs__btns">
@@ -90,6 +91,7 @@ function AdminPage() {
                 </button>
               </div>
             </div>
+
             <div className="emails__message__block">
               <h1>Сообщение</h1>
               <div className="emails__message__items">
