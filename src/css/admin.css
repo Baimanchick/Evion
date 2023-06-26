@@ -93,7 +93,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .user {
@@ -111,7 +111,7 @@
 .emails__message__block {
   width: 60%;
   margin-left: 10px;
-  margin-top: 100px;
+  margin-top: 71px;
   height: auto;
   padding: 10px 0px 10px 0px;
   background-color: #d4f3eb;
@@ -139,9 +139,9 @@
   background-color: #d4f3eb;
   border-radius: 10px;
   width: 400px;
-  height: 200px;
+  height: 140px;
   position: fixed;
-  top: 230px;
+  top: 184px;
   margin-top: 100px;
 }
 
@@ -151,7 +151,17 @@
   width: 400px;
   height: 150px;
   position: fixed;
-  top: 450px;
+  top: 339px;
+  margin-top: 100px;
+}
+
+.manage__blogs3 {
+  background-color: #d4f3eb;
+  border-radius: 10px;
+  width: 400px;
+  height: 150px;
+  position: fixed;
+  top: 502px;
   margin-top: 100px;
 }
 
@@ -167,6 +177,23 @@
   width: 100%;
   align-items: center;
   gap: 20px;
+}
+
+.manage__blogs__special__btn {
+  padding: 25px 0px 0px 25px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+.manage__blogs__special__btn button {
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  background-color: gold;
 }
 
 .manage__blogs__btns button {

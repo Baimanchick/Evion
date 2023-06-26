@@ -68,6 +68,7 @@ function AdminPage() {
               />
               <div className="user__username">{user?.email}</div>
             </div>
+
             <div className="manage__blogs">
               <div className="manage__blogs__title">Управление блога:</div>
               <div className="manage__blogs__btns">
@@ -89,6 +90,13 @@ function AdminPage() {
                 <button onClick={() => navigate("/admin/contacts")}>
                   Контакты (FAQ)
                 </button>
+              </div>
+            </div>
+
+            <div className="manage__blogs3">
+              <div className="manage__blogs__title">Локации:</div>
+              <div className="manage__blogs__special__btn">
+                <button onClick={() => navigate("/")}>Добавить метки</button>
               </div>
             </div>
 
