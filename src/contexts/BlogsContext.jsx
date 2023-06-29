@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
 import { ACTIONS, BASE_URL, BLOGS_URL } from "../utils/consts";
-import { async } from "q";
 
 const blogContext = createContext();
 

@@ -95,8 +95,13 @@ function AdminPage() {
 
             <div className="manage__blogs3">
               <div className="manage__blogs__title">Локации:</div>
-              <div className="manage__blogs__special__btn">
-                <button onClick={() => navigate("/")}>Добавить метки</button>
+              <div className="manage__blogs__btns">
+                <button onClick={() => navigate("/admin/location/add")}>
+                  Добавить метки
+                </button>
+                <button onClick={() => navigate("/admin/location/marker")}>
+                  Посмотреть все метки
+                </button>
               </div>
             </div>
 

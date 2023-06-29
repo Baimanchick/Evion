@@ -5,7 +5,7 @@ import Slider2 from "./Slider2";
 
 import { ReactComponent as CloseSvg } from "../images/close-outline.svg";
 import { ReactComponent as ChatSvg } from "../images/chatbubble-ellipses-outline.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Slider3 from "./Slider3";
 import { useEmailContext } from "../contexts/EmailsContext";
 import emailjs from "@emailjs/browser";
@@ -26,6 +26,8 @@ function HomePage() {
     kilowatt: "",
     address: "",
   });
+
+  const navigate = useNavigate();
 
   const [message, setMessage] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
@@ -275,7 +277,7 @@ function HomePage() {
 
       <div className="home_section-project">
         <div className="containerC">
-          <div className="home_section-project-title">
+          <div className="home_section-project-title" id="projectHomePage">
             <h2>Наши проекты</h2>
             <p>В данный момент мы реализуем следующие проекты</p>
           </div>
@@ -575,7 +577,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="home_section-partners">
+      <div className="home_section-partners" id="partners">
         <div className="containerC">
           <div className="parthers__items">
             <div className="parthers__title">Партнеры</div>
@@ -717,18 +719,53 @@ function HomePage() {
               <div className="footer_info_item_2">
                 <ul className="footer_links_1">
                   <div className="about_evion">Об EVION</div>
-                  <li>кто мы</li>
-                  <li>наша миссия</li>
-                  <li>проекты</li>
-                  <li>партнеры</li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    кто мы
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    наша миссия
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    проекты
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    партнеры
+                  </li>
                 </ul>
               </div>
               <div className="footer_info_item_3">
                 <ul className="footer_links_2">
                   <div className="our_services">Наши услуги</div>
-                  <li>Установка ЭЗС</li>
-                  <li>TOUCH App</li>
-                  <li>Зарядочные станции</li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-2")}
+                  >
+                    Установка ЭЗС
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-4")}
+                  >
+                    TOUCH App
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/location")}
+                  >
+                    Зарядочные станции
+                  </li>
                 </ul>
               </div>
             </div>

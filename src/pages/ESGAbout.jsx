@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../css/esgAbout.css";
 import Slider4 from "../components/Slider4";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ESGAbout() {
   const [count, setCount] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -253,9 +255,24 @@ function ESGAbout() {
               <div className="footer_info_item_3">
                 <ul className="footer_links_2">
                   <div className="our_services">Наши услуги</div>
-                  <li>Установка ЭЗС</li>
-                  <li>TOUCH App</li>
-                  <li>Зарядочные станции</li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-2")}
+                  >
+                    Установка ЭЗС
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-4")}
+                  >
+                    TOUCH App
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/location")}
+                  >
+                    Зарядочные станции
+                  </li>
                 </ul>
               </div>
             </div>

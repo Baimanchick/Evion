@@ -3,6 +3,7 @@ export const SPAMS_URL = "https://evion-db-main.vercel.app/spams";
 export const BLOGS_URL = "https://evion-db-main.vercel.app/blogs";
 export const PHONES_URL = "https://evion-db-main.vercel.app/phones";
 export const PHONES_URL2 = "https://evion-db-main.vercel.app/phones2";
+export const LOCATIONS_URL = "http://localhost:8000/locations";
 
 export const ACTIONS = {
   emails: "emails",
@@ -15,6 +16,7 @@ export const ACTIONS = {
   onePhone: "onePhone",
   phones2: "phones2",
   onePhone2: "onePhone2",
+  location: "location",
 };
 
 // export const ADMINS = ["baika132213@gmail.com"];

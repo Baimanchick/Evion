@@ -48,23 +48,23 @@ function Slider4() {
         <div className="first-slide">
           <div className="wrapper__left">
             <img
-              src="https://thumb.tildacdn.com/tild6534-3361-4664-a163-326266373164/-/format/webp/mattthomason110752_d.jpg"
+              src="https://www.advantour.com/img/kyrgyzstan/legends/kyrgyzstan-legends-issyk-kul-legend.jpg"
               alt=""
             />
           </div>
           <div className="wrapper__rightt">
-            <h2>
-              More about countless and <br /> breathtaking Canadian Lakes
-            </h2>
+            <h2>Развитие связи в Кыргызстане: Установка 11 станций</h2>
             <p>
-              Most of the area is served by the Stanwood ZIP code 49346, <br />
-              although "Canadian Lakes, Michigan", is an acceptable name for
-              mail <br /> delivery by the post office. <br /> Small portions of
-              the area defined by the CDP are served by other <br /> postal
-              delivery areas. A small portion in the southern area of the CDP{" "}
-              <br /> along the Little Muskegon River is served by the Lakeview
-              ZIP code, <br /> 48850. A small area in the eastern part of the
-              CDP is served by the <br /> Mecosta ZIP code, 49332.
+              В Кыргызстане в настоящее время установлено 11 станций, которые
+              играют важную роль в обеспечении связи и доступа к информации для
+              местного населения. Одна из этих станций находится в городе ИК
+              (Иссык-Куль). Станция в ИК является значимым объектом, поскольку
+              она обеспечивает связь и доступ к интернету для местных жителей, а
+              также предоставляет возможности для развития телекоммуникационной
+              инфраструктуры в регионе. Благодаря этой станции, жители
+              Иссык-Куля и близлежащих населенных пунктов имеют доступ к
+              современным коммуникационным технологиям и могут быть подключены к
+              мировой сети.
             </p>
           </div>
         </div>
