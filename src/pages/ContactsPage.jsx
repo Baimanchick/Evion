@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/contact.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { usePhoneContext } from "../contexts/PhonesContext";
 import { notifyError } from "../components/Toastify";
 
@@ -13,6 +13,8 @@ function ContactsPage() {
   });
   const [hasData, setHasData] = useState(false);
   const { addPhones } = usePhoneContext();
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -212,18 +214,53 @@ function ContactsPage() {
               <div className="footer_info_item_2">
                 <ul className="footer_links_1">
                   <div className="about_evion">Об EVION</div>
-                  <li>кто мы</li>
-                  <li>наша миссия</li>
-                  <li>проекты</li>
-                  <li>партнеры</li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    кто мы
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    наша миссия
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    проекты
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/about")}
+                  >
+                    партнеры
+                  </li>
                 </ul>
               </div>
               <div className="footer_info_item_3">
                 <ul className="footer_links_2">
                   <div className="our_services">Наши услуги</div>
-                  <li>Установка ЭЗС</li>
-                  <li>TOUCH App</li>
-                  <li>Зарядочные станции</li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-2")}
+                  >
+                    Установка ЭЗС
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/#section-4")}
+                  >
+                    TOUCH App
+                  </li>
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/location")}
+                  >
+                    Зарядочные станции
+                  </li>
                 </ul>
               </div>
             </div>

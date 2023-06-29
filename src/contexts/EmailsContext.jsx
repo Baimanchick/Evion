@@ -49,20 +49,19 @@ function EmailContext({ children }) {
 
   async function getOneEmail(id) {
     try {
-      const res = await axios.get(`${BASE_URL}/${id}`)
+      const res = await axios.get(`${BASE_URL}/${id}`);
       dispatch({
         type: ACTIONS.oneEmail,
-        payload: res.data
-      })
+        payload: res.data,
+      });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
   async function getSpams() {
     try {
       const res = await axios.get(`${SPAMS_URL}`);
-      console.log(res.data);
       dispatch({
         type: ACTIONS.spamsDB,
         payload: res.data,
@@ -105,7 +104,7 @@ function EmailContext({ children }) {
     spamEmails,
     getSpams,
     spams: state.spamsDB,
-    getOneEmail
+    getOneEmail,
   };
 
   return (

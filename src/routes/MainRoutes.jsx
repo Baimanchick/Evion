@@ -19,6 +19,8 @@ import AdminContactsPage from "../pages/AdminContactsPage";
 import AdminClienContactsPage from "../pages/AdminClienContactsPage";
 import Location from "../pages/Location";
 import Leafleat from "../pages/Leafleat";
+import AddLocationPage from "../pages/AddLocationPage";
+import AdminBlogLocationPage from "../pages/AdminBlogLocationPage";
 
 function MainRoutes() {
   return (
@@ -46,6 +48,11 @@ function MainRoutes() {
       </Route>
       <Route path="/location" element={<Location />} />
       <Route path="/details/:id" element={<BlockDetailsPage />} />
+      <Route path="/admin/location/add" element={<AddLocationPage />} />
+      <Route
+        path="/admin/location/marker"
+        element={<AdminBlogLocationPage />}
+      />
     </Routes>
   );
 }

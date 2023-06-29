@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useBlogContext } from "../contexts/BlogsContext";
 import "../css/blog.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ReactHtmlParser from "react-html-parser";
 
 function BlogPage() {
@@ -50,6 +50,8 @@ function BlogPage() {
       behavior: "smooth",
     });
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="t-main-content">
@@ -180,9 +182,24 @@ function BlogPage() {
             <div className="footer_info_item_3">
               <ul className="footer_links_2">
                 <div className="our_services">Наши услуги</div>
-                <li>Установка ЭЗС</li>
-                <li>TOUCH App</li>
-                <li>Зарядочные станции</li>
+                <li
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigate("/#section-2")}
+                >
+                  Установка ЭЗС
+                </li>
+                <li
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigate("/#section-4")}
+                >
+                  TOUCH App
+                </li>
+                <li
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigate("/location")}
+                >
+                  Зарядочные станции
+                </li>
               </ul>
             </div>
           </div>

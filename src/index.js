@@ -7,6 +7,7 @@ import AuthContext from "./contexts/AuthContext";
 import BlogsContext from "./contexts/BlogsContext";
 import Toastify from "./components/Toastify";
 import PhonesContext from "./contexts/PhonesContext";
+import LocationContext from "./contexts/LocationContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,10 +16,12 @@ root.render(
       <AuthContext>
         <BlogsContext>
           <PhonesContext>
-            <StrictMode>
-              <App />
-              <Toastify />
-            </StrictMode>
+            <LocationContext>
+              <StrictMode>
+                <App />
+                <Toastify />
+              </StrictMode>
+            </LocationContext>
           </PhonesContext>
         </BlogsContext>
       </AuthContext>

@@ -269,6 +269,12 @@
   font-size: 20px;
 }
 
+.emails__message__info__name__special {
+  font-size: 20px;
+  width: 500px;
+  max-width: 600px;
+}
+
 .emails__message__info__request {
   font-size: 14px;
   color: #515050;
