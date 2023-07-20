@@ -102,7 +102,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="notification" onClick={() => setMessage(!message)}>
+      {/* <div className="notification" onClick={() => setMessage(!message)}>
         <div style={{ position: "absolute", bottom: "45%" }}>
           {message ? (
             <div className="communication">
@@ -131,7 +131,7 @@ function HomePage() {
             <ChatSvg className={`chat ${message == false ? "animated" : ""}`} />
           )}
         </label>
-      </div>
+      </div> */}
 
       <div className="home_section-img">
         <img

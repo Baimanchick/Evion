@@ -21,6 +21,7 @@ import Location from "../pages/Location";
 import Leafleat from "../pages/Leafleat";
 import AddLocationPage from "../pages/AddLocationPage";
 import AdminBlogLocationPage from "../pages/AdminBlogLocationPage";
+import Submit from "../pages/Submit";
 
 function MainRoutes() {
   return (
