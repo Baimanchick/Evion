@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [ click2, setClick2 ] = useState(false);
+  const [click2, setClick2] = useState(false);
 
   const [bottomLine, setBottomLine] = useState(false);
   const [bottomLine2, setBottomLine2] = useState(false);
@@ -27,9 +27,15 @@ function Navbar() {
   }, []);
 
   return (
-    <header style={ click ? { marginBottom: "135px" } : { marginBottom: "" } } className={`${ click2 ? "mb-7" : "" }`} >
-      <div className={`header_left ${ click2 ? "header_nav_ipad" : "" }`}>
-        <ul className={`header_nav`} style={ click ? { display: "flex", gap: "15px" } : { display: "" } }>
+    <header
+      style={click ? { marginBottom: "135px" } : { marginBottom: "" }}
+      className={`${click2 ? "mb-7" : ""}`}
+    >
+      <div className={`header_left ${click2 ? "header_nav_ipad" : ""}`}>
+        <ul
+          className={`header_nav`}
+          style={click ? { display: "flex", gap: "15px" } : { display: "" }}
+        >
           <li className={`nav-item`}>
             <a
               href="#section-1"
@@ -77,7 +83,20 @@ function Navbar() {
           <ion-icon name={click2 ? "close" : "menu-outline"}></ion-icon>
         </div>
       </div>
-      <div className="header_right" style={ click ? { display: "flex", marginTop: "45px", justifyContent: "center", alignItems: "center", width: "65%" } : { display: "" } }>
+      <div
+        className="header_right"
+        style={
+          click
+            ? {
+                display: "flex",
+                marginTop: "45px",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "65%",
+              }
+            : { display: "" }
+        }
+      >
         <a className="phone" href="tel:+996500333351">
           +996 500 333351
         </a>

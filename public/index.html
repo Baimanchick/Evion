@@ -51,8 +51,25 @@
     <a href=""></a>
 
     <script src="../src/BurgerMenu.js"></script>
+
+    <script
+      id="amoforms_script_1169062"
+      async="async"
+      charset="utf-8"
+      src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1688983944"
+    ></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
     <script>
-      AOS.init();
+      window.botpressWebChat.init({
+        composerPlaceholder: "Chat with bot",
+        botConversationDescription:
+          "This chatbot was built surprisingly fast with Botpress",
+        botId: "4b5fa16c-2adb-4411-b530-2bae7862a2aa",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v0",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "4b5fa16c-2adb-4411-b530-2bae7862a2aa",
+      });
     </script>
   </body>
 </html>
