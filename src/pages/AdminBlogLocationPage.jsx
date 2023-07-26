@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-import ReactHtmlParser from "react-html-parser";
 import { useNavigate } from "react-router-dom";
 import { useLocationContext } from "../contexts/LocationContext";
 

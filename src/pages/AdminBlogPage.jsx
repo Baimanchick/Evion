@@ -4,8 +4,6 @@ import { useBlogContext } from "../contexts/BlogsContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-
-import ReactHtmlParser from "react-html-parser";
 import { useNavigate } from "react-router-dom";
 
 function AdminBlogPage() {
