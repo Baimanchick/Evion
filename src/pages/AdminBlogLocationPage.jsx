@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useLocationContext } from "../contexts/LocationContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 function AdminBlogLocationPage() {
   const { location, getLocations, deleteMarker } = useLocationContext();
+  const [user] = useAuthContext();
 
   const navigate = useNavigate();
 
@@ -14,6 +16,9 @@ function AdminBlogLocationPage() {
     getLocations();
   }, []);
 
+  if (!user) {
+    return Navigate("/auth");
+  }
   const extractedData = location.map((location) => {
     const regex = />(.*?)<\/a>/;
     const match = location.popUp.match(regex);

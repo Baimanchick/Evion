@@ -1,28 +1,31 @@
-import { signOut } from "firebase/auth";
 import React, { useState } from "react";
+import { signOut } from "firebase/auth";
 import { notify } from "../components/Toastify";
 import { useAuthContext } from "../contexts/AuthContext";
 import { auth } from "../fireBase";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useBlogContext } from "../contexts/BlogsContext";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function AdminBlogAddPage() {
-  const [value, setValue] = useState("");
   const { user } = useAuthContext();
   const { addBlog } = useBlogContext();
-
   const navigate = useNavigate();
 
+  const [value, setValue] = useState("");
   const [formValue, setFormValue] = useState({
     title: "",
     img: "",
     text: "",
   });
 
+  if (!user) {
+    return <Navigate to="/auth" />;
+  }
+
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     try {
       addBlog(formValue);
       setFormValue({

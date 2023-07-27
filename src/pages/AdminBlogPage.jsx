@@ -4,7 +4,7 @@ import { useBlogContext } from "../contexts/BlogsContext";
 import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function AdminBlogPage() {
   const { getBlogs, blogs, deleteBlog, addBlog } = useBlogContext();
@@ -15,6 +15,10 @@ function AdminBlogPage() {
   useEffect(() => {
     getBlogs();
   }, []);
+
+  if (!user) {
+    return <Navigate to="/auth" />;
+  }
 
   return (
     <div>

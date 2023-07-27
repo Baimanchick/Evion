@@ -74,7 +74,7 @@ function AddLocationPage() {
         <div>Долгота</div>
         <input
           placeholder="Enter your text..."
-          className="input2"
+          className="input__location"
           name="let"
           type="text"
           value={letValue}
