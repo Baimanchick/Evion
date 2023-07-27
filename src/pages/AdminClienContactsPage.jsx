@@ -5,7 +5,7 @@ import { signOut } from "@firebase/auth";
 import { auth } from "../fireBase";
 import { notify } from "../components/Toastify";
 import { usePhoneContext } from "../contexts/PhonesContext";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function AdminClienContactsPage() {
   const { getPhones2, phones2, deletePhone } = usePhoneContext();
@@ -16,6 +16,10 @@ function AdminClienContactsPage() {
   useEffect(() => {
     getPhones2();
   }, []);
+
+  if (!user) {
+    return <Navigate replace to="/auth" />;
+  }
 
   return (
     <div>
