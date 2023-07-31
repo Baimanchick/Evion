@@ -52,7 +52,11 @@ function BlogPage() {
 
   const navigate = useNavigate();
 
-  const cheerio = require("cheerio");
+  function parseAndSanitizeHTML(htmlString) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, "text/html");
+    return doc.body.innerHTML;
+  }
 
   return (
     <div className="t-main-content">
@@ -110,13 +114,19 @@ function BlogPage() {
                 </a>
                 <div className="t899__item__title">{item.title}</div>
                 <div className="t899__item__text">
-                  {cheerio.load(
-                    `${
-                      item.text.length > 50
-                        ? `${item.text.slice(0, 50)}...`
-                        : item.text
-                    }`
-                  )}
+                  {
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: parseAndSanitizeHTML(
+                          `${
+                            item.text.length > 50
+                              ? `${item.text.slice(0, 50)}...`
+                              : item.text
+                          }`
+                        ),
+                      }}
+                    />
+                  }
                 </div>
               </div>
             ))}
