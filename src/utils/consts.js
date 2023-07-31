@@ -3,7 +3,7 @@ export const SPAMS_URL = "https://evion-db-main.vercel.app/spams";
 export const BLOGS_URL = "https://evion-db-main.vercel.app/blogs";
 export const PHONES_URL = "https://evion-db-main.vercel.app/phones";
 export const PHONES_URL2 = "https://evion-db-main.vercel.app/phones2";
-export const LOCATIONS_URL = "https://evion-db-main.vercel.app/locations";
+export const LOCATIONS_URL = "https://evion-db-main.vercel.app/locations/";
 
 export const ACTIONS = {
   emails: "emails",

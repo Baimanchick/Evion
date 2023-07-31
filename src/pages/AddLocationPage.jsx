@@ -4,6 +4,7 @@ import { notify } from "../components/Toastify";
 import { auth } from "../fireBase";
 import { useNavigate } from "react-router-dom";
 import { useLocationContext } from "../contexts/LocationContext";
+import { useAuthContext } from "../contexts/AuthContext";
 
 function AddLocationPage() {
   const navigate = useNavigate();
@@ -42,6 +43,12 @@ function AddLocationPage() {
       console.log(error);
     }
   };
+
+  const { user } = useAuthContext();
+
+  if (!user) {
+    navigate("/auth");
+  }
 
   return (
     <>

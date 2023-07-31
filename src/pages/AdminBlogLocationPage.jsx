@@ -8,17 +8,18 @@ import { useAuthContext } from "../contexts/AuthContext";
 
 function AdminBlogLocationPage() {
   const { location, getLocations, deleteMarker } = useLocationContext();
-  const [user] = useAuthContext();
-
   const navigate = useNavigate();
 
   useEffect(() => {
     getLocations();
   }, []);
 
+  const { user } = useAuthContext();
+
   if (!user) {
-    return Navigate("/auth");
+    navigate("/auth");
   }
+
   const extractedData = location.map((location) => {
     const regex = />(.*?)<\/a>/;
     const match = location.popUp.match(regex);

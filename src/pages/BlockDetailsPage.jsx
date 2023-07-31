@@ -36,7 +36,11 @@ function BlockDetailsPage() {
     });
   };
 
-  const cheerio = require("cheerio");
+  function parseAndSanitizeHTML(htmlString) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, "text/html");
+    return doc.body.innerHTML;
+  }
 
   return (
     <>
@@ -62,7 +66,13 @@ function BlockDetailsPage() {
           <div className="detailss">
             <div className="title-db">{oneBlog.title}</div>
             <img src={`${oneBlog.img}`} alt="" />
-            <div className={`text-details`}>{cheerio.load(oneBlog.text)}</div>
+            <div className={`text-details`}>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: parseAndSanitizeHTML(oneBlog.text),
+                }}
+              />
+            </div>
           </div>
         </div>
       ) : (
